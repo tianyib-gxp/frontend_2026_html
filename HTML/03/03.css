@@ -1,0 +1,10 @@
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 24px;
+  line-height: 1.7;
+}
+
+section {
+  border: 1px solid #cccccc;
+  padding: 16px;
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session 4: 複数ページをリンクでつなぐ</title>
+  <link rel="stylesheet" href="./04.css" />
+</head>
+<body>
+  <!--
+    Session 4 課題
+    やってほしいこと:
+    1) nav内リンクでindexとaboutを行き来する
+    2) 相対パス、絶対パス、ルートパスの違いを試す
+    3) 画像を追加してaltを適切に記述する
+    4) target="_blank"を使う外部リンクにrel="noopener"を必ず付ける
+
+    座学で説明しやすいポイント:
+    - セマンティック要素は「意味の区画」を機械に伝える
+    - altは「画像の説明」ではなく「画像が果たす役割」を書く
+    - noopenerは新規タブ遷移時のセキュリティ対策
+
+    参考リンク:
+    - https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+    - https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+  -->
+
+  <header>
+    <h1>Session 4 練習</h1>
+    <nav>
+      <a href="./04.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="https://developer.mozilla.org/ja/" target="_blank" rel="noopener">MDN</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>リンクと構造</h2>
+      <p>header / nav / main / footer の役割を意識して組み立てます。</p>
+      <img
+        src="https://dummyimage.com/640x240/e8f1f5/0b4f6c&text=Session+4+Image"
+        alt="Session 4の練習用バナー画像"
+      />
+    </article>
+  </main>
+
+  <footer>
+    <small>Session 4 Footer</small>
+  </footer>
+</body>
+</html>
