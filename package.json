@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "HTML/CSS/JavaScript learning repository",
   "scripts": {
-    "start": "serve . -l ${PORT:-3000}"
+    "start": "http-server . -p ${PORT:-3000} -c-1 --cors"
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "http-server": "^14.1.1"
   }
 }
