@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ループ（for文）の導入（回答）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="back-button" onclick="goBack()">← 戻る</button>
+      <h1>JavaScript ループ（for文）（回答）</h1>
+
+      <section class="card">
+        <h2>ループとは？</h2>
+        <p>ループを使うと、同じ処理を何回も繰り返すことができます。</p>
+        <p>
+          今回は
+          <strong>for文</strong>
+          を使って、1から5までの数字を表示してみましょう。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>やってほしいこと</h2>
+        <ol>
+          <li><code>08_01_intro.js</code> を開いてください</li>
+          <li>
+            <code>runLoop</code> 関数の中に
+            <strong>for文</strong> を書いてください
+          </li>
+          <li>ループの中で <code>addItem(i)</code> を呼び出してください</li>
+          <li>「実行」ボタンを押して結果を確認しましょう</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>ヒント</h2>
+        <ul>
+          <li><code>for (let i = 1; i <= 5; i++)</code></li>
+        </ul>
+      </section>
+
+      <section class="card result">
+        <h2>結果</h2>
+        <button onclick="runLoop()">実行</button>
+        <ul id="list"></ul>
+      </section>
+    </div>
+
+    <script src="./08_01_intro.js"></script>
+    <script src="../../index.js"></script>
+  </body>
+</html>

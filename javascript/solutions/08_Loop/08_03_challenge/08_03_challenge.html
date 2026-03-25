@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ループ（for文）チャレンジ（回答）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <button class="back-button" onclick="goBack()">← 戻る</button>
+
+    <div class="container">
+      <h1>ループ チャレンジ（回答）</h1>
+
+      <section class="card">
+        <h2>やってほしいこと</h2>
+        <ol>
+          <li>1から20までの数字をループで処理してください</li>
+          <li>
+            以下のルールで表示してください:
+            <ul>
+              <li>3の倍数 → "Fizz"</li>
+              <li>5の倍数 → "Buzz"</li>
+              <li>両方 → "FizzBuzz"</li>
+              <li>それ以外 → 数字</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="card result">
+        <h2>結果</h2>
+        <button onclick="runLoop()">実行</button>
+        <ul id="list"></ul>
+      </section>
+    </div>
+
+    <script src="../../index.js"></script>
+    <script src="./08_03_challenge.js"></script>
+  </body>
+</html>

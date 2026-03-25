@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  background: #f0f4f8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: #dbeafe;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #555;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.result {
+  text-align: center;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4cafef;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3a9edb;
+}
+
+ul {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+li {
+  padding: 4px 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
