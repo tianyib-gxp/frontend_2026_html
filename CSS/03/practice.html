@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セレクター 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 — セレクター</h1>
+    <p>practice.css の TODO コメントを埋めてください。</p>
+  </header>
+
+  <main>
+    <!-- 問題1 -->
+    <section class="task">
+      <h2>問題 1：タグセレクターでスタイルを当てる</h2>
+      <p>ページ内の全ての <code>&lt;h3&gt;</code> タグを <strong>color: #1d3461、font-size: 20px</strong> にしてください。</p>
+      <div class="preview">
+        <h3>見出し A</h3>
+        <p>本文テキストは変わりません。</p>
+        <h3>見出し B</h3>
+        <p>こちらも本文なので変わりません。</p>
+        <h3>見出し C</h3>
+      </div>
+    </section>
+
+    <!-- 問題2 -->
+    <section class="task">
+      <h2>問題 2：クラスセレクターでボタンをスタイリング</h2>
+      <p><code>class="btn"</code> が付いたボタンに <strong>background: #4361ee、color: white、padding: 10px 20px、border-radius: 6px、border: none、cursor: pointer</strong> を設定してください。</p>
+      <div class="preview">
+        <button class="btn">送信する</button>
+        <button class="btn">キャンセル</button>
+        <button>スタイルなし（クラスなし）</button>
+      </div>
+    </section>
+
+    <!-- 問題3 -->
+    <section class="task">
+      <h2>問題 3：id セレクターで特定要素をスタイリング</h2>
+      <p><code>id="hero-title"</code> の要素に <strong>font-size: 36px、color: #e63946、font-weight: 900、text-align: center</strong> を設定してください。</p>
+      <div class="preview">
+        <h2 id="hero-title">ようこそ！</h2>
+        <p>このページへようこそ。</p>
+      </div>
+    </section>
+
+    <!-- 問題4 -->
+    <section class="task">
+      <h2>問題 4：複数クラスを組み合わせる</h2>
+      <p>以下のクラスを定義してください：</p>
+      <ul>
+        <li><code>.card</code>：border: 1px solid #ccc、border-radius: 8px、padding: 16px</li>
+        <li><code>.featured</code>：background: #fff3bf、border-color: #f4a261</li>
+        <li><code>.card.featured</code> を組み合わせた要素が目立つようになっています。</li>
+      </ul>
+      <div class="preview">
+        <div class="card">普通のカード</div>
+        <br>
+        <div class="card featured">注目カード（card + featured）</div>
+      </div>
+    </section>
+
+    <!-- 問題5 -->
+    <section class="task">
+      <h2>問題 5：子孫セレクターで特定の場所だけに当てる</h2>
+      <p><code>.sidebar</code> の中の <code>&lt;a&gt;</code> だけを <strong>color: #4361ee、font-weight: bold、text-decoration: none</strong> にしてください。<br>
+      メインコンテンツ内のリンクは変わらないようにします。</p>
+      <div class="preview">
+        <div style="display:flex; gap: 24px; flex-wrap: wrap;">
+          <div class="sidebar">
+            <p>サイドバー内のリンク：</p>
+            <a href="#">リンク A</a><br>
+            <a href="#">リンク B</a><br>
+            <a href="#">リンク C</a>
+          </div>
+          <div>
+            <p>メインコンテンツ内のリンク（変わらない）：</p>
+            <a href="#">リンク X</a><br>
+            <a href="#">リンク Y</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

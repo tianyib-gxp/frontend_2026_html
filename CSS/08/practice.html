@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Flexbox 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 4. Flexbox</h1>
+    <p>practice.css の TODO を埋めてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：ナビゲーションバーを作る</h2>
+      <p>ロゴを左端、メニューを右端に配置し、縦方向は中央揃えにしてください。<br>
+      <code>justify-content: space-between</code>、<code>align-items: center</code> を使います。</p>
+      <nav class="navbar">
+        <span class="nav-logo">MyBlog</span>
+        <ul class="nav-menu">
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">記事</a></li>
+          <li><a href="#">プロフィール</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：コンテンツを上下左右中央に配置</h2>
+      <p>グレーのエリアの中央（上下左右）にカードを配置してください。<br>
+      <code>justify-content: center</code>、<code>align-items: center</code> を使います。</p>
+      <div class="center-stage">
+        <div class="center-card">中央に配置する</div>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 3：カードを横並びにして均等に並べる</h2>
+      <p>3枚のカードを横並びにし、<strong>gap: 16px</strong> で間隔を開けてください。</p>
+      <div class="card-row">
+        <div class="feat-card">機能 1<br><small>説明テキスト</small></div>
+        <div class="feat-card">機能 2<br><small>説明テキスト</small></div>
+        <div class="feat-card">機能 3<br><small>説明テキスト</small></div>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 4：縦方向に並べる</h2>
+      <p>アイテムを縦方向（column）に並べ、<strong>gap: 8px</strong> で間隔を開けてください。</p>
+      <div class="vert-list">
+        <div class="vert-item">項目 1</div>
+        <div class="vert-item">項目 2</div>
+        <div class="vert-item">項目 3</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #16213e; color: #fff; padding: 20px 32px; }
+.page-header a { color: #a8d8ea; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.task h2 { margin: 0 0 8px; font-size: 18px; color: #16213e; }
+.task p { margin: 0 0 16px; font-size: 14px; }
+
+/* ===== TODO: 各スタイルを設定してください ===== */
+
+/* 問題1: カードの内側の余白 */
+.card {
+  border: 2px solid #0f3460;
+  border-radius: 6px;
+  max-width: 300px;
+  /* TODO: padding を 上下16px 左右20px に */
+}
+.card h3 { margin: 0 0 8px; }
+.card p { margin: 0; }
+
+/* 問題2: ボックス間の外側の余白 */
+.item {
+  background: #0f3460;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.item-spacing {
+  /* TODO: margin-bottom を 16px に */
+}
+
+/* 問題3: ボタンのパディング */
+.btn {
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  /* TODO: padding を 上下12px 左右24px に */
+}
+
+/* 問題4: コンテンツ中央配置 */
+.content-box {
+  background: #e8f4f8;
+  border-radius: 6px;
+  max-width: 500px;
+  /* TODO: margin を auto（左右中央寄せ）に */
+  /* TODO: padding を 24px に */
+}

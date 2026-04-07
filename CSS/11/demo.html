@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. 見た目・背景 デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>6. 見た目・背景</h1>
+    <p>background / border / border-radius / box-shadow / opacity / cursor</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>background-color / background-image</h2>
+      <div class="demo-row">
+        <div class="box bg-color">background-color: #4361ee</div>
+        <div class="box bg-gradient">background: linear-gradient(...)</div>
+        <div class="box bg-image">background-image: url(...)</div>
+      </div>
+      <pre class="code">.box { background-color: #4361ee; }
+.gradient { background: linear-gradient(135deg, #667eea, #764ba2); }
+.image { background-image: url('image.jpg'); background-size: cover; }</pre>
+    </section>
+
+    <section>
+      <h2>border / border-radius（角丸）</h2>
+      <div class="demo-row">
+        <div class="box border-basic">border: 2px solid</div>
+        <div class="box border-dashed">border: dashed</div>
+        <div class="box border-radius-sm">border-radius: 4px</div>
+        <div class="box border-radius-lg">border-radius: 16px</div>
+        <div class="box border-radius-full">border-radius: 50%</div>
+      </div>
+      <pre class="code">.box    { border: 2px solid #4361ee; }
+.rounded { border-radius: 8px; }
+.pill    { border-radius: 9999px; }
+.circle  { border-radius: 50%; }</pre>
+    </section>
+
+    <section>
+      <h2>box-shadow</h2>
+      <div class="demo-row">
+        <div class="box shadow-sm">影: 小</div>
+        <div class="box shadow-md">影: 中</div>
+        <div class="box shadow-lg">影: 大</div>
+        <div class="box shadow-colored">カラー影</div>
+      </div>
+      <pre class="code">.sm { box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.md { box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+.lg { box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.colored { box-shadow: 0 4px 20px rgba(67,97,238,.4); }</pre>
+    </section>
+
+    <section>
+      <h2>opacity（透明度）</h2>
+      <div class="demo-row">
+        <div class="box opacity-100">opacity: 1.0</div>
+        <div class="box opacity-75">opacity: 0.75</div>
+        <div class="box opacity-50">opacity: 0.5</div>
+        <div class="box opacity-25">opacity: 0.25</div>
+      </div>
+      <pre class="code">.full    { opacity: 1; }
+.medium  { opacity: 0.5; }
+.faded   { opacity: 0.25; }</pre>
+    </section>
+
+    <section>
+      <h2>cursor（マウスカーソル）</h2>
+      <div class="demo-row">
+        <div class="box cursor-pointer">cursor: pointer<br><small>ボタン・リンクに</small></div>
+        <div class="box cursor-default">cursor: default<br><small>通常</small></div>
+        <div class="box cursor-not-allowed">cursor: not-allowed<br><small>無効状態</small></div>
+        <div class="box cursor-grab">cursor: grab<br><small>ドラッグ可能</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>組み合わせ — カードコンポーネント</h2>
+      <p class="note">上記のプロパティを組み合わせてカードを作ります。</p>
+      <div class="card-demo">
+        <div class="demo-card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">カードタイトル</h3>
+            <p class="card-desc">ここにカードの説明文が入ります。複数行のテキストも自然に流れます。</p>
+            <button class="card-btn">詳しく見る</button>
+          </div>
+        </div>
+      </div>
+      <pre class="code">.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+.card-btn {
+  cursor: pointer;
+  border-radius: 8px;
+}</pre>
+    </section>
+  </main>
+</body>
+</html>

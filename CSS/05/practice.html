@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2-2. position 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 2-2. position</h1>
+    <p>practice.css の TODO を埋めてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：カード右上にバッジを配置</h2>
+      <p>カードの<strong>右上に「NEW」バッジ</strong>を配置してください。<br>
+      カード側に <code>position: relative</code>、バッジ側に <code>position: absolute</code> と <code>top</code>/<code>right</code> を設定します。</p>
+      <div class="card">
+        <span class="badge">NEW</span>
+        <h3>商品タイトル</h3>
+        <p>商品の説明文がここに入ります。</p>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：固定ヘッダーを作る</h2>
+      <p>ヘッダーを画面上部に固定してください。<br>
+      スクロールしても追いかけてくるようにします（<code>position: fixed</code>）。</p>
+      <div class="fixed-header">固定ヘッダー（スクロールしても動かない）</div>
+      <div class="scroll-content">
+        <p>スクロールしてみてください。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 3：relative で要素をずらす</h2>
+      <p>真ん中のボックスを<strong>下に 20px、右に 20px</strong> ずらしてください（<code>position: relative</code> を使う）。</p>
+      <div class="row">
+        <div class="sq">A</div>
+        <div class="sq sq-shift">B（ずらす）</div>
+        <div class="sq">C</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-2. max-height / overflow デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>5-2. max-height / overflow</h1>
+    <p>コンテンツがボックスからはみ出したときの表示方法を指定します。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>overflow: visible（デフォルト）</h2>
+      <p class="note">はみ出したコンテンツがそのまま表示されます。</p>
+      <div class="demo-area">
+        <div class="box overflow-visible">
+          <p>テキストが長くてもはみ出して表示されます。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <pre class="code">.box { height: 80px; overflow: visible; } /* デフォルト */</pre>
+    </section>
+
+    <section>
+      <h2>overflow: hidden</h2>
+      <p class="note">はみ出した部分が非表示になります。テキストの切り捨てなどに使います。</p>
+      <div class="demo-area">
+        <div class="box overflow-hidden">
+          <p>テキストが長いとここで切れます。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <pre class="code">.box { height: 80px; overflow: hidden; }</pre>
+    </section>
+
+    <section>
+      <h2>overflow: scroll</h2>
+      <p class="note">常にスクロールバーが表示されます（コンテンツに関わらず）。</p>
+      <div class="demo-area">
+        <div class="box overflow-scroll">
+          <p>スクロールして続きを読めます。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <pre class="code">.box { height: 80px; overflow: scroll; }</pre>
+    </section>
+
+    <section>
+      <h2>overflow: auto</h2>
+      <p class="note">必要なときだけスクロールバーが表示されます（scroll の推奨版）。</p>
+      <div class="demo-area">
+        <div class="box overflow-auto">
+          <p>必要なときだけスクロールバーが出ます。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <pre class="code">.box { height: 80px; overflow: auto; } /* おすすめ */</pre>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-1. max-width / min-width 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 5-1. max-width / min-width</h1>
+    <p>practice.css の TODO を埋めてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：コンテンツエリアの最大幅を制限する</h2>
+      <p>コンテンツエリアを <strong>max-width: 720px</strong> に設定し、<strong>中央寄せ（margin: 0 auto）</strong> にしてください。</p>
+      <div class="content-area">
+        <p>これはコンテンツエリアです。ブラウザを広げても720pxを超えないようにしてください。</p>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：ボタンの最小幅を設定する</h2>
+      <p>ボタンのラベルが短くても一定の幅を保つよう、<strong>min-width: 120px</strong> を設定してください。</p>
+      <div class="btn-row">
+        <button class="min-btn">OK</button>
+        <button class="min-btn">キャンセル</button>
+        <button class="min-btn">送信する</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 3：カードグリッドのレスポンシブ化</h2>
+      <p>各カードに <strong>min-width: 200px</strong> と <strong>max-width: 320px</strong> を設定して、<br>
+      ブラウザ幅に応じて適切に並ぶようにしてください。</p>
+      <div class="resp-grid">
+        <div class="resp-card">カード A</div>
+        <div class="resp-card">カード B</div>
+        <div class="resp-card">カード C</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

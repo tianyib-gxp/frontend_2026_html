@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1-2. margin / padding デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>1-2. margin / padding</h1>
+    <p>margin は要素の「外側」、padding は要素の「内側」の余白です。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>margin — 要素の外側の余白</h2>
+      <p class="note">ボックスと周囲の要素との間隔を作ります。背景色は margin には適用されません。</p>
+      <div class="demo-area">
+        <div class="box margin-demo">margin: 24px</div>
+        <div class="box margin-demo">margin: 24px</div>
+        <div class="box margin-demo">margin: 24px</div>
+      </div>
+      <pre class="code">.box { margin: 24px; }</pre>
+    </section>
+
+    <section>
+      <h2>padding — 要素の内側の余白</h2>
+      <p class="note">ボックスの中身（テキストなど）とボーダーの間に余白を作ります。背景色は padding にも適用されます。</p>
+      <div class="demo-area">
+        <div class="box padding-demo">padding: 24px<br>テキストとボーダーの間の余白</div>
+      </div>
+      <pre class="code">.box { padding: 24px; }</pre>
+    </section>
+
+    <section>
+      <h2>margin vs padding — 視覚的な比較</h2>
+      <div class="compare-area">
+        <div>
+          <p class="label">margin のみ（外側の余白）</p>
+          <div class="wrapper">
+            <div class="box compare-margin">テキスト</div>
+          </div>
+        </div>
+        <div>
+          <p class="label">padding のみ（内側の余白）</p>
+          <div class="wrapper">
+            <div class="box compare-padding">テキスト</div>
+          </div>
+        </div>
+        <div>
+          <p class="label">margin ＋ padding 両方</p>
+          <div class="wrapper">
+            <div class="box compare-both">テキスト</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>box-sizing: border-box（推奨）</h2>
+      <p class="note">padding を加えても要素の width が変わらないようにします。</p>
+      <div class="compare-area">
+        <div>
+          <p class="label">box-sizing: content-box（デフォルト）<br><small>width: 200px + padding: 20px → 実際の幅 = 240px</small></p>
+          <div class="box content-box-demo">幅が広がる！</div>
+        </div>
+        <div>
+          <p class="label">box-sizing: border-box（推奨）<br><small>width: 200px + padding: 20px → 実際の幅 = 200px のまま</small></p>
+          <div class="box border-box-demo">幅が保たれる</div>
+        </div>
+      </div>
+      <pre class="code">/* ページ全体に適用するおまじない */
+* { box-sizing: border-box; }</pre>
+    </section>
+  </main>
+</body>
+</html>

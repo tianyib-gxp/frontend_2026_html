@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.page-header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 20px 32px;
+}
+.page-header a { color: #a8d8ea; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+
+section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+section h2 { margin: 0 0 8px; font-size: 18px; color: #1a1a2e; }
+
+.note { margin: 0 0 16px; font-size: 14px; color: #666; }
+
+.demo-area { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; background: #eef2ff; padding: 16px; border-radius: 4px; }
+.demo-area--column { flex-direction: column; }
+
+.box {
+  background: #4361ee;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.px-200 { width: 200px; height: 80px; }
+.px-350 { width: 350px; height: 80px; background: #3a0ca3; }
+.px-100.tall { width: 100px; height: 150px; background: #7209b7; }
+.pct-100 { width: 100%; height: 40px; }
+.pct-75  { width: 75%;  height: 40px; background: #3a0ca3; }
+.pct-50  { width: 50%;  height: 40px; background: #7209b7; }
+.pct-25  { width: 25%;  height: 40px; background: #f72585; }
+
+.compare-area { display: flex; gap: 24px; flex-wrap: wrap; }
+.compare-item { flex: 1; min-width: 200px; }
+.label { margin: 0 0 8px; font-size: 14px; font-weight: bold; }
+.box-fixed { width: 200px; height: 50px; background: #f72585; border-radius: 4px; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.box-fluid { width: 50%; height: 50px; background: #4cc9f0; border-radius: 4px; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+
+pre.code { background: #1e1e2e; color: #cdd6f4; padding: 16px; border-radius: 4px; font-size: 13px; margin-top: 16px; overflow-x: auto; line-height: 1.6; }

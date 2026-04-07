@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #023e8a; color: #fff; padding: 20px 32px; }
+.page-header a { color: #90e0ef; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+section h2 { margin: 0 0 16px; font-size: 18px; color: #023e8a; }
+
+.demo-area { background: #caf0f8; padding: 16px; border-radius: 4px; }
+.demo-area p { margin: 0 0 12px; }
+.demo-area p:last-child { margin-bottom: 0; }
+
+/* font-size */
+.fs-12 { font-size: 12px; }
+.fs-16 { font-size: 16px; }
+.fs-24 { font-size: 24px; }
+.fs-36 { font-size: 36px; }
+
+/* font-weight */
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-700 { font-weight: 700; }
+.fw-900 { font-weight: 900; }
+
+/* font-family */
+.ff-sans  { font-family: sans-serif; }
+.ff-serif { font-family: serif; }
+.ff-mono  { font-family: monospace; }
+
+/* color */
+.color-name    { color: tomato; }
+.color-hex     { color: #1d3557; font-weight: bold; }
+.color-rgb     { color: rgb(76, 201, 240); font-weight: bold; }
+.color-inherit { color: inherit; }
+
+/* text-align */
+.align-left   { text-align: left;   background: #ade8f4; padding: 8px; border-radius: 4px; }
+.align-center { text-align: center; background: #48cae4; padding: 8px; border-radius: 4px; color: #fff; }
+.align-right  { text-align: right;  background: #0096c7; padding: 8px; border-radius: 4px; color: #fff; }

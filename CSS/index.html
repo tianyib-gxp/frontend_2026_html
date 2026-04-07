@@ -1,14 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Practice Index</title>
+  <title>CSS 学習教材</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+    header { background: #1a1a2e; color: #fff; padding: 32px; }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; opacity: 0.8; font-size: 15px; }
+    main { padding: 32px; max-width: 900px; }
+    h2 { font-size: 20px; color: #1a1a2e; margin: 32px 0 16px; border-left: 4px solid #4361ee; padding-left: 12px; }
+    h2:first-of-type { margin-top: 0; }
+    .section-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 8px; }
+    .section-card { background: #fff; border-radius: 8px; padding: 16px 20px; box-shadow: 0 2px 8px rgba(0,0,0,.08); display: flex; align-items: center; justify-content: space-between; }
+    .section-card-info h3 { margin: 0 0 4px; font-size: 15px; }
+    .section-card-info p { margin: 0; font-size: 13px; color: #666; }
+    .section-card-links { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn-demo, .btn-practice { display: inline-block; padding: 6px 14px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: bold; }
+    .btn-demo     { background: #4361ee; color: #fff; }
+    .btn-practice { background: #f5f5f5; color: #333; border: 1px solid #ccc; }
+  </style>
 </head>
 <body>
-  <h1>CSS Practice Index</h1>
-  <ul>
-    <li><a href="./01/01.html">Practice 01</a></li>
-  </ul>
+  <header>
+    <h1>CSS 学習教材</h1>
+    <p>各セクションのデモで概念を確認し、練習問題で手を動かしましょう。</p>
+  </header>
+
+  <main>
+    <h2>1. 大きさの変え方</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>1-1. width / height</h3>
+          <p>px と % の違い、固定サイズと可変サイズ</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./01/demo.html" class="btn-demo">デモ</a>
+          <a href="./01/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>1-2. margin / padding</h3>
+          <p>外側の余白・内側の余白・box-sizing</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./02/demo.html" class="btn-demo">デモ</a>
+          <a href="./02/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>2. セレクター</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>2. セレクター（id / class / タグ）</h3>
+          <p>タグ・クラス・id の指定方法、子孫セレクター、複数クラスの組み合わせ</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./03/demo.html" class="btn-demo">デモ</a>
+          <a href="./03/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>3. 配置・レイアウト</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>3-1. display</h3>
+          <p>block / inline / inline-block の違い</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./04/demo.html" class="btn-demo">デモ</a>
+          <a href="./04/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>3-2. position</h3>
+          <p>static / relative / absolute / fixed</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./05/demo.html" class="btn-demo">デモ</a>
+          <a href="./05/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>3-3. z-index</h3>
+          <p>重なり順の制御</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./06/demo.html" class="btn-demo">デモ</a>
+          <a href="./06/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>4. テキスト</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>4. テキストスタイル</h3>
+          <p>font-size / font-weight / font-family / color / text-align</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./07/demo.html" class="btn-demo">デモ</a>
+          <a href="./07/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>5. Flexbox</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>5. Flexbox</h3>
+          <p>flex-direction / justify-content / align-items / gap（インタラクティブデモ付き）</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./08/demo.html" class="btn-demo">デモ</a>
+          <a href="./08/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>6. サイズ調整</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>6-1. max-width / min-width</h3>
+          <p>レスポンシブの基本的な考え方</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./09/demo.html" class="btn-demo">デモ</a>
+          <a href="./09/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>6-2. max-height / overflow</h3>
+          <p>overflow: hidden / scroll / auto の違い</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./10/demo.html" class="btn-demo">デモ</a>
+          <a href="./10/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>7. 見た目・背景</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>7. 見た目・背景</h3>
+          <p>background / border / border-radius / box-shadow / opacity / cursor</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./11/demo.html" class="btn-demo">デモ</a>
+          <a href="./11/practice.html" class="btn-practice">練習</a>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
