@@ -3,38 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript研修</title>
+    <title>JavaScript Day2</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
+
   <body>
-    <div class="container">
-      <button class="back-button" onclick="goBack()">← 戻る</button>
-      <h1>JavaScript 研修</h1>
+    <header>
+      <h1>JavaScript 学習教材</h1>
+      <p>
+        HTMLとCSSの基礎を学んだ後は、いよいよJavaScriptでWebページに動きを加えていきましょう。
+      </p>
+    </header>
 
-      <section class="card">
-        <h2>コース</h2>
-        <ul class="menu">
-          <li>
-            <a href="./01/01.html">01 ...</a>
-          </li>
-          <li>
-            <a href="./day_2/index.html">Day2</a>
-          </li>
-        </ul>
-      </section>
+    <main>
+      <!-- 1. Day1 -->
+      <h2>1. Day1</h2>
+      <div class="section-group">
+        <div class="section-card">
+          <div class="section-card-info">
+              <h3>JavaScriptの基礎とデータ操作</h3>
+              <p>変数・演算子・文字列・配列・条件文など、JavaScriptの基本的なデータ操作と構文を学びます。</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./01/01.html" class="btn-demo">レッスン</a>
+          </div>
+        </div>
+      </div>
 
-      <section class="card">
-        <h2>解答</h2>
-        <ul class="menu">
-          <li>
-            <a href="./solutions/index.html"
-              >解答一覧（※まずは自分で考えましょう）</a
-            >
-          </li>
-        </ul>
-      </section>
-    </div>
+      <!-- 2. Day2 -->
+      <h2>2. Day2</h2>
+      <div class="section-group">
+        <div class="section-card">
+          <div class="section-card-info">
+              <h3>ループ・関数・オブジェクト・非同期処理</h3>
+              <p>ループや関数、オブジェクト、非同期処理（Promise/JSON）など、実践的なJavaScriptの使い方を習得します。</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./day_2/index.html" class="btn-demo">レッスン</a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <script src="./index.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
