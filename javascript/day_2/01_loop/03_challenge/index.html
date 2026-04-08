@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../../../index.css" />
   </head>
   <body>
-    <button class="back-button" onclick="goBack()">← 戻る</button>
+    <header class="page-header">
+      <a href="../index.html">← 一覧へ</a>
+      <h1>1-3. ループ チャレンジ</h1>
+      <p>for文を使って、FizzBuzz問題にチャレンジしましょう。</p>
+    </header>
 
-    <div class="container">
-      <h1>ループ チャレンジ</h1>
-
+    <main>
       <section class="card">
         <h2>やってほしいこと</h2>
         <ol>
@@ -30,10 +32,12 @@
 
       <section class="card result">
         <h2>結果</h2>
-        <button onclick="runLoop()">実行</button>
-        <ul id="list"></ul>
+        <div class="demo-area">
+          <button onclick="runLoop()">実行</button>
+          <ul id="list"></ul>
+        </div>
       </section>
-    </div>
+    </main>
 
     <script src="../../../index.js"></script>
     <script src="./script.js"></script>
