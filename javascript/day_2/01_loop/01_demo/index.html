@@ -3,40 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ループ（for文）の導入</title>
+    <title>ループ（for文）デモ</title>
     <link rel="stylesheet" href="../../../index.css" />
   </head>
   <body>
     <header class="page-header">
-      <a href="../../index.html">← 一覧へ</a>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
       <h1>1-1. ループ（for文）デモ</h1>
       <p>for文を使って、1から5までの数字を順番に表示する仕組みを体験しましょう。</p>
     </header>
 
     <main>
-      <!-- 1. Loop -->
-      <h2>for文の基本</h2>
-      <div class="section-group">
-        <div class="section-card">
-          <div class="section-card-info">
-            <p>for文は、決まった回数だけ同じ処理を繰り返したいときに使います。<br>下の「実行」ボタンを押すと、1から5までの数字が順番に表示されます。</p>
-            <div class="demo-area">
-              <a class="btn-demo" onclick="runLoop()">実行</a>
-              <ul id="list"></ul>
-            </div>
-            <div class="code-heading">for文のサンプルコード</div>
-            <pre class="code">for (let i = 1; i <= 5; i++) {
-  // 繰り返し処理
-}
-            </pre>
-          </div>
+      <section>
+        <h2>for文の基本</h2>
+        <p class="note">for文は、決まった回数だけ同じ処理を繰り返したいときに使います。<br>下の「実行」ボタンを押すと、1から5までの数字が順番に表示されます。</p>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runLoop()">実行</a>
+          <ul id="list"></ul>
         </div>
-      </div>
-      <h2>他のループとの比較</h2>
-      <div class="section-group">
-        <div class="section-card">
-          <div class="section-card-info">
-            <table class="summary-table">
+        <div class="code-heading">for文のサンプルコード</div>
+        <pre class="code-block"><code>for (let i = 1; i <= 5; i++) {
+  // 繰り返し処理
+}</code></pre>
+      </section>
+      <section>
+        <h2>他のループとの比較</h2>
+        <table class="summary-table">
           <thead>
             <tr><th>種類</th><th>構文例</th><th>特徴</th></tr>
           </thead>
@@ -46,9 +38,7 @@
             <tr><td>do...while</td><td><code>do { ... } while (条件)</code></td><td>最低1回は必ず実行される</td></tr>
           </tbody>
         </table>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
     <script src="./script.js"></script>
     <script src="../../../index.js"></script>
