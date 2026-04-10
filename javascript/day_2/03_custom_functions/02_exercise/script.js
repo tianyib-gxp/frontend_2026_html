@@ -5,20 +5,18 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-function showMessage(text) {
-  /**
-   * ============================
-   * ここにコードを書いてください
-   *
-   * text を表示する
-   * ============================
-   */
-}
+/**
+ * =====================================
+ * ここに関数を書いてください
+ *
+ * showMessage(text, type)
+ * =====================================
+ */
 
 function run() {
   const list = document.getElementById("list");
   list.innerHTML = "";
 
-  showMessage("こんにちは！");
-  showMessage("Good job!");
+  showMessage("保存できました", "success");
+  showMessage("エラーが発生しました", "error");
 }

@@ -5,15 +5,16 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-function showMessage() {
+function celsiusToFahrenheit(celsius) {
+  return celsius * 9 / 5 + 32;
+}
+
+function runDemo() {
   const list = document.getElementById("list");
   list.innerHTML = "";
-
-  /**
-   * ============================
-   * ここにコードを書いてください
-   *
-   * 「メッセージです」と表示
-   * ============================
-   */
+  const temps = [0, 20, 37, 100];
+  for (let i = 0; i < temps.length; i++) {
+    const f = celsiusToFahrenheit(temps[i]);
+    addItem(temps[i] + "°C → " + f + "°F");
+  }
 }

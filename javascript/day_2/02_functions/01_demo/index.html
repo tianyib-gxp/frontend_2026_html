@@ -3,45 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>関数の導入</title>
+    <title>関数（Function）デモ</title>
     <link rel="stylesheet" href="../../../index.css" />
   </head>
   <body>
-    <button class="back-button" onclick="goBack()">← 戻る</button>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>2-1. 関数（Function）デモ</h1>
+      <p>関数を使って、処理をまとめて再利用できる仕組みを体験しましょう。</p>
+    </header>
 
-    <div class="container">
-      <h1>関数（Function）導入</h1>
-
-      <section class="card">
-        <h2>関数とは？</h2>
-        <p>関数とは、処理をまとめて再利用できる仕組みです。</p>
-        <p>必要なときに呼び出すことで、その処理を実行できます。</p>
+    <main>
+      <section>
+        <h2>関数の基本</h2>
+        <p class="note">関数とは、一連の処理をまとめて名前をつけたものです。<br>下の「実行」ボタンを押すと、名前のリストに挨拶が表示されます。</p>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runDemo()">実行</a>
+          <ul id="list"></ul>
+        </div>
+        <div class="code-heading">関数のサンプルコード</div>
+        <pre class="code-block"><code>function greet(name) {
+  return "こんにちは、" + name + "さん！";
+}</code></pre>
       </section>
-
-      <section class="card">
-        <h2>やってほしいこと</h2>
-        <ol>
-          <li>sayHello 関数の中にコードを書く</li>
-          <li>"Hello" と画面に表示する</li>
-          <li>ボタンを押して確認する</li>
-        </ol>
+      <section>
+        <h2>関数の書き方の比較</h2>
+        <table class="summary-table">
+          <thead>
+            <tr><th>種類</th><th>構文例</th><th>特徴</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>function宣言</td><td><code>function greet(name) { ... }</code></td><td>巻き上げ（hoisting）される</td></tr>
+            <tr><td>関数式</td><td><code>const greet = function(name) { ... }</code></td><td>変数に代入する形</td></tr>
+            <tr><td>アロー関数</td><td><code>const greet = (name) =&gt; { ... }</code></td><td>短く書けるモダンな書き方</td></tr>
+          </tbody>
+        </table>
       </section>
-
-      <section class="card">
-        <h2>ヒント</h2>
-        <ul>
-          <li>addItem("Hello") を使う</li>
-        </ul>
-      </section>
-
-      <section class="card result">
-        <h2>結果</h2>
-        <button onclick="sayHello()">実行</button>
-        <ul id="list"></ul>
-      </section>
-    </div>
-
-    <script src="../../../index.js"></script>
+    </main>
     <script src="./script.js"></script>
+    <script src="../../../index.js"></script>
   </body>
 </html>

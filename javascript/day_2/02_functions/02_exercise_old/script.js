@@ -6,14 +6,18 @@ function addItem(text) {
 }
 
 function greet(name) {
-  return "こんにちは、" + name + "さん！";
+  /**
+   * ============================
+   * ここにコードを書いてください
+   *
+   * "Hello 太郎" のように表示する
+   * ============================
+   */
 }
 
-function runDemo() {
+function run() {
   const list = document.getElementById("list");
   list.innerHTML = "";
-  const names = ["太郎", "花子", "健太"];
-  for (let i = 0; i < names.length; i++) {
-    addItem(greet(names[i]));
-  }
+
+  greet("太郎");
 }

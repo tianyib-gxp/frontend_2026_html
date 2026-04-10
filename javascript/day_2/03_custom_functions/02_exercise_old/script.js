@@ -5,19 +5,20 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-/**
- * ====================================
- * ここに関数 add を作ってください
- *
- * - 引数: a, b
- * - return: a + b
- * ====================================
- */
+function showMessage(text) {
+  /**
+   * ============================
+   * ここにコードを書いてください
+   *
+   * text を表示する
+   * ============================
+   */
+}
 
 function run() {
   const list = document.getElementById("list");
   list.innerHTML = "";
 
-  const result = add(3, 5);
-  addItem(result);
+  showMessage("こんにちは！");
+  showMessage("Good job!");
 }
