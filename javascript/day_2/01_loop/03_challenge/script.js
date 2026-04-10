@@ -1,27 +1,14 @@
-function addItem(text) {
-  const list = document.getElementById("list");
+function addPrime(text) {
+  const list = document.getElementById("prime-list");
   const li = document.createElement("li");
   li.textContent = text;
   list.appendChild(li);
 }
 
-function runLoop() {
-  const list = document.getElementById("list");
-
-  // リセット
+function runBonus() {
+  const list = document.getElementById("prime-list");
   list.innerHTML = "";
 
-  /**
-   * =========================================
-   * ここにコードを書いてください
-   *
-   * 要件:
-   * - for文を使う（1〜20）
-   * - 条件分岐を使う（if）
-   * - FizzBuzzルールに従う
-   *
-   * ヒント:
-   * - %（余り）を使う
-   * =========================================
-   */
+  // ここにfor文を使って2〜50の素数をリスト表示するコードを書いてください
+  // ヒント: for文の中にfor文（ネスト）を使う
 }
