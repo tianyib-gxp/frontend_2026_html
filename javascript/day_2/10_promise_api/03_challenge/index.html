@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise API チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>10-3. Promise API チャレンジ</h1>
+      <p>
+        <code>Promise.allSettled()</code> と <code>Promise.race()</code>
+        を使って応用問題を解きましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題 1：成功と失敗を全部収集する</h2>
+        <p>
+          5つのAPIリクエストを並行実行し、<strong>成功したもの・失敗したもの全てを表示</strong>してください。
+        </p>
+        <ol>
+          <li><code>requests</code> 配列の5つのPromiseを <code>Promise.allSettled()</code> で実行する</li>
+          <li>結果を順にループし、成功なら「✅ 成功: 値」、失敗なら「❌ 失敗: メッセージ」と表示する</li>
+          <li>最後に「成功X件 / 失敗Y件」と表示する</li>
+        </ol>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;" onclick="runSettled()">allSettled を実行</a>
+          <ul id="log-settled"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>問題 2：タイムアウト付きリクエスト</h2>
+        <p>
+          <code>Promise.race()</code> を使い、APIリクエストに<strong>タイムアウト（1秒）</strong>を設定してください。
+        </p>
+        <ol>
+          <li><code>fetchData()</code> はランダムな時間（500〜2000ms）で応答するAPIです</li>
+          <li><code>timeout(ms)</code> は指定ミリ秒後に拒否するPromiseを返します（実装してください）</li>
+          <li><code>Promise.race([fetchData(), timeout(1000)])</code> を使い、1秒以内なら成功、超えたら「タイムアウト」と表示する</li>
+        </ol>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;" onclick="runRace()">race + タイムアウトを実行</a>
+          <ul id="log-race"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

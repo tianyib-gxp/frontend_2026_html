@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プロミス チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>9-3. プロミス チャレンジ</h1>
+      <p><code>async/await</code> と <code>try/catch</code> で非同期処理を書きましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：async/await で模擬ログイン</h2>
+        <p>
+          以下の模擬API関数を組み合わせて、<strong><code>async/await</code></strong> による
+          ログインフロー全体を実装してください。
+        </p>
+        <ol>
+          <li><code>authenticate(username, password)</code>: 認証を行い、トークンを返すPromise</li>
+          <li><code>fetchProfile(token)</code>: トークンを使いプロフィールを返すPromise</li>
+          <li>非同期関数 <code>login(username, password)</code> を <code>async/await</code> で実装する</li>
+          <li><code>try/catch</code> でエラーを処理する</li>
+          <li>ユーザー名「admin」パスワード「1234」で成功、それ以外で失敗するようにする</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <div style="margin-bottom:8px;">
+            <a class="btn-demo" style="cursor:pointer;margin-right:8px;" onclick="login('admin','1234')">正しい認証情報</a>
+            <a class="btn-practice" style="cursor:pointer;" onclick="login('guest','wrong')">間違った認証情報</a>
+          </div>
+          <ul id="log"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

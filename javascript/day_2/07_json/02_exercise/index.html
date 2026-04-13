@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 練習</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>7-2. JSON 練習</h1>
+      <p>JSONを解析してデータを表示しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：商品データをJSONから表示する</h2>
+        <ol>
+          <li>下記のJSON文字列を <code>JSON.parse()</code> でオブジェクトに変換する</li>
+          <li><code>products</code> 配列をループして、各商品を「○○: ○○円（在庫:○）」の形式でリスト表示する</li>
+          <li><code>inStock</code> が <code>false</code> の場合は「（在庫なし）」と表示する</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="run()">実行</a>
+          <ul id="list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

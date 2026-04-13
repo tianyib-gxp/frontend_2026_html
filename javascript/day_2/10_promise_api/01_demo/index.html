@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise API デモ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>10-1. Promise API デモ</h1>
+      <p>4種類のPromise静的メソッドの動作を比較する</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>メソッド比較表</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>メソッド</th>
+              <th>いつ解決するか</th>
+              <th>いつ拒否するか</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Promise.all()</code></td>
+              <td>全て成功したとき</td>
+              <td>どれか1つでも失敗したとき</td>
+            </tr>
+            <tr>
+              <td><code>Promise.any()</code></td>
+              <td>どれか1つでも成功したとき</td>
+              <td>全て失敗したとき</td>
+            </tr>
+            <tr>
+              <td><code>Promise.race()</code></td>
+              <td>最初に完了したものが成功のとき</td>
+              <td>最初に完了したものが失敗のとき</td>
+            </tr>
+            <tr>
+              <td><code>Promise.allSettled()</code></td>
+              <td>全て完了したとき（失敗も含む）</td>
+              <td>拒否されない</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>① Promise.all() — 全成功待ち</h2>
+        <div class="code-block"><pre>
+Promise.all([p1, p2, p3])
+  .then(results =&gt; console.log(results))
+  .catch(err =&gt; console.error(err));</pre></div>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;margin-right:8px;" onclick="demoAll(false)">全て成功</a>
+          <a class="btn-practice" style="cursor:pointer;" onclick="demoAll(true)">1つ失敗</a>
+          <ul id="log-all"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>② Promise.any() — 最初の成功待ち</h2>
+        <div class="code-block"><pre>
+Promise.any([p1, p2, p3])
+  .then(first =&gt; console.log(first))
+  .catch(err =&gt; console.error(err)); // AggregateError</pre></div>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;margin-right:8px;" onclick="demoAny(false)">1つ成功</a>
+          <a class="btn-practice" style="cursor:pointer;" onclick="demoAny(true)">全て失敗</a>
+          <ul id="log-any"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>③ Promise.race() — 最速優先</h2>
+        <div class="code-block"><pre>
+Promise.race([fast, slow])
+  .then(winner =&gt; console.log("勝者:", winner));</pre></div>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;" onclick="demoRace()">実行</a>
+          <ul id="log-race"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>④ Promise.allSettled() — 全結果収集</h2>
+        <div class="code-block"><pre>
+Promise.allSettled([p1, p2, p3]).then(results =&gt; {
+  results.forEach(r =&gt; {
+    if (r.status === "fulfilled") console.log("成功:", r.value);
+    else console.log("失敗:", r.reason);
+  });
+});</pre></div>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;" onclick="demoAllSettled()">実行</a>
+          <ul id="log-settled"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

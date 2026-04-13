@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>7-3. JSON チャレンジ</h1>
+      <p>JSONデータからカードUIを動的に生成しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：社員ディレクトリ</h2>
+        <ol>
+          <li>下記のJSON文字列を解析する</li>
+          <li>各社員について <code>&lt;div class="employee-card"&gt;</code> を動的に生成する</li>
+          <li>カードに名前・部署・スキルリストを表示する</li>
+          <li>最後に、全社員のスキルを集めた重複なし一覧を <code>JSON.stringify()</code> で出力する</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runChallenge()">実行</a>
+          <div id="cards"></div>
+          <p id="allSkills" style="margin-top:16px;font-size:13px;color:#555;"></p>
+        </div>
+      </section>
+    </main>
+
+    <style>
+      .employee-card {
+        background: #f0f4ff;
+        border: 1px solid #4361ee;
+        border-radius: 6px;
+        padding: 12px 16px;
+        margin-bottom: 10px;
+      }
+      .employee-card h3 { margin: 0 0 4px; font-size: 15px; color: #1a1a2e; }
+      .employee-card p  { margin: 0 0 4px; font-size: 13px; color: #555; }
+    </style>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

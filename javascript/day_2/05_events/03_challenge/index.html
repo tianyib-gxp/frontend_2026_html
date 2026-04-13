@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>イベント チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>5-3. イベント チャレンジ</h1>
+      <p>イベントの応用 — フォームバリデーションを実装しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：フォームバリデーション</h2>
+        <ol>
+          <li>フォームの <code>submit</code> イベントを検知する</li>
+          <li>名前・メールが空の場合は <code>e.preventDefault()</code> で送信を止める</li>
+          <li>空のフィールドがある場合は <code>id="error"</code> にエラーメッセージを表示する</li>
+          <li>すべて入力されている場合は「送信成功！」を表示する</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <form id="myForm">
+            <div style="margin-bottom:8px;">
+              <label>名前: <input type="text" id="nameInput" /></label>
+            </div>
+            <div style="margin-bottom:8px;">
+              <label>メール: <input type="text" id="emailInput" /></label>
+            </div>
+            <button class="btn-demo" type="submit" style="border:none">送信</button>
+          </form>
+          <p id="error" style="color:red;margin-top:8px;"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

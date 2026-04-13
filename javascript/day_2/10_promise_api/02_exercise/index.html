@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise API 練習</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>10-2. Promise API 練習</h1>
+      <p><code>Promise.all()</code> で複数の非同期処理を並行実行しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題</h2>
+        <p>
+          3つのAPIから並行してデータを取得し、<strong>全て揃ってから</strong>画面に表示してください。
+        </p>
+        <ol>
+          <li>
+            <code>fetchName()</code>・<code>fetchAge()</code>・<code>fetchCity()</code>
+            は既に用意されています（変更不要）
+          </li>
+          <li>
+            <code>Promise.all()</code> を使って3つを並行実行してください
+          </li>
+          <li>
+            全て完了したら <code>addItem()</code> で「名前」「年齢」「都市」を表示してください
+          </li>
+          <li>エラーが起きた場合は <code>addItem("エラー: " + err.message)</code> と表示してください</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;" onclick="runAll()">並行取得を実行</a>
+          <ul id="result-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

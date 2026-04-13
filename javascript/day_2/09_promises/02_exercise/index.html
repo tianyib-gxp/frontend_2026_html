@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プロミス 練習</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>9-2. プロミス 練習</h1>
+      <p>Promise チェーンを自分で書いてみましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：模擬APIリクエストのPromiseチェーン</h2>
+        <ol>
+          <li>関数 <code>mockFetch(url)</code> はすでに用意されています（800ms後にデータを返す Promise）</li>
+          <li><code>mockFetch()</code> を呼んでプロミスチェーンを作る:
+            <ul>
+              <li>最初の <code>.then()</code>: レスポンスのステータスが "ok" でなければエラーを throw し、そうでなければ <code>data</code> を返す</li>
+              <li>2つ目の <code>.then()</code>: 受け取ったデータを使い「取得成功: ○○件」と <code>addLog</code> で表示する</li>
+              <li><code>.catch()</code>: エラーを「エラー発生: ○○」と表示する</li>
+            </ul>
+          </li>
+          <li>「成功URL」ボタンと「エラーURL」ボタンでそれぞれ動作を確認する</li>
+        </ol>
+        <hr>
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor:pointer;margin-right:8px;" onclick="run('/api/items')">成功URLで実行</a>
+          <a class="btn-practice" style="cursor:pointer;" onclick="run('/api/error')">エラーURLで実行</a>
+          <ul id="log"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
