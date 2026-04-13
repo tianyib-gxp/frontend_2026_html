@@ -1,25 +1,29 @@
-function addItem(text) {
-  const list = document.getElementById("list");
+function addPrime(text) {
+  const list = document.getElementById("prime-list");
   const li = document.createElement("li");
   li.textContent = text;
   list.appendChild(li);
 }
 
-function runLoop() {
-  const list = document.getElementById("list");
-
-  // リセット
+function runBonus() {
+  const list = document.getElementById("prime-list");
   list.innerHTML = "";
 
-  for (let i = 1; i <= 20; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      addItem("FizzBuzz");
-    } else if (i % 3 === 0) {
-      addItem("Fizz");
-    } else if (i % 5 === 0) {
-      addItem("Buzz");
-    } else {
-      addItem(i);
+  // 外側ループ: 2〜50の各数字を候補にする
+  for (let i = 2; i <= 50; i++) {
+    let isPrime = true;
+
+    // 内側ループ: 2〜(i-1)で割り切れるか確認
+    // 割り切れたら素数ではない
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break; // 一度割り切れたら内側ループを抜ける
+      }
+    }
+
+    if (isPrime) {
+      addPrime(i);
     }
   }
 }

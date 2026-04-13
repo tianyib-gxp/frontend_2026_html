@@ -7,10 +7,7 @@ function addItem(text) {
 
 function runLoop() {
   const list = document.getElementById("list");
-
-  // リセット
   list.innerHTML = "";
-
   for (let i = 1; i <= 5; i++) {
     addItem(i);
   }

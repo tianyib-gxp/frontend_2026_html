@@ -5,10 +5,15 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-function sayHello() {
+function greet(name) {
+  return "こんにちは、" + name + "さん！";
+}
+
+function runDemo() {
   const list = document.getElementById("list");
   list.innerHTML = "";
-
-  // 解答
-  addItem("Hello");
+  const names = ["太郎", "花子", "健太"];
+  for (let i = 0; i < names.length; i++) {
+    addItem(greet(names[i]));
+  }
 }

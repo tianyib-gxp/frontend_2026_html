@@ -5,14 +5,15 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-function greet(name) {
-  // 解答
-  addItem("Hello " + name);
+// 2つの数値を受け取り、その合計を返す
+function add(a, b) {
+  return a + b;
 }
 
 function run() {
   const list = document.getElementById("list");
   list.innerHTML = "";
 
-  greet("太郎");
+  const result = add(3, 5);
+  addItem(result);
 }
