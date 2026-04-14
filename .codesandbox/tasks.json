@@ -1,13 +1,13 @@
 {
   "setupTasks": [
     {
-      "name": "install",
+      "name": "install dependencies",
       "command": "npm install"
     }
   ],
   "tasks": {
     "run": {
-      "name": "Vite Dev Server",
+      "name": "server start",
       "command": "npm start",
       "runAtStart": true,
       "preview": {
