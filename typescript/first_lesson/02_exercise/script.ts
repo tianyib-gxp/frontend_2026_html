@@ -6,7 +6,7 @@ const generateMessage = (name: string): string => {
   if (name.trim() === '') {
     return 'Veuillez entrer un nom valide.';
   }
-  return `Félicitations, ${name} ! Votre environnement TypeScript fonctionne.`;
+  return `おめでとうございます、 ${name} ! TypeScriptを使えます！`;
 };
 
 button.addEventListener('click', () => {
@@ -18,7 +18,3 @@ button.addEventListener('click', () => {
     resultDisplay.style.fontWeight = 'bold';
   }
 });
-
-// TEST POUR TON COLLÈGUE :
-// Si tu enlèves les ":" ou si tu essaies de passer un nombre à generateMessage(),
-// ESLint et TypeScript devraient souligner l'erreur en rouge pour vous deux.
