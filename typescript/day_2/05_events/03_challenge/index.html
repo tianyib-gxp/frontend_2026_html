@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>イベント チャレンジ（TypeScript）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>5-3. イベント チャレンジ</h1>
+      <p>
+        イベントと型を組み合わせて、フォームの入力チェックを実装しましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：フォームバリデーション（復習）</h2>
+        <ol>
+          <li>フォームの submit イベントを取得する</li>
+          <li>入力欄（名前・メール）を取得する</li>
+          <li>どちらかが空の場合は送信を止める</li>
+          <li>エラーメッセージを表示する</li>
+          <li>すべてのDOM・変数に型を付ける</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <form id="myForm">
+            <div style="margin-bottom: 8px">
+              <label>名前: <input type="text" id="nameInput" /></label>
+            </div>
+            <div style="margin-bottom: 8px">
+              <label>メール: <input type="text" id="emailInput" /></label>
+            </div>
+            <button class="btn-demo" type="submit" style="border: none">
+              送信
+            </button>
+          </form>
+          <p id="error" style="color: red; margin-top: 8px"></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+const form = document.getElementById("myForm");
+
+// TypeScript
+const form = document.getElementById("myForm") as HTMLFormElement;
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、フォームや入力欄にも型を付けます。<br />
+          また、イベントの引数（e）にも型があるため、安全に扱うことができます。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント（復習）</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>フォームの型</td>
+              <td><code>as HTMLFormElement</code></td>
+              <td>form要素として扱う</td>
+            </tr>
+            <tr>
+              <td>inputの型</td>
+              <td><code>as HTMLInputElement</code></td>
+              <td>valueを安全に取得する</td>
+            </tr>
+            <tr>
+              <td>イベントの型</td>
+              <td><code>(e: Event)</code></td>
+              <td>イベントオブジェクトの型</td>
+            </tr>
+            <tr>
+              <td>null対策</td>
+              <td><code>as HTML...</code></td>
+              <td>要素取得時の安全性</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script type="module" src="./script.ts"></script>
+  </body>
+</html>

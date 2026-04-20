@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>非同期 チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>8-3. 非同期 チャレンジ</h1>
+      <p>TypeScriptでコールバックを連鎖させて処理をつなげましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：模擬データパイプライン</h2>
+        <ol>
+          <li>3つの非同期関数を作る</li>
+          <li>引数・戻り値・コールバックに型を付ける</li>
+          <li>コールバックで順番に処理をつなぐ</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runChallenge()">実行</a>
+          <ul id="log"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+function fetchUser(id, callback) { ... }
+
+// TypeScript
+function fetchUser(
+  id: number,
+  callback: (user: User) => void
+): void { ... }
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、コールバックで受け渡すデータの型も定義します。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>オブジェクト型</td>
+              <td><code>type User = { id: number; name: string }</code></td>
+              <td>データ構造を定義する</td>
+            </tr>
+            <tr>
+              <td>関数型</td>
+              <td><code>(user: User) =&gt; void</code></td>
+              <td>コールバックの型</td>
+            </tr>
+            <tr>
+              <td>非同期処理</td>
+              <td><code>setTimeout</code></td>
+              <td>時間差で処理を実行する</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script type="module" src="./script.ts"></script>
+  </body>
+</html>
