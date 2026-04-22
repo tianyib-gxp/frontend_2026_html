@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列 デモ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>6-1. 配列 デモ（解答）</h1>
+      <p>配列の作成・操作・繰り返し・変換メソッドを学びましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>配列の基本</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showBasics()">基本操作を確認</a>
+          <ul id="basics-list"></ul>
+        </div>
+        <div class="code-heading">配列の作成とアクセス</div>
+        <pre class="code-block"><code>const fruits = ['りんご', 'バナナ', 'みかん'];
+fruits[0]          // 'りんご'
+fruits.length      // 3
+fruits.indexOf('バナナ')  // 1</code></pre>
+      </section>
+
+      <section>
+        <h2>要素の追加・削除</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showModify()">追加・削除を確認</a>
+          <ul id="modify-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr><th>メソッド</th><th>説明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>.push(item)</code></td><td>末尾に追加</td></tr>
+            <tr><td><code>.pop()</code></td><td>末尾を削除して返す</td></tr>
+            <tr><td><code>.unshift(item)</code></td><td>先頭に追加</td></tr>
+            <tr><td><code>.shift()</code></td><td>先頭を削除して返す</td></tr>
+            <tr><td><code>.splice(i, n)</code></td><td>位置 i から n 個削除</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>変換メソッド</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showTransform()">変換メソッドを確認</a>
+          <ul id="transform-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr><th>メソッド</th><th>説明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>.map(fn)</code></td><td>各要素を変換した新しい配列を返す</td></tr>
+            <tr><td><code>.filter(fn)</code></td><td>条件に合う要素だけの配列を返す</td></tr>
+            <tr><td><code>.join(sep)</code></td><td>配列を文字列に変換</td></tr>
+            <tr><td><code>'a,b'.split(',')</code></td><td>文字列を配列に変換</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

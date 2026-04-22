@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>条件文 チャレンジ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>7-3. 条件文 チャレンジ（解答）</h1>
+      <p>switch 文と三項演算子を使って月の日数カレンダーを作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>チャレンジ：月の日数を表示する</h2>
+        <div class="demo-area">
+          <div style="margin-bottom: 0.5rem; display: flex; gap: 1rem;">
+            <label>月: <input type="number" id="month-input" value="2" min="1" max="12" style="width: 60px;" /></label>
+            <label>年: <input type="number" id="year-input" value="2024" style="width: 90px;" /></label>
+          </div>
+          <a class="btn-demo" onclick="showDaysInMonth()">確認する</a>
+          <div id="days-output" style="margin-top: 1rem; font-size: 1.1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

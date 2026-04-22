@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>便利な文字列メソッド デモ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>5-1. 便利な文字列メソッド デモ（解答）</h1>
+      <p>よく使う文字列メソッドを実際に動かして確認しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>length・インデックスアクセス</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showLengthIndex()">確認する</a>
+          <ul id="length-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>検索系メソッド</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showSearchMethods()">確認する</a>
+          <ul id="search-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr><th>メソッド</th><th>説明</th><th>戻り値</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>.includes()</code></td><td>部分文字列を含むか</td><td>boolean</td></tr>
+            <tr><td><code>.startsWith()</code></td><td>指定文字列で始まるか</td><td>boolean</td></tr>
+            <tr><td><code>.endsWith()</code></td><td>指定文字列で終わるか</td><td>boolean</td></tr>
+            <tr><td><code>.indexOf()</code></td><td>最初の出現位置</td><td>number (-1なら不在)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>変換・切り出し系メソッド</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showTransformMethods()">確認する</a>
+          <ul id="transform-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr><th>メソッド</th><th>説明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>.slice(start, end)</code></td><td>一部を切り出す</td></tr>
+            <tr><td><code>.toLowerCase()</code></td><td>小文字に変換</td></tr>
+            <tr><td><code>.toUpperCase()</code></td><td>大文字に変換</td></tr>
+            <tr><td><code>.replace(old, new)</code></td><td>最初の一致を置換</td></tr>
+            <tr><td><code>.replaceAll(old, new)</code></td><td>全ての一致を置換</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

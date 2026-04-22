@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>条件文 練習（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>7-2. 条件文 練習（解答）</h1>
+      <p>天気に応じたメッセージを表示するプログラムを作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：天気メッセージ表示</h2>
+        <div class="demo-area">
+          <div style="margin-bottom: 0.8rem;">
+            <label>天気を選択:
+              <select id="weather-select" style="padding: 0.4rem; margin-left: 0.5rem;">
+                <option value="sunny">☀️ 晴れ (sunny)</option>
+                <option value="cloudy">☁️ 曇り (cloudy)</option>
+                <option value="rainy">🌧️ 雨 (rainy)</option>
+                <option value="snowy">❄️ 雪 (snowy)</option>
+              </select>
+            </label>
+          </div>
+          <a class="btn-demo" onclick="showWeatherMessage()">表示</a>
+          <p id="weather-message" style="margin-top: 1rem; font-size: 1.1rem;"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列 練習（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>6-2. 配列 練習（解答）</h1>
+      <p>配列のメソッドを使って買い物リストを作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：買い物リスト</h2>
+        <div class="demo-area">
+          <div style="margin-bottom: 0.8rem;">
+            <input type="text" id="item-input" placeholder="アイテムを入力..." style="width: 200px; padding: 0.4rem;" />
+            <a class="btn-demo" onclick="addItem()">追加</a>
+          </div>
+          <a class="btn-practice" onclick="removeLastItem()">最後を削除</a>
+          <a class="btn-challenge" onclick="clearItems()">全クリア</a>
+          <p id="count-display" style="margin-top: 0.5rem;"></p>
+          <ul id="shopping-list" style="margin-top: 0.5rem;"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

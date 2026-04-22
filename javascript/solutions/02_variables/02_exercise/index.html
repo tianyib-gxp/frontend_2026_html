@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>変数 練習（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>2-2. 変数 練習（解答）</h1>
+      <p>変数を使って自己紹介カードを作成しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：自己紹介カードを表示する</h2>
+        <ol>
+          <li>以下の変数を宣言してください：
+            <ul>
+              <li><code>name</code>（文字列）: 自分の名前</li>
+              <li><code>age</code>（数値）: 年齢</li>
+              <li><code>job</code>（文字列）: 職業</li>
+              <li><code>hobbies</code>（配列）: 趣味を3つ以上</li>
+            </ul>
+          </li>
+          <li>「表示」ボタンを押すと、<code>#profile</code> に自己紹介が表示されるようにしてください</li>
+          <li>変わらない値には <code>const</code>、変わる可能性がある値には <code>let</code> を使ってください</li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showProfile()">表示</a>
+          <div id="profile" style="margin-top: 1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
