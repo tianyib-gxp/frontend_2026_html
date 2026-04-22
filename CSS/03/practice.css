@@ -28,6 +28,7 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #1a1a2e; }
 .task p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; }
 .task ul { margin: 0 0 16px; padding-left: 20px; font-size: 14px; line-height: 1.8; }
+.task em { color: #555; }
 code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
 
 .preview {
@@ -44,28 +45,51 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
   min-width: 160px;
 }
 
-/* ===== TODO: 各セレクターを設定してください ===== */
+/* =====================================================
+   TODO: #practice-dummy〇 を正しいセレクターに書き換えてください
+   スタイルの中身は変えなくて OK です
+   ===================================================== */
 
-/* 問題1: タグセレクター */
-/* TODO: h3 タグ全てに color: #1d3461、font-size: 20px を設定 */
+/* 問題1: <h3> タグ全てに適用するセレクターに書き換えてください */
+#practice-dummy1 {
+  color: #1d3461;
+  font-size: 20px;
+}
 
+/* 問題2: "btn" クラスが付いた要素に適用するセレクターに書き換えてください */
+#practice-dummy2 {
+  background: #4361ee;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 
-/* 問題2: クラスセレクター */
-/* TODO: .btn クラスに background: #4361ee、color: white、padding: 10px 20px、
-         border-radius: 6px、border: none、cursor: pointer を設定 */
+/* 問題3: "hero-title" という id を持つ要素に適用するセレクターに書き換えてください */
+#practice-dummy3 {
+  font-size: 36px;
+  color: #e63946;
+  font-weight: 900;
+  text-align: center;
+}
 
+/* 問題4a: "card" クラスに適用するセレクターに書き換えてください */
+#practice-dummy4a {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
 
-/* 問題3: id セレクター */
-/* TODO: #hero-title に font-size: 36px、color: #e63946、
-         font-weight: 900、text-align: center を設定 */
+/* 問題4b: "featured" クラスに適用するセレクターに書き換えてください */
+#practice-dummy4b {
+  background: #fff3bf;
+  border-color: #f4a261;
+}
 
-
-/* 問題4: 複数クラス */
-/* TODO: .card に border: 1px solid #ccc、border-radius: 8px、padding: 16px を設定 */
-
-/* TODO: .featured に background: #fff3bf、border-color: #f4a261 を設定 */
-
-
-/* 問題5: 子孫セレクター */
-/* TODO: .sidebar の中の a だけに
-         color: #4361ee、font-weight: bold、text-decoration: none を設定 */
+/* 問題5: ".sidebar の中の a タグだけ" に適用するセレクターに書き換えてください */
+#practice-dummy5 {
+  color: #4361ee;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -12,48 +12,39 @@ main { padding: 32px; max-width: 900px; }
 .task p { margin: 0 0 12px; font-size: 14px; }
 .task ul { margin: 0 0 16px; padding-left: 20px; font-size: 14px; line-height: 1.8; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: ボタン */
+/* 問題1: ボタンに背景色・角丸・影・クリックカーソルを設定する */
 .styled-btn {
   color: #fff;
   border: none;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
-  /* TODO: background-color を #4361ee に */
-  /* TODO: border-radius を 8px に */
-  /* TODO: cursor を pointer に */
-  /* TODO: box-shadow を 0 2px 8px rgba(67,97,238,.4) に */
 }
 
-/* 問題2: アバター */
+/* 問題2: 画像を円形にして枠線を付ける */
 .avatar {
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, #4361ee, #7209b7);
-  /* TODO: border-radius を 50% に */
-  /* TODO: border を 3px solid #4361ee に */
 }
 
-/* 問題3: プロダクトカード */
+/* 問題3（カード全体）: 白背景・角丸・影・はみ出し非表示にする */
 .product-card {
   max-width: 220px;
-  /* TODO: background を white に */
-  /* TODO: border-radius を 12px に */
-  /* TODO: box-shadow を 0 4px 16px rgba(0,0,0,.1) に */
-  /* TODO: overflow を hidden に */
 }
 
+/* 問題3（画像エリア）: 好きなグラデーション背景を設定する */
 .product-img {
   height: 130px;
-  /* TODO: background に好きなグラデーションを設定（例: linear-gradient(135deg, #4361ee, #7209b7)） */
 }
 
 .product-body { padding: 16px; }
 .product-name { margin: 0 0 4px; font-size: 15px; }
 .product-price { margin: 0 0 12px; font-size: 18px; font-weight: bold; color: #e63946; }
 
+/* 問題3（ボタン）: クリックカーソルと角丸を設定する */
 .product-btn {
   width: 100%;
   background: #4361ee;
@@ -61,11 +52,9 @@ main { padding: 32px; max-width: 900px; }
   border: none;
   padding: 10px;
   font-size: 14px;
-  /* TODO: cursor を pointer に */
-  /* TODO: border-radius を 6px に */
 }
 
-/* 問題4: 無効ボタン */
+/* 問題4: ボタンを半透明にして「操作できない」見た目にする */
 .disabled-btn {
   background: #6c757d;
   color: #fff;
@@ -73,6 +62,4 @@ main { padding: 32px; max-width: 900px; }
   padding: 12px 24px;
   font-size: 16px;
   border-radius: 8px;
-  /* TODO: opacity を 0.4 に */
-  /* TODO: cursor を not-allowed に */
 }

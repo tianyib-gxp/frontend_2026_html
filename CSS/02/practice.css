@@ -12,19 +12,18 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #16213e; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: カードの内側の余白 */
+/* 問題1: カードに内側の余白を追加する */
 .card {
   border: 2px solid #0f3460;
   border-radius: 6px;
   max-width: 300px;
-  /* TODO: padding を 上下16px 左右20px に */
 }
 .card h3 { margin: 0 0 8px; }
 .card p { margin: 0; }
 
-/* 問題2: ボックス間の外側の余白 */
+/* 問題2: ボックスの下側に外側の余白を追加する */
 .item {
   background: #0f3460;
   color: #fff;
@@ -32,10 +31,9 @@ main { padding: 32px; max-width: 900px; }
   border-radius: 4px;
 }
 .item-spacing {
-  /* TODO: margin-bottom を 16px に */
 }
 
-/* 問題3: ボタンのパディング */
+/* 問題3: ボタンを押しやすいサイズにする */
 .btn {
   background: #e94560;
   color: #fff;
@@ -43,14 +41,11 @@ main { padding: 32px; max-width: 900px; }
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  /* TODO: padding を 上下12px 左右24px に */
 }
 
-/* 問題4: コンテンツ中央配置 */
+/* 問題4: コンテンツを中央に配置して内側に余白を付ける */
 .content-box {
   background: #e8f4f8;
   border-radius: 6px;
   max-width: 500px;
-  /* TODO: margin を auto（左右中央寄せ）に */
-  /* TODO: padding を 24px に */
 }

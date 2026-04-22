@@ -35,35 +35,26 @@ main { padding: 32px; max-width: 900px; }
   justify-content: center;
 }
 
-/* ===== TODO: 各ボックスのサイズを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: 幅 300px、高さ 100px */
+/* 問題1: ボックスを固定サイズにする */
 .box-1 {
-  /* TODO: width を 300px に */
-  /* TODO: height を 100px に */
 }
 
-/* 問題2: 幅 60%、高さ 80px */
+/* 問題2: ボックスを%指定のサイズにする */
 .box-2 {
-  /* TODO: width を 60% に */
-  /* TODO: height を 80px に */
 }
 
-/* 問題3: 幅・高さともに 120px（正方形） */
+/* 問題3: 正方形のボックスにする */
 .box-3 {
-  /* TODO: width を 120px に */
-  /* TODO: height を 120px に */
 }
 
-/* 問題4: 幅 100%（全幅） */
+/* 問題4: ボックスを全幅にする */
 .box-4 {
-  /* TODO: width を 100% に */
-  height: 50px; /* 高さはすでに設定済み */
+  height: 50px;
 }
 
-/* 問題5: 幅 80%、高さ 60px */
+/* 問題5: 横長バナー風のボックスにする */
 .box-5 {
-  /* TODO: width を 80% に */
-  /* TODO: height を 60px に */
-  background: #f72585; /* 色はこのまま */
+  background: #f72585;
 }

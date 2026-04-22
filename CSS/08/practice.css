@@ -11,36 +11,28 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #0f4c75; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: ナビゲーションバー */
+/* 問題1: ロゴを左端・メニューを右端・縦方向は中央に配置する */
 .navbar {
   background: #0f4c75;
   padding: 12px 24px;
   border-radius: 4px;
-  /* TODO: display を flex に */
-  /* TODO: justify-content を space-between に */
-  /* TODO: align-items を center に */
 }
 .nav-logo { color: #fff; font-size: 18px; font-weight: bold; }
 .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
 .nav-menu a { color: #fff; text-decoration: none; font-size: 14px; }
 
-/* 問題2: 中央配置 */
+/* 問題2: コンテンツを上下左右の中央に配置する */
 .center-stage {
   background: #dbeafe;
   height: 200px;
   border-radius: 4px;
-  /* TODO: display を flex に */
-  /* TODO: justify-content を center に */
-  /* TODO: align-items を center に */
 }
 .center-card { background: #0f4c75; color: #fff; padding: 16px 24px; border-radius: 8px; font-size: 14px; }
 
-/* 問題3: カードを横並び */
+/* 問題3: カードを横並びにして間隔を開ける */
 .card-row {
-  /* TODO: display を flex に */
-  /* TODO: gap を 16px に */
 }
 .feat-card {
   flex: 1;
@@ -53,14 +45,11 @@ main { padding: 32px; max-width: 900px; }
   line-height: 1.6;
 }
 
-/* 問題4: 縦方向リスト */
+/* 問題4: アイテムを縦方向に並べて間隔を開ける */
 .vert-list {
   background: #dbeafe;
   padding: 16px;
   border-radius: 4px;
-  /* TODO: display を flex に */
-  /* TODO: flex-direction を column に */
-  /* TODO: gap を 8px に */
 }
 .vert-item {
   background: #0f4c75;

@@ -10,14 +10,18 @@
   <header class="page-header">
     <a href="../index.html">← 一覧へ</a>
     <h1>練習問題 — セレクター</h1>
-    <p>practice.css の TODO コメントを埋めてください。</p>
+    <p>practice.css の「ダミーセレクター」を正しいセレクターに書き換えてください。</p>
   </header>
 
   <main>
     <!-- 問題1 -->
     <section class="task">
-      <h2>問題 1：タグセレクターでスタイルを当てる</h2>
-      <p>ページ内の全ての <code>&lt;h3&gt;</code> タグを <strong>color: #1d3461、font-size: 20px</strong> にしてください。</p>
+      <h2>問題 1：タグセレクター</h2>
+      <p>
+        CSSにスタイルは用意してあります。<br>
+        そのスタイルを<strong>ページ内の全ての <code>&lt;h3&gt;</code> タグ</strong>に適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy1</code> を書き換えてください。</em>
+      </p>
       <div class="preview">
         <h3>見出し A</h3>
         <p>本文テキストは変わりません。</p>
@@ -29,8 +33,12 @@
 
     <!-- 問題2 -->
     <section class="task">
-      <h2>問題 2：クラスセレクターでボタンをスタイリング</h2>
-      <p><code>class="btn"</code> が付いたボタンに <strong>background: #4361ee、color: white、padding: 10px 20px、border-radius: 6px、border: none、cursor: pointer</strong> を設定してください。</p>
+      <h2>問題 2：クラスセレクター</h2>
+      <p>
+        CSSにボタンのスタイルが用意してあります。<br>
+        <strong><code>class="btn"</code> が付いた要素だけ</strong>にそのスタイルを適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy2</code> を書き換えてください。</em>
+      </p>
       <div class="preview">
         <button class="btn">送信する</button>
         <button class="btn">キャンセル</button>
@@ -40,8 +48,12 @@
 
     <!-- 問題3 -->
     <section class="task">
-      <h2>問題 3：id セレクターで特定要素をスタイリング</h2>
-      <p><code>id="hero-title"</code> の要素に <strong>font-size: 36px、color: #e63946、font-weight: 900、text-align: center</strong> を設定してください。</p>
+      <h2>問題 3：id セレクター</h2>
+      <p>
+        CSSに大きな見出し用のスタイルが用意してあります。<br>
+        <strong><code>id="hero-title"</code> を持つ要素だけ</strong>にそのスタイルを適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy3</code> を書き換えてください。</em>
+      </p>
       <div class="preview">
         <h2 id="hero-title">ようこそ！</h2>
         <p>このページへようこそ。</p>
@@ -51,12 +63,12 @@
     <!-- 問題4 -->
     <section class="task">
       <h2>問題 4：複数クラスを組み合わせる</h2>
-      <p>以下のクラスを定義してください：</p>
+      <p>以下の 2 つのスタイルを定義してください：</p>
       <ul>
-        <li><code>.card</code>：border: 1px solid #ccc、border-radius: 8px、padding: 16px</li>
-        <li><code>.featured</code>：background: #fff3bf、border-color: #f4a261</li>
-        <li><code>.card.featured</code> を組み合わせた要素が目立つようになっています。</li>
+        <li>枠線・角丸・内側余白 → <strong><code>.card</code> クラス</strong>に適用</li>
+        <li>背景色・枠線の色を変える → <strong><code>.featured</code> クラス</strong>に適用</li>
       </ul>
+      <p><em>→ practice.css の <code>#practice-dummy4a</code> と <code>#practice-dummy4b</code> を書き換えてください。</em></p>
       <div class="preview">
         <div class="card">普通のカード</div>
         <br>
@@ -66,9 +78,13 @@
 
     <!-- 問題5 -->
     <section class="task">
-      <h2>問題 5：子孫セレクターで特定の場所だけに当てる</h2>
-      <p><code>.sidebar</code> の中の <code>&lt;a&gt;</code> だけを <strong>color: #4361ee、font-weight: bold、text-decoration: none</strong> にしてください。<br>
-      メインコンテンツ内のリンクは変わらないようにします。</p>
+      <h2>問題 5：子孫セレクター</h2>
+      <p>
+        CSSにリンクのスタイルが用意してあります。<br>
+        <strong><code>.sidebar</code> の中にある <code>&lt;a&gt;</code> タグだけ</strong>にそのスタイルを適用させてください。<br>
+        メインコンテンツ内のリンクには影響しないようにします。<br>
+        <em>→ practice.css の <code>#practice-dummy5</code> を書き換えてください。</em>
+      </p>
       <div class="preview">
         <div style="display:flex; gap: 24px; flex-wrap: wrap;">
           <div class="sidebar">
@@ -86,5 +102,6 @@
       </div>
     </section>
   </main>
+  <script src="../lesson-nav.js"></script>
 </body>
 </html>

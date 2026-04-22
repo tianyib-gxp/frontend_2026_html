@@ -11,37 +11,29 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #023e8a; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: 記事タイトル */
+/* 問題1: 記事タイトルを大きく・太く・青くする */
 .article-title {
-  /* TODO: font-size を 32px に */
-  /* TODO: font-weight を 700 に */
-  /* TODO: color を #023e8a に */
 }
 
-/* 問題2: 引用文 */
+/* 問題2: 引用文を中央揃え・斜体・グレーにする */
 .quote {
   border-left: 4px solid #023e8a;
   margin: 0;
   padding: 12px 24px;
   background: #caf0f8;
-  /* TODO: text-align を center に */
-  /* TODO: font-style を italic に */
-  /* TODO: color を #555 に */
 }
 
-/* 問題3: コードブロック */
+/* 問題3: コードらしい等幅フォントにする */
 .code-block {
   background: #1e1e2e;
   color: #cdd6f4;
   padding: 16px;
   border-radius: 4px;
-  /* TODO: font-family を monospace に */
-  /* TODO: font-size を 14px に */
 }
 
-/* 問題4: テキストカード */
+/* 問題4: テキストカードのタイトル・本文・リンクをスタイリングする */
 .text-card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -50,16 +42,11 @@ main { padding: 32px; max-width: 900px; }
 }
 .card-title {
   margin: 0 0 8px;
-  /* TODO: font-size を 20px に */
-  /* TODO: font-weight を 700 に */
 }
 .card-body {
   margin: 0 0 12px;
-  /* TODO: font-size を 14px に */
-  /* TODO: color を #666 に */
 }
 .card-link {
   margin: 0;
-  /* TODO: text-align を right に */
 }
 .card-link a { color: #0096c7; }

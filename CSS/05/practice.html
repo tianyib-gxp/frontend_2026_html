@@ -17,7 +17,7 @@
     <section class="task">
       <h2>問題 1：カード右上にバッジを配置</h2>
       <p>カードの<strong>右上に「NEW」バッジ</strong>を配置してください。<br>
-      カード側に <code>position: relative</code>、バッジ側に <code>position: absolute</code> と <code>top</code>/<code>right</code> を設定します。</p>
+      カードを配置の基準点（relative）にして、バッジを絶対配置（absolute）で右上に固定します。</p>
       <div class="card">
         <span class="badge">NEW</span>
         <h3>商品タイトル</h3>
@@ -27,8 +27,8 @@
 
     <section class="task">
       <h2>問題 2：固定ヘッダーを作る</h2>
-      <p>ヘッダーを画面上部に固定してください。<br>
-      スクロールしても追いかけてくるようにします（<code>position: fixed</code>）。</p>
+      <p>ヘッダーを<strong>画面上部に固定</strong>してください。<br>
+      スクロールしても追いかけてくる固定配置（fixed）にします。</p>
       <div class="fixed-header">固定ヘッダー（スクロールしても動かない）</div>
       <div class="scroll-content">
         <p>スクロールしてみてください。</p>
@@ -41,7 +41,7 @@
 
     <section class="task">
       <h2>問題 3：relative で要素をずらす</h2>
-      <p>真ん中のボックスを<strong>下に 20px、右に 20px</strong> ずらしてください（<code>position: relative</code> を使う）。</p>
+      <p>真ん中のボックスを、現在の位置から<strong>下に 20px・右に 20px</strong> ずらしてください（相対配置: relative）。</p>
       <div class="row">
         <div class="sq">A</div>
         <div class="sq sq-shift">B（ずらす）</div>
@@ -49,5 +49,6 @@
       </div>
     </section>
   </main>
+  <script src="../lesson-nav.js"></script>
 </body>
 </html>

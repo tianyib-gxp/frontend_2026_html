@@ -11,9 +11,9 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #1b4332; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: ナビゲーションアイテム */
+/* 問題1: メニュー項目を横並びにする */
 .nav-item {
   background: #2d6a4f;
   color: #fff;
@@ -21,10 +21,9 @@ main { padding: 32px; max-width: 900px; }
   padding: 8px 16px;
   border-radius: 4px;
   margin-right: 4px;
-  /* TODO: display を inline-block に */
 }
 
-/* 問題2: ボタン風 span */
+/* 問題2: span をブロック要素として幅と高さを持たせる */
 .block-btn {
   background: #1b4332;
   color: #fff;
@@ -33,12 +32,9 @@ main { padding: 32px; max-width: 900px; }
   cursor: pointer;
   text-align: center;
   line-height: 48px;
-  /* TODO: display を block に */
-  /* TODO: width を 200px に */
-  /* TODO: height を 48px に */
 }
 
-/* 問題3: タグ */
+/* 問題3: タグを横並びにする（現在は縦並び） */
 .tag {
   background: #52b788;
   color: #fff;
@@ -46,5 +42,5 @@ main { padding: 32px; max-width: 900px; }
   border-radius: 16px;
   font-size: 13px;
   margin-right: 4px;
-  /* TODO: display を inline-block に */
+  display: block; /* ← ここを変えてください */
 }

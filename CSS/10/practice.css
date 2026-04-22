@@ -11,21 +11,19 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #2b2d42; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: テキスト切り捨て */
+/* 問題1: 高さを固定して、はみ出た部分を見えなくする */
 .clamp-box {
   background: #edf2f4;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px 12px;
   max-width: 320px;
-  /* TODO: height を 60px に */
-  /* TODO: overflow を hidden に */
 }
 .clamp-box p { margin: 0; font-size: 13px; line-height: 1.6; }
 
-/* 問題2: スクロールリスト */
+/* 問題2: 高さを制限してスクロールできるようにする */
 .scroll-list {
   background: #edf2f4;
   border: 1px solid #ccc;
@@ -33,18 +31,15 @@ main { padding: 32px; max-width: 900px; }
   padding: 8px 16px;
   margin: 0;
   max-width: 250px;
-  /* TODO: height を 150px に */
-  /* TODO: overflow を auto に */
 }
 .scroll-list li { padding: 4px 0; font-size: 14px; border-bottom: 1px solid #ddd; }
 .scroll-list li:last-child { border-bottom: none; }
 
-/* 問題3: 画像カード */
+/* 問題3: 画像がカードからはみ出ないようにする */
 .img-card {
   border: 1px solid #ccc;
   border-radius: 8px;
   max-width: 240px;
-  /* TODO: overflow を hidden に */
 }
 .fake-img {
   width: 120%;  /* わざとカードより大きくしてはみ出させている */

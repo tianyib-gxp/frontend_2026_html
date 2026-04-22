@@ -11,20 +11,19 @@ main { padding: 32px; max-width: 900px; }
 .task h2 { margin: 0 0 8px; font-size: 18px; color: #3d0c02; }
 .task p { margin: 0 0 16px; font-size: 14px; }
 
-/* ===== TODO: 各スタイルを設定してください ===== */
+/* ===== ここから練習スペース ===== */
 
-/* 問題1: カード */
+/* 問題1（カード側）: バッジを配置するための基準点にする */
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   max-width: 280px;
-  /* TODO: position を relative に */
 }
 .card h3 { margin: 0 0 8px; }
 .card p { margin: 0; font-size: 14px; color: #666; }
 
-/* バッジ */
+/* 問題1（バッジ側）: カードの右上に絶対配置する */
 .badge {
   background: #d62828;
   color: #fff;
@@ -32,31 +31,21 @@ main { padding: 32px; max-width: 900px; }
   font-weight: bold;
   padding: 4px 8px;
   border-radius: 4px;
-  /* TODO: position を absolute に */
-  /* TODO: top を -10px に */
-  /* TODO: right を -10px に */
 }
 
-/* 問題2: 固定ヘッダー */
+/* 問題2: 画面上部に固定して追いかけてくるようにする */
 .fixed-header {
   background: #9d0208;
   color: #fff;
   padding: 16px 24px;
   font-weight: bold;
-  /* TODO: position を fixed に */
-  /* TODO: top を 0 に */
-  /* TODO: left を 0 に */
-  /* TODO: width を 100% に */
 }
 .scroll-content { margin-top: 60px; padding: 16px; background: #ffecd2; border-radius: 4px; }
 
-/* 問題3: relative でずらす */
+/* 問題3: 現在の位置から下・右にずらす */
 .row { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #ffecd2; border-radius: 4px; }
 .sq { width: 60px; height: 60px; background: #9d0208; color: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; }
 
 .sq-shift {
   background: #f48c06;
-  /* TODO: position を relative に */
-  /* TODO: top を 20px に */
-  /* TODO: left を 20px に */
 }
