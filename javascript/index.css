@@ -11,6 +11,10 @@ header {
   padding: 32px;
 }
 
+header.solutions {
+  background: #3f37c9;
+}
+
 header h1 {
   margin: 0 0 8px;
   font-size: 28px;
