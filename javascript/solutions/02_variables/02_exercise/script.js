@@ -6,19 +6,19 @@ function showProfile() {
   const name = '田中 太郎';
   const age = 24;
   const job = 'エンジニア';
-  const hobbies = ['読書', '映画', 'ゲーム', '登山'];
 
-  // それぞれの値を段落として追加する
-  const fields = [
-    `名前: ${name}`,
-    `年齢: ${age}`,
-    `職業: ${job}`,
-    `趣味: ${hobbies.join(', ')}`,
-  ];
+  // 名前を段落として追加する
+  const p1 = document.createElement('p');
+  p1.textContent = `名前: ${name}`;
+  output.appendChild(p1);
 
-  for (const field of fields) {
-    const p = document.createElement('p');
-    p.textContent = field;
-    output.appendChild(p);
-  }
+  // 年齢を段落として追加する
+  const p2 = document.createElement('p');
+  p2.textContent = `年齢: ${age}`;
+  output.appendChild(p2);
+
+  // 職業を段落として追加する
+  const p3 = document.createElement('p');
+  p3.textContent = `職業: ${job}`;
+  output.appendChild(p3);
 }

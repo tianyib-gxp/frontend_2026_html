@@ -7,19 +7,23 @@ function showProfile() {
    * ここにコードを書いてください
    *
    * 要件:
-   * - name, age, job, hobbies の変数を宣言する
-   * - 変わらない値は const、変わる可能性がある値は let を使う
-   * - #profile に自己紹介を表示する
+   * - 以下の変数を宣言する:
+   *     name  （文字列）: 自分の名前
+   *     age   （数値）:   年齢
+   *     job   （文字列）: 職業
+   * - 変わらない値は const を使う
+   * - #profile に各変数を1行ずつ表示する
    *
    * 表示例:
    *   名前: 田中 太郎
    *   年齢: 24
    *   職業: エンジニア
-   *   趣味: 読書, 映画, ゲーム
    *
    * ヒント:
-   * - 配列は [item1, item2, item3] の形式で作成する
-   * - document.createElement('p') と textContent で段落を追加する
+   * - const p1 = document.createElement('p'); で段落を作成する
+   * - p1.textContent = `名前: ${name}`; でテキストを設定する
+   * - output.appendChild(p1); で追加する
+   * - name, age, job それぞれに同じ手順を繰り返す
    * =========================================
    */
 }
