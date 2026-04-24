@@ -1,46 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Day2</title>
+    <title>JavaScript</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
     <header>
-      <a href="../../index.html" class="back-button">← 一覧へ</a>
-      <h1>JavaScript 学習教材</h1>
+      <a href="../index.html" class="back-button">← 一覧へ</a>
+      <h1>JavaScript</h1>
       <p>
-        HTMLとCSSの基礎を学んだ後は、いよいよJavaScriptでWebページに動きを加えていきましょう。
+        JavaScriptの基本構文（ループ・関数・カスタム関数・返値・イベント・オブジェクト・JSON・非同期・Promise）を学び、
+        実際に手を動かして理解を深めましょう。
       </p>
     </header>
 
     <main>
-      <!-- 1. Day1 -->
-      <h2>1. Day1</h2>
+      <!-- 8. Loop -->
+      <h2>8. ループ（for文）</h2>
       <section>
         <div class="section-card">
           <div class="section-card-info">
-              <h3>JavaScriptの基礎とデータ操作</h3>
-              <p>変数・演算子・文字列・配列・条件文など、JavaScriptの基本的なデータ操作と構文を学びます。</p>
+            <h3>ループ処理</h3>
+            <p>同じ処理を繰り返す方法を学ぶ</p>
           </div>
           <div class="section-card-links">
-            <a href="./01/01.html" class="btn-demo">レッスン</a>
+            <a href="./08_loop/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./08_loop/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./08_loop/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
           </div>
         </div>
       </section>
 
-      <!-- 2. Day2 -->
-      <h2>2. Day2</h2>
+      <!-- 9. Functions -->
+      <h2>9. 関数</h2>
       <section>
         <div class="section-card">
           <div class="section-card-info">
-              <h3>ループ・関数・オブジェクト・非同期処理</h3>
-              <p>ループや関数、オブジェクト、非同期処理（Promise/JSON）など、実践的なJavaScriptの使い方を習得します。</p>
+            <h3>関数の基本</h3>
+            <p>関数の定義・引数・returnを理解する</p>
           </div>
           <div class="section-card-links">
-            <a href="./day_2/index.html" class="btn-demo">レッスン</a>
+            <a href="./09_functions/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./09_functions/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./09_functions/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Custom Functions -->
+      <h2>10. 独自の関数</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>関数を作る</h3>
+            <p>自分で関数を設計し、処理をまとめる</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./10_custom_functions/01_demo/index.html" class="btn-demo"
+              >デモ</a
+            >
+            <a
+              href="./10_custom_functions/02_exercise/index.html"
+              class="btn-practice"
+              >練習</a
+            >
+            <a
+              href="./10_custom_functions/03_challenge/index.html"
+              class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. Return Values -->
+      <h2>11. 関数の返値</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>返値とは</h3>
+            <p>関数が計算結果を <code>return</code> で返す仕組みを学ぶ</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./11_return_values/01_demo/index.html" class="btn-demo"
+              >デモ</a
+            >
+            <a
+              href="./11_return_values/02_exercise/index.html"
+              class="btn-practice"
+              >練習</a
+            >
+            <a
+              href="./11_return_values/03_challenge/index.html"
+              class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. Events -->
+      <h2>12. イベント入門</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>イベントとは</h3>
+            <p><code>addEventListener</code> でクリックやキー入力を検知する</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./12_events/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./12_events/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./12_events/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. Objects -->
+      <h2>13. オブジェクトの基本</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>オブジェクトとは</h3>
+            <p>プロパティとメソッドでデータをまとめる方法を学ぶ</p>
+          </div>
+          <div class="section-card-links">
+            <a href="./13_objects/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./13_objects/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./13_objects/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 14. JSON -->
+      <h2>14. JSONの操作</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>JSONとは</h3>
+            <p>
+              <code>JSON.parse()</code> と
+              <code>JSON.stringify()</code> の使い方を学ぶ
+            </p>
+          </div>
+          <div class="section-card-links">
+            <a href="./14_json/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./14_json/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./14_json/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 15. Async -->
+      <h2>15. 非同期JavaScript入門</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>非同期処理とは</h3>
+            <p>
+              コールバック・<code>setTimeout</code> による非同期処理の基礎を学ぶ
+            </p>
+          </div>
+          <div class="section-card-links">
+            <a href="./15_async/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./15_async/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a href="./15_async/03_challenge/index.html" class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 16. Promises -->
+      <h2>16. プロミスの使い方</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>Promiseとは</h3>
+            <p>
+              <code>.then()</code>・<code>.catch()</code>・<code
+                >async/await</code
+              >
+              で非同期を扱う
+            </p>
+          </div>
+          <div class="section-card-links">
+            <a href="./16_promises/01_demo/index.html" class="btn-demo">デモ</a>
+            <a href="./16_promises/02_exercise/index.html" class="btn-practice"
+              >練習</a
+            >
+            <a
+              href="./16_promises/03_challenge/index.html"
+              class="btn-challenge"
+              >チャレンジ</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 17. Promise API -->
+      <h2>17. Promise APIの活用</h2>
+      <section>
+        <div class="section-card">
+          <div class="section-card-info">
+            <h3>Promise静的メソッド</h3>
+            <p>
+              <code>Promise.all()</code
+              >・<code>Promise.any()</code>・<code>Promise.race()</code>・<code
+                >Promise.allSettled()</code
+              >
+              を学ぶ
+            </p>
+          </div>
+          <div class="section-card-links">
+            <a href="./17_promise_api/01_demo/index.html" class="btn-demo"
+              >デモ</a
+            >
+            <a
+              href="./17_promise_api/02_exercise/index.html"
+              class="btn-practice"
+              >練習</a
+            >
+            <a
+              href="./17_promise_api/03_challenge/index.html"
+              class="btn-challenge"
+              >チャレンジ</a
+            >
           </div>
         </div>
       </section>
@@ -50,16 +259,18 @@
       <section>
         <div class="section-card">
           <div class="section-card-info">
-              <h3>全レッスン回答</h3>
-              <p>Day1・Day2の全ての練習問題・チャレンジの回答を確認できます。</p>
+            <h3>全レッスン回答</h3>
+            <p>全ての練習問題・チャレンジの回答を確認できます。</p>
           </div>
           <div class="section-card-links">
-            <a href="./solutions/index.html" class="btn-challenge">回答を見る</a>
+            <a href="./solutions/index.html" class="btn-challenge"
+              >回答を見る</a
+            >
           </div>
         </div>
       </section>
     </main>
 
-    <script src="../index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

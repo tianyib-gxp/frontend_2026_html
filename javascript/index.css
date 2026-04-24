@@ -32,7 +32,9 @@ header p {
   font-size: 14px;
   text-decoration: none;
   margin-bottom: 12px;
-  transition: background 0.2s, border 0.2s;
+  transition:
+    background 0.2s,
+    border 0.2s;
 }
 
 main {
@@ -53,17 +55,17 @@ h2:first-of-type {
 }
 
 section {
-    background: #fff;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
-    margin: 0 0 8px;
-    font-size: 18px;
-    color: #1a1a2e;
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #1a1a2e;
 }
 
 hr {
@@ -129,7 +131,6 @@ hr {
   font-size: 15px;
 }
 
-
 .code-block {
   background: #1e1e2e;
   color: #cdd6f4;
@@ -146,7 +147,8 @@ hr {
   border-collapse: collapse;
   margin-top: 12px;
 }
-.summary-table th, .summary-table td {
+.summary-table th,
+.summary-table td {
   border: 1px solid #ccc;
   padding: 10px 16px;
   text-align: center;
@@ -164,5 +166,5 @@ hr {
 
 .demo-area {
   margin-top: 18px;
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
