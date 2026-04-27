@@ -1,24 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML課題 目次</title>
-  </head>
-  <body>
-    <h1>HTML課題 目次</h1>
-    <ol>
-      <li>
-        <a href="./01/">Session 1: 環境を作り、最初のHTMLを表示する</a>
-      </li>
-      <li><a href="./02/">Session 2: HTMLの骨格を理解する</a></li>
-      <li>
-        <a href="./03/">Session 3: テキストを意味のある構造にする</a>
-      </li>
-      <li><a href="./04/">Session 4: 複数ページをリンクでつなぐ</a></li>
-      <li><a href="./05/">Session 5: バグを直し、DevToolsを使う</a></li>
-      <li><a href="./06/">Session 6: ウェブの仕組みを体感する</a></li>
-      <li><a href="./final/">総合課題</a></li>
-    </ol>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML 学習教材</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+    header { background: #1a1a2e; color: #fff; padding: 32px; }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; opacity: 0.8; font-size: 15px; }
+    main { padding: 32px; max-width: 900px; }
+    h2 { font-size: 20px; color: #1a1a2e; margin: 32px 0 16px; border-left: 4px solid #4361ee; padding-left: 12px; }
+    h2:first-of-type { margin-top: 0; }
+    .section-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 8px; }
+    .section-card { background: #fff; border-radius: 8px; padding: 16px 20px; box-shadow: 0 2px 8px rgba(0,0,0,.08); display: flex; align-items: center; justify-content: space-between; }
+    .section-card-info h3 { margin: 0 0 4px; font-size: 15px; }
+    .section-card-info p { margin: 0; font-size: 13px; color: #666; }
+    .section-card-links { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn-demo, .btn-next { display: inline-block; padding: 6px 14px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: bold; }
+    .btn-demo { background: #4361ee; color: #fff; }
+    .btn-next { background: #f5f5f5; color: #333; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML 学習教材</h1>
+    <p>説明を読んで理解し、やってほしいことを順番に進めましょう。</p>
+  </header>
+
+  <main>
+    <h2>1. HTMLの基礎</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 1: 最初のHTMLを表示する</h3>
+          <p>見出し・段落・リストの基本構造を作る</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./01/practice.html" class="btn-demo">説明と課題</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 2: HTMLの骨格を理解する</h3>
+          <p>head要素と基本設定の役割を確認する</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./02/practice.html" class="btn-demo">説明と課題</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 3: テキストを意味のある構造にする</h3>
+          <p>見出し階層・段落・強調の使い分け</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./03/practice.html" class="btn-demo">説明と課題</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>2. ページ構造とデバッグ</h2>
+    <div class="section-group">
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 4: 複数ページをリンクでつなぐ</h3>
+          <p>navと相対パスを使ってページ遷移を作る</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./04/practice.html" class="btn-demo">説明と課題</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 5: バグを直し、DevToolsを使う</h3>
+          <p>HTMLエラーの修正と検証手順を学ぶ</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./05/practice.html" class="btn-demo">説明と課題</a>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-info">
+          <h3>Session 6: ウェブの仕組みを体感する</h3>
+          <p>Networkタブで通信とステータスコードを確認する</p>
+        </div>
+        <div class="section-card-links">
+          <a href="./06/practice.html" class="btn-demo">説明と課題</a>
+          <a href="../CSS/index.html" class="btn-next">次はCSSへ</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
 </html>

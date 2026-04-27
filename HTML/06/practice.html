@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session 6: ウェブの仕組みを体感する</title>
+  <link rel="stylesheet" href="../lesson-layout.css" />
+  <link rel="stylesheet" href="./06.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Session 6: ウェブの仕組みを体感する</h1>
+    <p>ブラウザとサーバーのやりとりをNetworkタブで観察します。</p>
+  </header>
+
+  <main class="lesson-main">
+    <section class="panel">
+      <h2>説明パート</h2>
+      <p>ページ表示はHTMLだけでなく、CSS・画像・スクリプトの追加通信で成り立っています。通信ログを確認すると、Webがどの順序で表示されるかを具体的に理解できます。</p>
+    </section>
+
+    <section class="panel">
+      <h2>やってほしいこと</h2>
+      <ol class="task-list">
+        <li>DevToolsのNetworkを開いてこのページを再読込する</li>
+        <li>HTML, CSS, 画像のリクエスト行を見つける</li>
+        <li>missing.css のリンクを追加して404を確認する</li>
+        <li>下のURLを使って200, 301, 404を比較する</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <span class="point-label">[ポイント]</span>
+      <ul class="point-list">
+        <li>ブラウザはHTML受信後に追加リソースを順に取得する</li>
+        <li>HTTPステータスコードは通信結果の要約</li>
+        <li>DNSは名前解決、サーバーは応答、クライアントは表示担当</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>参考リンク</h2>
+      <ul class="link-list">
+        <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener">MDN: Webの仕組み</a></li>
+      </ul>
+    </section>
+
+    <section class="panel work-area">
+      <h2>作業エリア</h2>
+      <!-- ↓ DevTools（F12）→ Network タブを開いた状態でこのページをリロードしてみよう -->
+      <p>Networkタブで通信の流れを観察してください。</p>
+
+      <h3>ステータスコード観察用リンク</h3>
+      <!-- ↓ 各リンクをクリックして、Networkタブの Status 列の値を確認してみよう -->
+      <ul>
+        <li><a href="https://httpstat.us/200" target="_blank" rel="noopener">200 OK</a></li>
+        <li><a href="https://httpstat.us/301" target="_blank" rel="noopener">301 Moved Permanently</a></li>
+        <li><a href="https://httpstat.us/404" target="_blank" rel="noopener">404 Not Found</a></li>
+      </ul>
+
+      <!-- ↓ [課題3] headタグ内に <link rel="stylesheet" href="./missing.css"> を追加して、Networkに赤い404行が出ることを確認しよう -->
+
+      <img src="https://dummyimage.com/480x180/eaf4ff/003049&text=Network+Practice" alt="ネットワーク確認用のサンプル画像" />
+    </section>
+  </main>
+
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>
