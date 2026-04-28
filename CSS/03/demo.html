@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セレクター デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>セレクター — id / class / タグ</h1>
+    <p>CSS でどの要素にスタイルを当てるかを「セレクター」で指定します。</p>
+  </header>
+
+  <main>
+    <!-- タグセレクター -->
+    <section>
+      <h2>タグセレクター（要素セレクター）</h2>
+      <p class="note">HTML タグ名をそのまま書くと、そのタグ全てにスタイルが当たります。</p>
+      <div class="demo-area">
+        <p>この段落は &lt;p&gt; タグなので青になります。</p>
+        <p>こちらも &lt;p&gt; タグなので同じスタイルです。</p>
+        <span>この &lt;span&gt; は別のタグなので影響されません。</span>
+      </div>
+      <pre class="code">/* タグセレクター */
+p {
+  color: #1d3461;
+  font-weight: bold;
+}</pre>
+    </section>
+
+    <!-- クラスセレクター -->
+    <section>
+      <h2>クラスセレクター（.クラス名）</h2>
+      <p class="note">HTML に <code>class="名前"</code> を付けて、CSS で <code>.名前</code> と書きます。<br>
+      同じクラスは複数の要素に使い回せます。</p>
+      <div class="demo-area">
+        <p class="highlight">class="highlight" が付いた段落（黄色背景）</p>
+        <p>クラスなし — スタイルが当たりません</p>
+        <p class="highlight">こちらも class="highlight" なので同じスタイル</p>
+        <div class="highlight">div タグでも同じクラスが使えます</div>
+      </div>
+      <pre class="code">/* クラスセレクター */
+.highlight {
+  background-color: #fff3bf;
+  padding: 8px 12px;
+  border-left: 4px solid #f4a261;
+  border-radius: 4px;
+}</pre>
+    </section>
+
+    <!-- id セレクター -->
+    <section>
+      <h2>id セレクター（#id名）</h2>
+      <p class="note">HTML に <code>id="名前"</code> を付けて、CSS で <code>#名前</code> と書きます。<br>
+      id は1ページに1つだけ使うのがルールです（クラスと違って使い回し不可）。</p>
+      <div class="demo-area">
+        <p id="main-title">id="main-title" が付いた要素（特別なスタイル）</p>
+        <p>id なし — スタイルなし</p>
+        <p>id なし — スタイルなし</p>
+      </div>
+      <pre class="code">/* id セレクター */
+#main-title {
+  font-size: 24px;
+  color: #9b2335;
+  font-weight: bold;
+  border-bottom: 2px solid #9b2335;
+  padding-bottom: 8px;
+}</pre>
+    </section>
+
+    <!-- クラスと id の違い -->
+    <section>
+      <h2>class と id の使い分け</h2>
+      <div class="compare-table">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>class</th>
+              <th>id</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML の書き方</td>
+              <td><code>class="名前"</code></td>
+              <td><code>id="名前"</code></td>
+            </tr>
+            <tr>
+              <td>CSS の書き方</td>
+              <td><code>.名前 { ... }</code></td>
+              <td><code>#名前 { ... }</code></td>
+            </tr>
+            <tr>
+              <td>同じページで複数使える？</td>
+              <td>○ 何度でも使える</td>
+              <td>✕ 1ページに1つだけ</td>
+            </tr>
+            <tr>
+              <td>1つの要素に複数指定？</td>
+              <td>○ スペース区切りで複数OK</td>
+              <td>✕ 1要素に1つだけ</td>
+            </tr>
+            <tr>
+              <td>主な用途</td>
+              <td>繰り返すスタイル（ボタン・カードなど）</td>
+              <td>ページ上で唯一の要素（ヘッダーIDなど）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 複数クラス -->
+    <section>
+      <h2>複数クラスの組み合わせ</h2>
+      <p class="note">1つの要素に複数のクラスをスペース区切りで付けられます。スタイルが重なり合います。</p>
+      <div class="demo-area">
+        <div class="box">box のみ</div>
+        <div class="box red">box + red</div>
+        <div class="box large">box + large</div>
+        <div class="box red large">box + red + large（全部合わせる）</div>
+      </div>
+      <pre class="code">.box  { padding: 8px 16px; border-radius: 4px; border: 2px solid #ccc; }
+.red  { background: #e63946; color: #fff; border-color: #e63946; }
+.large { font-size: 20px; padding: 16px 24px; }</pre>
+    </section>
+
+    <!-- 子孫セレクター -->
+    <section>
+      <h2>子孫セレクター（スペースで繋ぐ）</h2>
+      <p class="note">「.親 子」のようにスペースで繋ぐと、特定の親の中にある子要素だけに当たります。</p>
+      <div class="demo-area">
+        <div class="card-demo">
+          <p>カードの中の &lt;p&gt; — 青色</p>
+          <p>カードの中の別の &lt;p&gt; — こちらも青色</p>
+        </div>
+        <p>カードの外の &lt;p&gt; — スタイルなし</p>
+      </div>
+      <pre class="code">/* .card-demo の中の p だけに当たる */
+.card-demo p {
+  color: #1d3461;
+  font-weight: bold;
+}</pre>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

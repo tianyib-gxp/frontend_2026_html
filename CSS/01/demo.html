@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1-1. width / height デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>1-1. width / height</h1>
+    <p>px は固定サイズ、% は親要素に対する割合です。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>px 指定（固定サイズ）</h2>
+      <p class="note">ブラウザ幅を変えても大きさが変わりません。</p>
+      <div class="demo-area">
+        <div class="box px-200">width: 200px<br>height: 80px</div>
+        <div class="box px-350">width: 350px<br>height: 80px</div>
+        <div class="box px-100 tall">width: 100px<br>height: 150px</div>
+      </div>
+      <pre class="code">.box-200px { width: 200px; height: 80px; }
+.box-350px { width: 350px; height: 80px; }
+.box-100px { width: 100px; height: 150px; }</pre>
+    </section>
+
+    <section>
+      <h2>% 指定（親要素に対する割合）</h2>
+      <p class="note">ブラウザ幅を変えると一緒に伸縮します。</p>
+      <div class="demo-area demo-area--column">
+        <div class="box pct-100">width: 100%</div>
+        <div class="box pct-75">width: 75%</div>
+        <div class="box pct-50">width: 50%</div>
+        <div class="box pct-25">width: 25%</div>
+      </div>
+      <pre class="code">.box-100pct { width: 100%; }
+.box-75pct  { width: 75%;  }
+.box-50pct  { width: 50%;  }
+.box-25pct  { width: 25%;  }</pre>
+    </section>
+
+    <section>
+      <h2>px vs % — ブラウザ幅を変えて確認しよう</h2>
+      <div class="compare-area">
+        <div class="compare-item">
+          <p class="label">px（固定）</p>
+          <div class="box-fixed">200px 固定</div>
+        </div>
+        <div class="compare-item">
+          <p class="label">%（可変）</p>
+          <div class="box-fluid">50% 可変</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

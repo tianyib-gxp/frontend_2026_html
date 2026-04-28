@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-1. max-width / min-width デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>5-1. max-width / min-width</h1>
+    <p>ブラウザ幅を変えて、各ボックスの挙動を確認しましょう。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>max-width — 最大幅を制限する</h2>
+      <p class="note">幅を広げすぎないようにします。レスポンシブレイアウトで本文コンテンツを読みやすく保つのに使います。</p>
+      <div class="demo-area">
+        <div class="box max-600">max-width: 600px<br>幅を広げても600pxを超えない</div>
+        <div class="box max-400">max-width: 400px<br>幅を広げても400pxを超えない</div>
+      </div>
+      <pre class="code">.container {
+  width: 100%;       /* 基本は100%（画面幅に合わせる） */
+  max-width: 600px;  /* でも600px以上には広がらない */
+  margin: 0 auto;    /* 中央寄せ */
+}</pre>
+    </section>
+
+    <section>
+      <h2>min-width — 最小幅を確保する</h2>
+      <p class="note">幅を縮めすぎないようにします。ボタンやカードが小さくなりすぎるのを防ぎます。</p>
+      <div class="demo-area">
+        <div class="box min-150">min-width: 150px<br>150px未満にならない</div>
+        <div class="box min-200">min-width: 200px<br>200px未満にならない</div>
+      </div>
+      <pre class="code">.button {
+  min-width: 120px;  /* ラベルが短くてもボタンが小さくならない */
+  padding: 8px 16px;
+}</pre>
+    </section>
+
+    <section>
+      <h2>レスポンシブの基本パターン</h2>
+      <p class="note">このページ自体が max-width の例です。ブラウザ幅を広げても本文エリアは広がりません。</p>
+      <div class="responsive-demo">
+        <p>このコンテナは <code>width: 100%</code> かつ <code>max-width: 800px</code> です。<br>
+        幅を広げてみてください。800px以上は広がりません。</p>
+      </div>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

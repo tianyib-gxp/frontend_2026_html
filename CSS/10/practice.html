@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-2. overflow 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 5-2. max-height / overflow</h1>
+    <p>practice.css の TODO を埋めてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：テキストを切り捨てる</h2>
+      <p>カードの説明文が長すぎます。<strong>高さを 60px に固定して、はみ出た部分を隠して</strong>ください。</p>
+      <div class="clamp-box">
+        <p>これは長い説明文です。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：スクロール可能なリストを作る</h2>
+      <p>リストが長いので、<strong>高さを 150px に制限してスクロールできる</strong>ようにしてください。</p>
+      <ul class="scroll-list">
+        <li>項目 1</li>
+        <li>項目 2</li>
+        <li>項目 3</li>
+        <li>項目 4</li>
+        <li>項目 5</li>
+        <li>項目 6</li>
+        <li>項目 7</li>
+        <li>項目 8</li>
+      </ul>
+    </section>
+
+    <section class="task">
+      <h2>問題 3：画像のはみ出しを防ぐ</h2>
+      <p>画像がカードからはみ出しています。<strong>はみ出た部分を隠して</strong>画像をカードに収めてください。</p>
+      <div class="img-card">
+        <div class="fake-img"></div>
+        <p class="img-caption">画像キャプション</p>
+      </div>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

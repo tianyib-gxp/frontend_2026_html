@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #023e8a; color: #fff; padding: 20px 32px; }
+.page-header a { color: #90e0ef; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.task h2 { margin: 0 0 8px; font-size: 18px; color: #023e8a; }
+.task p { margin: 0 0 16px; font-size: 14px; }
+
+/* ===== ここから練習スペース ===== */
+
+/* 問題1: 記事タイトルを大きく・太く・青くする */
+.article-title {
+}
+
+/* 問題2: 引用文を中央揃え・斜体・グレーにする */
+.quote {
+  border-left: 4px solid #023e8a;
+  margin: 0;
+  padding: 12px 24px;
+  background: #caf0f8;
+}
+
+/* 問題3: コードらしい等幅フォントにする */
+.code-block {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* 問題4: テキストカードのタイトル・本文・リンクをスタイリングする */
+.text-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 320px;
+}
+.card-title {
+  margin: 0 0 8px;
+}
+.card-body {
+  margin: 0 0 12px;
+}
+.card-link {
+  margin: 0;
+}
+.card-link a { color: #0096c7; }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session 3: テキストを意味のある構造にする</title>
+  <link rel="stylesheet" href="../lesson-layout.css" />
+  <link rel="stylesheet" href="./03.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Session 3: テキストを意味のある構造にする</h1>
+    <p>見た目だけでなく、文書の意味が伝わるタグ選びを練習します。</p>
+  </header>
+
+  <main class="lesson-main">
+    <section class="panel">
+      <h2>説明パート</h2>
+      <p>同じ文章でも、見出し・段落・リスト・強調を適切に使うと、読み手にも機械にも意味が伝わりやすくなります。ここではテキストを構造化して、セマンティクスを体感します。</p>
+    </section>
+
+    <section class="panel">
+      <h2>やってほしいこと</h2>
+      <ol class="task-list">
+        <li>下の素材テキストエリアを、見出し・段落・リストで構造化する</li>
+        <li>h1をh2に変えたとき、見た目だけでなく意味がどう変わるか確認する</li>
+        <li>bとstrongを使い分け、DevToolsで要素を確認する</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <span class="point-label">[ポイント]</span>
+      <ul class="point-list">
+        <li>ブロック要素は縦に積まれ、インライン要素は文中で流れる</li>
+        <li>strongは重要度、bは視覚強調が主目的</li>
+        <li>見出し階層は文書アウトラインに直結し、アクセシビリティに影響する</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>参考リンク</h2>
+      <ul class="link-list">
+        <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank" rel="noopener">MDN: HTMLテキストの基礎</a></li>
+      </ul>
+    </section>
+
+    <section class="panel work-area">
+      <h2>作業エリア</h2>
+      <!-- ↓ 下のpタグの中身を、h2・h3・p・ul・li などのタグに分けて整理してみよう -->
+      <!-- ↓ 例: 「わたしの学習記録」→ <h2>わたしの学習記録</h2> に変える -->
+      <!-- ↓ 例: 「重要: 〜」の部分 → <strong>重要: 〜</strong> で囲んでみよう -->
+      <h3>素材テキスト（最初はここをタグで整理）</h3>
+      <p>
+        わたしの学習記録 今日はHTMLの見出しと段落を学習した。次回はリンクと画像に進む。
+        学習メモ セマンティクスを意識すると読みやすくなる。重要: 見出しは順番に使う。
+      </p>
+      <!-- ↓ 整理できたら h3 を h2 に変えて、見た目と意味の変化を確認してみよう -->
+    </section>
+  </main>
+
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

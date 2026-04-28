@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #2b2d42; color: #fff; padding: 20px 32px; }
+.page-header a { color: #ef233c; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.task h2 { margin: 0 0 8px; font-size: 18px; color: #2b2d42; }
+.task p { margin: 0 0 16px; font-size: 14px; }
+
+/* ===== ここから練習スペース ===== */
+
+/* 問題1: 高さを固定して、はみ出た部分を見えなくする */
+.clamp-box {
+  background: #edf2f4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  max-width: 320px;
+}
+.clamp-box p { margin: 0; font-size: 13px; line-height: 1.6; }
+
+/* 問題2: 高さを制限してスクロールできるようにする */
+.scroll-list {
+  background: #edf2f4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0;
+  max-width: 250px;
+}
+.scroll-list li { padding: 4px 0; font-size: 14px; border-bottom: 1px solid #ddd; }
+.scroll-list li:last-child { border-bottom: none; }
+
+/* 問題3: 画像がカードからはみ出ないようにする */
+.img-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 240px;
+}
+.fake-img {
+  width: 120%;  /* わざとカードより大きくしてはみ出させている */
+  height: 120px;
+  background: linear-gradient(135deg, #2b2d42, #ef233c);
+}
+.img-caption { padding: 8px 12px; margin: 0; font-size: 13px; }

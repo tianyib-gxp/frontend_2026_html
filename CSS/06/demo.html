@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2-3. z-index デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>2-3. z-index</h1>
+    <p>重なり順（前後）を数値で制御します。大きいほど手前に表示されます。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>基本：2つの要素を重ねる</h2>
+      <p class="note">z-index の数値が大きい方が前面（手前）に表示されます。</p>
+      <div class="stack-area">
+        <div class="box layer-1">z-index: 1<br>（後ろ）</div>
+        <div class="box layer-2">z-index: 2<br>（前）</div>
+      </div>
+      <pre class="code">.layer-1 { position: relative; z-index: 1; }
+.layer-2 { position: relative; z-index: 2; } /* こちらが前面 */</pre>
+    </section>
+
+    <section>
+      <h2>3レイヤーの重なり</h2>
+      <p class="note">z-index の数値で3段階の前後関係を作れます。</p>
+      <div class="triple-area">
+        <div class="box tri-1">z-index: 1</div>
+        <div class="box tri-2">z-index: 3</div>
+        <div class="box tri-3">z-index: 2</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>モーダル風のオーバーレイ</h2>
+      <p class="note">モーダルは高い z-index でコンテンツより前に表示します。</p>
+      <div class="modal-demo">
+        <div class="content-behind">コンテンツ（z-index: 1）</div>
+        <div class="overlay">オーバーレイ（z-index: 10）</div>
+        <div class="modal">モーダル（z-index: 20）<br>一番前面</div>
+      </div>
+      <pre class="code">.overlay { position: absolute; z-index: 10; }
+.modal   { position: absolute; z-index: 20; } /* 最前面 */</pre>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

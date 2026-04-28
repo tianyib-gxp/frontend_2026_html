@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #0f4c75; color: #fff; padding: 20px 32px; }
+.page-header a { color: #90e0ef; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; max-width: 900px; }
+.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.task h2 { margin: 0 0 8px; font-size: 18px; color: #0f4c75; }
+.task p { margin: 0 0 16px; font-size: 14px; }
+
+/* ===== ここから練習スペース ===== */
+
+/* 問題1: ロゴを左端・メニューを右端・縦方向は中央に配置する */
+.navbar {
+  background: #0f4c75;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+.nav-logo { color: #fff; font-size: 18px; font-weight: bold; }
+.nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
+.nav-menu a { color: #fff; text-decoration: none; font-size: 14px; }
+
+/* 問題2: コンテンツを上下左右の中央に配置する */
+.center-stage {
+  background: #dbeafe;
+  height: 200px;
+  border-radius: 4px;
+}
+.center-card { background: #0f4c75; color: #fff; padding: 16px 24px; border-radius: 8px; font-size: 14px; }
+
+/* 問題3: カードを横並びにして間隔を開ける */
+.card-row {
+}
+.feat-card {
+  flex: 1;
+  background: #1b7fc4;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 問題4: アイテムを縦方向に並べて間隔を開ける */
+.vert-list {
+  background: #dbeafe;
+  padding: 16px;
+  border-radius: 4px;
+}
+.vert-item {
+  background: #0f4c75;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Flexbox デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>4. Flexbox</h1>
+    <p>display: flex で子要素を柔軟にレイアウトできます。</p>
+  </header>
+
+  <main>
+    <!-- インタラクティブデモ -->
+    <section class="interactive">
+      <h2>インタラクティブデモ</h2>
+      <p class="note">各ボタンを押してプロパティの変化を確認しましょう。</p>
+
+      <div class="controls">
+        <div class="control-group">
+          <label>flex-direction</label>
+          <div class="btn-group">
+            <button onclick="setFlex('flexDirection','row')" class="ctrl-btn active" data-group="dir">row</button>
+            <button onclick="setFlex('flexDirection','column')" class="ctrl-btn" data-group="dir">column</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>justify-content</label>
+          <div class="btn-group">
+            <button onclick="setFlex('justifyContent','flex-start')" class="ctrl-btn active" data-group="jc">flex-start</button>
+            <button onclick="setFlex('justifyContent','center')" class="ctrl-btn" data-group="jc">center</button>
+            <button onclick="setFlex('justifyContent','flex-end')" class="ctrl-btn" data-group="jc">flex-end</button>
+            <button onclick="setFlex('justifyContent','space-between')" class="ctrl-btn" data-group="jc">space-between</button>
+            <button onclick="setFlex('justifyContent','space-around')" class="ctrl-btn" data-group="jc">space-around</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>align-items</label>
+          <div class="btn-group">
+            <button onclick="setFlex('alignItems','stretch')" class="ctrl-btn active" data-group="ai">stretch</button>
+            <button onclick="setFlex('alignItems','flex-start')" class="ctrl-btn" data-group="ai">flex-start</button>
+            <button onclick="setFlex('alignItems','center')" class="ctrl-btn" data-group="ai">center</button>
+            <button onclick="setFlex('alignItems','flex-end')" class="ctrl-btn" data-group="ai">flex-end</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>gap</label>
+          <div class="btn-group">
+            <button onclick="setGap('0px')" class="ctrl-btn active" data-group="gap">0</button>
+            <button onclick="setGap('8px')" class="ctrl-btn" data-group="gap">8px</button>
+            <button onclick="setGap('16px')" class="ctrl-btn" data-group="gap">16px</button>
+            <button onclick="setGap('32px')" class="ctrl-btn" data-group="gap">32px</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-preview" id="flexPreview">
+        <div class="flex-item">A</div>
+        <div class="flex-item tall">B</div>
+        <div class="flex-item">C</div>
+        <div class="flex-item">D</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>よく使うパターン</h2>
+
+      <h3>水平中央配置</h3>
+      <div class="pattern-center">
+        <div class="item-box">中央に配置</div>
+      </div>
+      <pre class="code">.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</pre>
+
+      <h3 style="margin-top:24px">ナビゲーションバー</h3>
+      <nav class="pattern-nav">
+        <span class="logo">MyApp</span>
+        <div class="nav-links">
+          <a href="#">ホーム</a>
+          <a href="#">ブログ</a>
+          <a href="#">お問い合わせ</a>
+        </div>
+      </nav>
+      <pre class="code">.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</pre>
+
+      <h3 style="margin-top:24px">カードグリッド</h3>
+      <div class="pattern-grid">
+        <div class="grid-card">カード 1</div>
+        <div class="grid-card">カード 2</div>
+        <div class="grid-card">カード 3</div>
+      </div>
+      <pre class="code">.grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}</pre>
+    </section>
+  </main>
+
+  <script>
+    const preview = document.getElementById('flexPreview');
+    function setFlex(prop, val) {
+      preview.style[prop] = val;
+      const groupMap = { flexDirection: 'dir', justifyContent: 'jc', alignItems: 'ai' };
+      document.querySelectorAll('[data-group="' + groupMap[prop] + '"]').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    function setGap(val) {
+      preview.style.gap = val;
+      document.querySelectorAll('[data-group="gap"]').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+
+.page-header { background: #1a535c; color: #fff; padding: 20px 32px; }
+.page-header a { color: #4ecdc4; text-decoration: none; font-size: 14px; }
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+main { padding: 32px; }
+.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.task h2 { margin: 0 0 8px; font-size: 18px; color: #1a535c; }
+.task p { margin: 0 0 16px; font-size: 14px; }
+
+/* ===== ここから練習スペース ===== */
+
+/* 問題1: 最大幅を制限してコンテンツを中央に配置する */
+.content-area {
+  background: #e8f8f5;
+  padding: 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* 問題2: ボタンに最小の幅を設定してラベルが短くても揃えるようにする */
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.min-btn {
+  background: #1a535c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 問題3: カードに最小・最大の幅を設定してレスポンシブに並べる */
+.resp-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+.resp-card {
+  flex: 1;
+  background: #1a535c;
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}

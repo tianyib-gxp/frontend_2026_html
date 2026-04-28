@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2-3. z-index 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 2-3. z-index</h1>
+    <p>practice.css の TODO を埋めてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：赤いボックスを青より前面に</h2>
+      <p>現在、青いボックスが前にあります。<strong>重なり順</strong>を変えて赤いボックスが前面に来るようにしてください。</p>
+      <div class="overlap-area">
+        <div class="blue-box">青（後ろに）</div>
+        <div class="red-box">赤（前に出す）</div>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：ツールチップを前面に表示</h2>
+      <p>カードにホバーするとツールチップが出るデザインです。<br>
+      ツールチップが隣のカードに隠れています。<strong>重なり順を設定してツールチップが一番前面</strong>に来るようにしてください。</p>
+      <div class="cards">
+        <div class="card-item card-low">
+          <span class="tooltip">これはツールチップです！前面に出す</span>
+          カード A（ホバーしてみて）
+        </div>
+        <div class="card-item card-high">カード B（z-index が高い）</div>
+      </div>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

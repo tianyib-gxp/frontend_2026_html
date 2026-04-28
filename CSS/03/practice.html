@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セレクター 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 — セレクター</h1>
+    <p>practice.css の「ダミーセレクター」を正しいセレクターに書き換えてください。</p>
+  </header>
+
+  <main>
+    <!-- 問題1 -->
+    <section class="task">
+      <h2>問題 1：タグセレクター</h2>
+      <p>
+        CSSにスタイルは用意してあります。<br>
+        そのスタイルを<strong>ページ内の全ての <code>&lt;h3&gt;</code> タグ</strong>に適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy1</code> を書き換えてください。</em>
+      </p>
+      <div class="preview">
+        <h3>見出し A</h3>
+        <p>本文テキストは変わりません。</p>
+        <h3>見出し B</h3>
+        <p>こちらも本文なので変わりません。</p>
+        <h3>見出し C</h3>
+      </div>
+    </section>
+
+    <!-- 問題2 -->
+    <section class="task">
+      <h2>問題 2：クラスセレクター</h2>
+      <p>
+        CSSにボタンのスタイルが用意してあります。<br>
+        <strong><code>class="btn"</code> が付いた要素だけ</strong>にそのスタイルを適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy2</code> を書き換えてください。</em>
+      </p>
+      <div class="preview">
+        <button class="btn">送信する</button>
+        <button class="btn">キャンセル</button>
+        <button>スタイルなし（クラスなし）</button>
+      </div>
+    </section>
+
+    <!-- 問題3 -->
+    <section class="task">
+      <h2>問題 3：id セレクター</h2>
+      <p>
+        CSSに大きな見出し用のスタイルが用意してあります。<br>
+        <strong><code>id="hero-title"</code> を持つ要素だけ</strong>にそのスタイルを適用させてください。<br>
+        <em>→ practice.css の <code>#practice-dummy3</code> を書き換えてください。</em>
+      </p>
+      <div class="preview">
+        <h2 id="hero-title">ようこそ！</h2>
+        <p>このページへようこそ。</p>
+      </div>
+    </section>
+
+    <!-- 問題4 -->
+    <section class="task">
+      <h2>問題 4：複数クラスを組み合わせる</h2>
+      <p>以下の 2 つのスタイルを定義してください：</p>
+      <ul>
+        <li>枠線・角丸・内側余白 → <strong><code>.card</code> クラス</strong>に適用</li>
+        <li>背景色・枠線の色を変える → <strong><code>.featured</code> クラス</strong>に適用</li>
+      </ul>
+      <p><em>→ practice.css の <code>#practice-dummy4a</code> と <code>#practice-dummy4b</code> を書き換えてください。</em></p>
+      <div class="preview">
+        <div class="card">普通のカード</div>
+        <br>
+        <div class="card featured">注目カード（card + featured）</div>
+      </div>
+    </section>
+
+    <!-- 問題5 -->
+    <section class="task">
+      <h2>問題 5：子孫セレクター</h2>
+      <p>
+        CSSにリンクのスタイルが用意してあります。<br>
+        <strong><code>.sidebar</code> の中にある <code>&lt;a&gt;</code> タグだけ</strong>にそのスタイルを適用させてください。<br>
+        メインコンテンツ内のリンクには影響しないようにします。<br>
+        <em>→ practice.css の <code>#practice-dummy5</code> を書き換えてください。</em>
+      </p>
+      <div class="preview">
+        <div style="display:flex; gap: 24px; flex-wrap: wrap;">
+          <div class="sidebar">
+            <p>サイドバー内のリンク：</p>
+            <a href="#">リンク A</a><br>
+            <a href="#">リンク B</a><br>
+            <a href="#">リンク C</a>
+          </div>
+          <div>
+            <p>メインコンテンツ内のリンク（変わらない）：</p>
+            <a href="#">リンク X</a><br>
+            <a href="#">リンク Y</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

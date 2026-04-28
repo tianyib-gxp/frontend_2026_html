@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML総合課題</title>
+  <title>HTML講習 完了案内</title>
+  <link rel="stylesheet" href="../lesson-layout.css" />
   <link rel="stylesheet" href="./final.css" />
 </head>
 <body>
-  <!--
-    HTMLフェーズ総合課題
-    やってほしいこと:
-    1) Session 1で企画したサイトを2ページ以上で実装
-    2) 全ページにナビゲーションを設置して相互移動可能にする
-    3) header/nav/main/footerなどセマンティック要素を利用する
-    4) DevTools Consoleでエラー0を確認する
-    5) W3C Validatorで重大エラー0を目標にする
+  <header class="page-header">
+    <h1>HTML講習はここまで</h1>
+    <p>お疲れさまでした。HTMLの基礎を学び終えました。</p>
+    <p>次はCSSで見た目を整え、レイアウトを作る方法を学ぶ段階に進みます。</p>
+  </header>
 
-    座学で説明しやすいポイント:
-    - 完成度は見た目だけでなく、構造の意味付けで評価できる
-    - 検証ツールは「気づきを得るため」に使う
-    - 小さく作って段階的に改善するのが実務的
+  <main class="lesson-main">
 
-    参考リンク:
-    - https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-    - https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
-  -->
+    <section class="panel">
+      <span class="point-label">[ポイント]</span>
+      <ul class="point-list">
+        <li>HTMLは「何を書くか」、CSSは「どう見せるか」を担当する</li>
+        <li>構造が整っているほど、CSSでの調整がしやすい</li>
+      </ul>
+    </section>
 
-  <h1>HTML総合課題</h1>
-  <p>このページは要件メモです。ここから自分のサイト制作を開始してください。</p>
+    <section class="panel">
+      <a class="btn-link" href="../../CSS/index.html">CSS課題へ進む</a>
+    </section>
+  </main>
 </body>
 </html>

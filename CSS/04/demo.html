@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2-1. display デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>2-1. display</h1>
+    <p>block / inline / inline-block の違いを確認しましょう。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>display: block</h2>
+      <p class="note">横幅いっぱいに広がり、前後に改行が入ります。width / height / margin / padding が自由に使えます。</p>
+      <div class="demo-area">
+        <span class="block-demo">ブロック要素 A</span>
+        <span class="block-demo">ブロック要素 B</span>
+        <span class="block-demo">ブロック要素 C</span>
+      </div>
+      <pre class="code">.item { display: block; width: 200px; }</pre>
+    </section>
+
+    <section>
+      <h2>display: inline</h2>
+      <p class="note">テキストと同じように横に並びます。width / height は無視されます。上下の margin も効きません。</p>
+      <div class="demo-area">
+        <span class="inline-demo">インライン A</span>
+        <span class="inline-demo">インライン B</span>
+        <span class="inline-demo">インライン C</span>
+        <span class="inline-demo">インライン D</span>
+      </div>
+      <pre class="code">.item { display: inline; }
+/* width / height を指定しても効かない */</pre>
+    </section>
+
+    <section>
+      <h2>display: inline-block</h2>
+      <p class="note">横に並びながら（inline の性質）、width / height / margin が使えます（block の性質）。ナビゲーションメニューのボタンなどに使います。</p>
+      <div class="demo-area">
+        <span class="inline-block-demo">ボタン A</span>
+        <span class="inline-block-demo">ボタン B</span>
+        <span class="inline-block-demo">ボタン C</span>
+      </div>
+      <pre class="code">.item {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  margin: 4px;
+}</pre>
+    </section>
+
+    <section>
+      <h2>まとめ比較</h2>
+      <table class="summary-table">
+        <thead>
+          <tr><th>プロパティ</th><th>block</th><th>inline</th><th>inline-block</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>横並び</td><td>✕</td><td>○</td><td>○</td></tr>
+          <tr><td>width / height 指定</td><td>○</td><td>✕</td><td>○</td></tr>
+          <tr><td>上下 margin</td><td>○</td><td>✕</td><td>○</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

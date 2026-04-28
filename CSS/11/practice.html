@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. 見た目・背景 練習</title>
+  <link rel="stylesheet" href="./practice.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>練習問題 6. 見た目・背景</h1>
+    <p>practice.css の TODO を埋めてカードを完成させてください。</p>
+  </header>
+
+  <main>
+    <section class="task">
+      <h2>問題 1：ボタンをスタイリングする</h2>
+      <p>ボタンに以下のスタイルを適用してください：<br>
+      <strong>背景色 #4361ee・角の丸み 8px・ポインターカーソル・青い影（0 2px 8px rgba(67,97,238,.4)）</strong></p>
+      <button class="styled-btn">送信する</button>
+    </section>
+
+    <section class="task">
+      <h2>問題 2：アバターを丸くする</h2>
+      <p>四角い画像を丸くしてください。また、枠に好きな色を付けてください。</p>
+      <div class="avatar"></div>
+    </section>
+
+    <section class="task">
+      <h2>問題 3：カードコンポーネントを完成させる</h2>
+      <p>以下の仕様でカードをスタイリングしてください：</p>
+      <ul>
+        <li>カード全体: <strong>白い背景・角の丸み 12px・影（0 4px 16px rgba(0,0,0,.1)）・はみ出し非表示</strong></li>
+        <li>カード画像エリア: <strong>グラデーション背景（好きな色で）</strong></li>
+        <li>ボタン: <strong>クリックカーソル・角の丸み 6px</strong></li>
+      </ul>
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-body">
+          <h3 class="product-name">商品名</h3>
+          <p class="product-price">¥2,980</p>
+          <button class="product-btn">カートに追加</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>問題 4：無効状態のボタン</h2>
+      <p>無効なボタンを <strong>透明度を 0.4 に下げ、カーソルを「操作不可」の状態</strong>にしてください。</p>
+      <button class="disabled-btn">送信する（無効）</button>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>

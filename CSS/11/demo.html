@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. 見た目・背景 デモ</title>
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <header class="page-header">
+    <a href="../index.html">← 一覧へ</a>
+    <h1>6. 見た目・背景</h1>
+    <p>background / border / border-radius / box-shadow / opacity / cursor</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>background-color / background-image</h2>
+      <div class="demo-row">
+        <div class="box bg-color">background-color<br>#4361ee（青）</div>
+        <div class="box bg-color-orange">background-color<br>#f77f00（橙）</div>
+        <div class="box bg-color-red">background-color<br>#e63946（赤）</div>
+        <div class="box bg-gradient">linear-gradient<br>青→紫</div>
+        <div class="box bg-gradient-orange">linear-gradient<br>橙→黄</div>
+        <div class="box bg-gradient-red">linear-gradient<br>赤→橙</div>
+      </div>
+      <pre class="code">.blue   { background-color: #4361ee; }
+.orange { background-color: #f77f00; }
+.red    { background-color: #e63946; }
+.grad-blue   { background: linear-gradient(135deg, #4361ee, #7209b7); }
+.grad-orange { background: linear-gradient(135deg, #f77f00, #fcbf49); }
+.grad-red    { background: linear-gradient(135deg, #e63946, #f7a072); }</pre>
+    </section>
+
+    <section>
+      <h2>border / border-radius（角丸）</h2>
+      <div class="demo-row">
+        <div class="box border-basic">border: 2px solid</div>
+        <div class="box border-dashed">border: dashed</div>
+        <div class="box border-radius-sm">border-radius: 4px</div>
+        <div class="box border-radius-lg">border-radius: 16px</div>
+        <div class="box border-radius-full">border-radius: 50%</div>
+      </div>
+      <pre class="code">.box    { border: 2px solid #4361ee; }
+.rounded { border-radius: 8px; }
+.pill    { border-radius: 9999px; }
+.circle  { border-radius: 50%; }</pre>
+    </section>
+
+    <section>
+      <h2>box-shadow</h2>
+      <div class="demo-row">
+        <div class="box shadow-sm">影: 小</div>
+        <div class="box shadow-md">影: 中</div>
+        <div class="box shadow-lg">影: 大</div>
+        <div class="box shadow-colored">カラー影（青）</div>
+        <div class="box shadow-colored-orange">カラー影（橙）</div>
+        <div class="box shadow-colored-red">カラー影（赤）</div>
+      </div>
+      <pre class="code">.sm      { box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.md      { box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+.lg      { box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.blue    { box-shadow: 0 4px 20px rgba(67,97,238,.4); }
+.orange  { box-shadow: 0 4px 20px rgba(247,127,0,.5); }
+.red     { box-shadow: 0 4px 20px rgba(230,57,70,.5); }</pre>
+    </section>
+
+    <section>
+      <h2>opacity（透明度）</h2>
+      <div class="demo-row">
+        <div class="box opacity-100">opacity: 1.0</div>
+        <div class="box opacity-75">opacity: 0.75</div>
+        <div class="box opacity-50">opacity: 0.5</div>
+        <div class="box opacity-25">opacity: 0.25</div>
+      </div>
+      <pre class="code">.full    { opacity: 1; }
+.medium  { opacity: 0.5; }
+.faded   { opacity: 0.25; }</pre>
+    </section>
+
+    <section>
+      <h2>cursor（ホバー時のマウスカーソル）</h2>
+      <div class="demo-row">
+        <div class="box cursor-pointer">cursor: pointer<br><small>ボタン・リンクに</small></div>
+        <div class="box cursor-default">cursor: default<br><small>通常</small></div>
+        <div class="box cursor-not-allowed">cursor: not-allowed<br><small>無効状態</small></div>
+        <div class="box cursor-grab">cursor: grab<br><small>ドラッグ可能</small></div>
+        <div class="box cursor-text">cursor: text<br><small>テキスト入力</small></div>
+        <div class="box cursor-crosshair">cursor: crosshair<br><small>描画・選択</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>組み合わせ — カードコンポーネント</h2>
+      <p class="note">上記のプロパティを組み合わせてカードを作ることもできます。</p>
+      <div class="card-demo">
+        <div class="demo-card">
+          <div class="card-img card-img-blue"></div>
+          <div class="card-body">
+            <h3 class="card-title">ブルーカード</h3>
+            <p class="card-desc">クールで信頼感のある青系の配色です。</p>
+            <button class="card-btn card-btn-blue">詳しく見る</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="card-img card-img-orange"></div>
+          <div class="card-body">
+            <h3 class="card-title">オレンジカード</h3>
+            <p class="card-desc">暖かみと活気のあるオレンジ系の配色です。</p>
+            <button class="card-btn card-btn-orange">詳しく見る</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="card-img card-img-red"></div>
+          <div class="card-body">
+            <h3 class="card-title">レッドカード</h3>
+            <p class="card-desc">インパクトと情熱を感じさせる赤系の配色です。</p>
+            <button class="card-btn card-btn-red">詳しく見る</button>
+          </div>
+        </div>
+      </div>
+      <pre class="code">.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+.card-btn {
+  cursor: pointer;
+  border-radius: 8px;
+}</pre>
+    </section>
+  </main>
+  <script src="../lesson-nav.js"></script>
+</body>
+</html>
