@@ -9,9 +9,9 @@ function showQuotes() {
   list.innerHTML = '';
 
   const a = 'シングルクォート';
-  const b = "ダブルクォート";
-  const c = `バッククォート`;
-  const d = "It's a pen";
+  const b = 'ダブルクォート';
+  const c = 'バッククォート';
+  const d = 'It\'s a pen';
   const e = '彼は"こんにちは"と言った';
 
   addItem('quote-list', `シングル: ${a}`);
