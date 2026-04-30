@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ループ（for文）チャレンジ</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>1-3. ループ チャレンジ</h1>
+      <p>JavaScriptで解いた問題をTypeScriptで書き直してみましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：素数リスト</h2>
+        <ol>
+          <li>2から50までの素数をfor文を使ってリスト表示してください</li>
+          <li>for文の中にfor文（ネスト）を使ってください</li>
+          <li>関数や変数に型をつけてください</li>
+          <li>
+            型をつけたあと、意図的に間違った値を渡してエラーを確認してください
+            <ul>
+              <li><code>addPrime(true);</code></li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runBonus()">実行</a>
+          <ul id="prime-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>引数の型</td>
+              <td><code>text: number</code></td>
+              <td>数値のみを受け取るようにする</td>
+            </tr>
+            <tr>
+              <td>戻り値</td>
+              <td><code>(): void</code></td>
+              <td>値を返さない関数であることを示す</td>
+            </tr>
+            <tr>
+              <td>DOMの型</td>
+              <td><code>as HTMLUListElement</code></td>
+              <td>nullの可能性があるため型を明示する</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let i: number</code></td>
+              <td>ループ変数に型をつける</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数の返値 練習（復習）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>4-2. 関数の返値 練習</h1>
+      <p>
+        これまで学んだ「引数・戻り値・型」を使って、関数を完成させましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：温度変換関数（復習）</h2>
+        <ol>
+          <li>関数 <code>celsiusToFahrenheit(celsius)</code> を作る</li>
+          <li>摂氏（℃）を華氏（℉）に変換して <code>return</code> する</li>
+          <li>変換式：<code>℉ = ℃ × 9 / 5 + 32</code></li>
+          <li>引数と戻り値に型を付ける</li>
+          <li>配列や変数にも型を付ける</li>
+          <li>すべての型が正しく付いているか確認する</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="run()">実行</a>
+          <ul id="list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+function celsiusToFahrenheit(celsius) {
+  return celsius * 9 / 5 + 32;
+}
+
+// TypeScript
+function celsiusToFahrenheit(celsius: number): number {
+  return celsius * 9 / 5 + 32;
+}
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、引数と戻り値の両方に型を付けます。<br />
+          これにより、関数が「何を受け取り」「何を返すか」が明確になります。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント（復習）</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>引数の型</td>
+              <td><code>celsius: number</code></td>
+              <td>関数が受け取る値の型</td>
+            </tr>
+            <tr>
+              <td>戻り値の型</td>
+              <td><code>(): number</code></td>
+              <td>関数が返す値の型</td>
+            </tr>
+            <tr>
+              <td>配列の型</td>
+              <td><code>number[]</code></td>
+              <td>数値の配列であることを示す</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let i: number</code></td>
+              <td>ループ変数の型指定</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>

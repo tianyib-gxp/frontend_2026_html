@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise API 練習（TypeScript）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>10-2. Promise API 練習</h1>
+      <p>
+        <code>Promise.all()</code>
+        と型を使って、複数の非同期処理を安全に扱いましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題</h2>
+        <ol>
+          <li>各API関数に戻り値の型を付ける</li>
+          <li><code>Promise.all()</code> を使って並行処理を書く</li>
+          <li>取得結果に型を付けて表示する</li>
+          <li>エラー処理にも型を付ける</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runAll()">並行取得を実行</a>
+          <ul id="result-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+Promise.all([fetchName(), fetchAge(), fetchCity()])
+  .then(([name, age, city]) => { ... });
+
+// TypeScript
+Promise.all([fetchName(), fetchAge(), fetchCity()])
+  .then(([name, age, city]: [string, number, string]) => { ... });
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、Promise.all の結果にも型を付けることができます。<br />
+          どの順番でどんなデータが返るのかを明確にできます。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Promiseの型</td>
+              <td><code>Promise&lt;string&gt;</code></td>
+              <td>非同期の戻り値の型</td>
+            </tr>
+            <tr>
+              <td>タプル型</td>
+              <td><code>[string, number, string]</code></td>
+              <td>順序付きの型</td>
+            </tr>
+            <tr>
+              <td>エラー型</td>
+              <td><code>err: Error</code></td>
+              <td>エラーの型</td>
+            </tr>
+            <tr>
+              <td>DOM型</td>
+              <td><code>as HTMLUListElement</code></td>
+              <td>null対策</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>

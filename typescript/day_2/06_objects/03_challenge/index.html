@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オブジェクト チャレンジ（TypeScript）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>6-3. オブジェクト チャレンジ</h1>
+      <p>
+        TypeScriptではクラスと型を使って、安全にオブジェクトを扱うことができます。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：社員管理システム（TypeScript）</h2>
+        <ol>
+          <li>クラス <code>Employee</code> を作る</li>
+          <li>
+            以下のプロパティに型を付ける:
+            <ul>
+              <li><code>name</code>: string</li>
+              <li><code>department</code>: string</li>
+              <li><code>salary</code>: number</li>
+            </ul>
+          </li>
+          <li>コンストラクタで値を初期化する</li>
+          <li>
+            メソッド <code>introduce()</code> を作る（戻り値: string）<br />
+            → 「田中さん（営業部）の給与は350000円です」
+          </li>
+          <li>
+            メソッド <code>getRaise(percent)</code> を作る（戻り値: number）<br />
+            → 給与を更新して返す
+          </li>
+          <li>すべての引数・戻り値・変数に型を付ける</li>
+          <li>
+            型チェックとして以下を試す:
+            <ul>
+              <li><code>new Employee(123, "営業", 300000)</code></li>
+            </ul>
+          </li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runChallenge()">実行</a>
+          <ul id="result-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript（コンストラクタ関数）
+function Employee(name, department, salary) {
+  this.name = name;
+}
+
+// TypeScript（クラス + 型）
+class Employee {
+  name: string;
+  department: string;
+  salary: number;
+
+  constructor(name: string, department: string, salary: number) {
+    this.name = name;
+  }
+}
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、クラスにプロパティの型を定義し、<br />
+          コンストラクタやメソッドの引数・戻り値にも型を付けます。<br />
+          これにより、オブジェクトの構造が明確になります。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>クラス</td>
+              <td><code>class Employee</code></td>
+              <td>オブジェクトの設計図を作る</td>
+            </tr>
+            <tr>
+              <td>プロパティの型</td>
+              <td><code>name: string</code></td>
+              <td>オブジェクトの中身に型を付ける</td>
+            </tr>
+            <tr>
+              <td>コンストラクタ</td>
+              <td><code>constructor(...)</code></td>
+              <td>初期値を設定する</td>
+            </tr>
+            <tr>
+              <td>メソッドの型</td>
+              <td><code>(): string</code></td>
+              <td>戻り値の型を明示する</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>
