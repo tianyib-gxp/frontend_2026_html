@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数値と演算子 チャレンジ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="solutions">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>3-3. 数値と演算子 チャレンジ（解答）</h1>
+      <p>複数の演算子を組み合わせてチップ計算機を作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>チャレンジ：チップ計算機</h2>
+        <div class="demo-area">
+          <div style="margin-bottom: 0.5rem;">
+            <label>請求金額 (¥): <input type="number" id="bill" value="5000" style="width: 100px;" /></label>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <label>チップ率 (%): <input type="number" id="tip-rate" value="10" style="width: 80px;" /></label>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <label>人数: <input type="number" id="people" value="2" min="1" style="width: 80px;" /></label>
+          </div>
+          <a class="btn-demo" onclick="calcTip()">計算する</a>
+          <div id="tip-result" style="margin-top: 1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

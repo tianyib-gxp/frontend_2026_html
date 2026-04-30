@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>便利な文字列メソッド チャレンジ</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>5-3. 便利な文字列メソッド チャレンジ</h1>
+      <p>駅コードデータをパースして読みやすい形式に変換しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>チャレンジ：駅データのパース</h2>
+        <p>
+          以下の形式のデータが入力欄に入っています。これを解析して表示してください。
+        </p>
+        <div class="code-heading">データ形式</div>
+        <pre class="code-block"><code>MAN675847583748sjt567654;Manchester Piccadilly</code></pre>
+        <ol>
+          <li><code>;</code> の前にある3文字が駅コードです（<code>MAN</code>）</li>
+          <li><code>;</code> の後にある文字列が駅名です（<code>Manchester Piccadilly</code>）</li>
+          <li>駅コードを大文字にして、<code>コード: 駅名</code> の形式で表示してください</li>
+          <li>出力例: <code>MAN: Manchester Piccadilly</code></li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <div style="margin-bottom: 0.5rem; width: 100%;">
+            <label>
+              データ:<br />
+              <input type="text" id="station-data" value="MAN675847583748sjt567654;Manchester Piccadilly" style="width: 400px; max-width: 100%;" />
+            </label>
+          </div>
+          <a class="btn-demo" onclick="parseStation()">パース</a>
+          <div id="station-output" style="margin-top: 1rem; font-size: 1.1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

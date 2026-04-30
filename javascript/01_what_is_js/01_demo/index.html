@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScriptとは デモ</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>1-1. JavaScriptとは デモ</h1>
+      <p>
+        HTML・CSS・JavaScriptの3層構造を体験し、JavaScriptがウェブページをどのように動的にするかを確認しましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ウェブの3層構造</h2>
+        <p class="note">
+          ウェブページは3つの技術で成り立っています。<br />
+          <strong>HTML</strong>：構造と意味　／　<strong>CSS</strong>：見た目　／　<strong>JavaScript</strong>：動作と対話性
+        </p>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>技術</th>
+              <th>役割</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>構造・意味付け</td>
+              <td>見出し、段落、リスト</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>見た目・スタイル</td>
+              <td>色、フォント、レイアウト</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>動作・対話性</td>
+              <td>ボタンのクリック、DOM操作</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>JavaScriptで動的なページを作る</h2>
+        <p class="note">
+          下のボタンをクリックすると、JavaScriptがDOMを操作してページのコンテンツを変更します。
+        </p>
+        <div class="demo-area">
+          <button id="nameBtn" class="btn-demo" onclick="updateName()">クリックして名前を入力</button>
+          <p id="greeting">まだ名前が入力されていません。</p>
+        </div>
+        <div class="code-heading">DOM操作のサンプルコード</div>
+        <pre class="code-block"><code>function updateName() {
+  const name = prompt("あなたの名前は？");
+  if (name) {
+    document.getElementById('greeting').textContent =
+      `こんにちは、${name}さん！`;
+  }
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>JavaScriptの読み込み方</h2>
+        <p class="note">
+          JavaScriptを HTML に組み込む方法は主に2つあります。
+        </p>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>方法</th>
+              <th>書き方</th>
+              <th>特徴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>内蔵スクリプト</td>
+              <td><code>&lt;script&gt;...&lt;/script&gt;</code></td>
+              <td>HTML内に直接記述</td>
+            </tr>
+            <tr>
+              <td>外部スクリプト</td>
+              <td><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></td>
+              <td>別ファイルに分離（推奨）</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>コメントの書き方</h2>
+        <div class="code-heading">コメントの例</div>
+        <pre class="code-block"><code>// これは1行コメントです
+
+/*
+  これは
+  複数行コメントです
+*/</code></pre>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

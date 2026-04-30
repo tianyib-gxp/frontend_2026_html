@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字列 練習（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="solutions">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>4-2. 文字列 練習（解答）</h1>
+      <p>テンプレートリテラルを使って自己紹介メッセージを作成しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：自己紹介メッセージを作成する</h2>
+        <div class="demo-area">
+          <div style="display: grid; gap: 0.4rem; margin-bottom: 1rem; max-width: 320px;">
+            <label>名前: <input type="text" id="input-name" value="田中 太郎" style="width: 100%;" /></label>
+            <label>年齢: <input type="number" id="input-age" value="24" style="width: 100%;" /></label>
+            <label>出身地: <input type="text" id="input-place" value="東京" style="width: 100%;" /></label>
+            <label>趣味: <input type="text" id="input-hobby" value="読書" style="width: 100%;" /></label>
+          </div>
+          <a class="btn-demo" onclick="generateGreeting()">生成</a>
+          <div id="greeting-output" style="margin-top: 1rem; white-space: pre-wrap; padding: 1rem; border: 1px solid #ccc; min-height: 60px;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

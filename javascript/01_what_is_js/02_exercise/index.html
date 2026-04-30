@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScriptとは 練習</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>1-2. JavaScriptとは 練習</h1>
+      <p>ボタンをクリックするたびに段落を追加するプログラムを完成させましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：段落を動的に追加する</h2>
+        <ol>
+          <li>「段落を追加」ボタンをクリックするたびに、新しい <code>&lt;p&gt;</code> タグが <code>#output</code> に追加されるようにしてください</li>
+          <li>追加される文章は「ボタンが <strong>N 回</strong> 押されました！」（N は回数）にしてください</li>
+          <li>「リセット」ボタンで <code>#output</code> の中身を空にしてください</li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <a class="btn-demo" onclick="addParagraph()">段落を追加</a>
+          <a class="btn-challenge" onclick="resetOutput()">リセット</a>
+          <div id="output" style="margin-top: 1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

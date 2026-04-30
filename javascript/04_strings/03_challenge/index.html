@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字列 チャレンジ</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>4-3. 文字列 チャレンジ</h1>
+      <p>テンプレートリテラルと型変換を使って、割り勘計算結果メッセージを作成しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>チャレンジ：割り勘メッセージ生成</h2>
+        <ol>
+          <li>入力欄から食事の合計金額・人数・イベント名を取得してください</li>
+          <li><code>Number()</code> で適切に型変換してください</li>
+          <li>1人分の金額を計算してください（小数点以下切り捨て: <code>Math.floor()</code>）</li>
+          <li>テンプレートリテラルを使って、読みやすいメッセージを作成してください</li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <div style="display: grid; gap: 0.4rem; margin-bottom: 1rem; max-width: 320px;">
+            <label>イベント名: <input type="text" id="event-name" value="新年会" style="width: 100%;" /></label>
+            <label>合計金額 (¥): <input type="number" id="total-bill" value="12500" style="width: 100%;" /></label>
+            <label>人数: <input type="number" id="num-people" value="5" style="width: 100%;" /></label>
+          </div>
+          <a class="btn-demo" onclick="generateSplitMessage()">メッセージ生成</a>
+          <div id="split-output" style="margin-top: 1rem; white-space: pre-wrap; padding: 1rem; border: 1px solid #ccc; min-height: 60px;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

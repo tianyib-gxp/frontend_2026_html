@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>条件文 練習</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>7-2. 条件文 練習</h1>
+      <p>天気に応じたメッセージを表示するプログラムを作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：天気メッセージ表示</h2>
+        <ol>
+          <li>ドロップダウンで天気を選択してください</li>
+          <li>「表示」ボタンを押すと、天気に応じたメッセージが表示されるようにしてください</li>
+          <li><code>if / else if / else</code> を使ってください</li>
+          <li>各天気のメッセージ例：
+            <ul>
+              <li>sunny（晴れ）→ 「今日は晴れです。お出かけ日和ですね！」</li>
+              <li>cloudy（曇り）→ 「今日は曇りです。念のため傘を持っていきましょう。」</li>
+              <li>rainy（雨）→ 「今日は雨です。傘を忘れずに！」</li>
+              <li>snowy（雪）→ 「今日は雪です。暖かくして出かけましょう。」</li>
+              <li>その他 → 「天気情報が不明です。」</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <div style="margin-bottom: 0.8rem;">
+            <label>天気を選択:
+              <select id="weather-select" style="padding: 0.4rem; margin-left: 0.5rem;">
+                <option value="sunny">☀️ 晴れ (sunny)</option>
+                <option value="cloudy">☁️ 曇り (cloudy)</option>
+                <option value="rainy">🌧️ 雨 (rainy)</option>
+                <option value="snowy">❄️ 雪 (snowy)</option>
+              </select>
+            </label>
+          </div>
+          <a class="btn-demo" onclick="showWeatherMessage()">表示</a>
+          <p id="weather-message" style="margin-top: 1rem; font-size: 1.1rem;"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

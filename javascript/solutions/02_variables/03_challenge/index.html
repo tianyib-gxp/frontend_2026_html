@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>変数 チャレンジ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="solutions">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>2-3. 変数 チャレンジ（解答）</h1>
+      <p>変数と型変換を使いこなして、簡単な計算アプリを作ってみましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>チャレンジ：BMI計算機</h2>
+        <ol>
+          <li>入力欄から身長（cm）と体重（kg）を取得してください</li>
+          <li><code>Number()</code> を使って文字列から数値に変換してください</li>
+          <li>BMI = 体重(kg) ÷ (身長(m) × 身長(m)) を計算してください</li>
+          <li>結果を小数点2桁で表示してください（<code>toFixed(2)</code> を使う）</li>
+          <li>BMIの判定結果（やせ/普通/肥満）も表示してください：
+            <ul>
+              <li>BMI &lt; 18.5 → やせ</li>
+              <li>18.5 ≤ BMI &lt; 25 → 普通</li>
+              <li>25 ≤ BMI → 肥満</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <div style="margin-bottom: 0.5rem;">
+            <label>身長 (cm): <input type="number" id="height" value="170" style="width: 80px;" /></label>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <label>体重 (kg): <input type="number" id="weight" value="65" style="width: 80px;" /></label>
+          </div>
+          <a class="btn-demo" onclick="calcBMI()">BMI を計算</a>
+          <div id="bmi-result" style="margin-top: 1rem; font-size: 1.1rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

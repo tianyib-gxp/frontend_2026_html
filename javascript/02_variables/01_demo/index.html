@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>変数 デモ</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>2-1. 変数 デモ</h1>
+      <p>
+        変数はデータを格納するための「箱」です。<code>let</code>・<code>const</code>・データ型を学びましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>変数の宣言と初期化</h2>
+        <p class="note">
+          <code>let</code> は再代入可能な変数、<code>const</code> は再代入不可の定数を宣言します。
+        </p>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showVariables()">変数を表示</a>
+          <ul id="var-list"></ul>
+        </div>
+        <div class="code-heading">変数宣言のサンプルコード</div>
+        <pre class="code-block"><code>let myName = "田中";      // 再代入可能
+const myAge = 25;         // 定数（再代入不可）
+let isStudent = true;     // 論理値
+
+myName = "鈴木";           // OK: let は再代入できる
+// myAge = 30;            // エラー: const は再代入不可</code></pre>
+      </section>
+
+      <section>
+        <h2>データ型</h2>
+        <p class="note">
+          JavaScriptには様々なデータ型があります。<br />
+          ボタンを押してそれぞれの型を確認してみましょう。
+        </p>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showDataTypes()">データ型を表示</a>
+          <ul id="type-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>型</th>
+              <th>例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>数値 (Number)</td>
+              <td><code>42, 3.14</code></td>
+              <td>整数・小数</td>
+            </tr>
+            <tr>
+              <td>文字列 (String)</td>
+              <td><code>"hello"</code></td>
+              <td>テキスト</td>
+            </tr>
+            <tr>
+              <td>論理値 (Boolean)</td>
+              <td><code>true, false</code></td>
+              <td>真偽値</td>
+            </tr>
+            <tr>
+              <td>配列 (Array)</td>
+              <td><code>[1, 2, 3]</code></td>
+              <td>リスト</td>
+            </tr>
+            <tr>
+              <td>オブジェクト (Object)</td>
+              <td><code>{name: "太郎"}</code></td>
+              <td>複合データ</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>let vs const の使い分け</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>キーワード</th>
+              <th>再代入</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>const</code></td>
+              <td>❌ 不可</td>
+              <td>値が変わらない場合（推奨）</td>
+            </tr>
+            <tr>
+              <td><code>let</code></td>
+              <td>✅ 可能</td>
+              <td>値が後から変わる場合</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

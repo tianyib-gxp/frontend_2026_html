@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数値と演算子 デモ（解答）</title>
+    <link rel="stylesheet" href="../../../index.css" />
+  </head>
+  <body>
+    <header class="solutions">
+      <a href="../../index.html" class="back-button">← 一覧へ</a>
+      <h1>3-1. 数値と演算子 デモ（解答）</h1>
+      <p>JavaScriptの算術演算子・代入演算子・比較演算子を学びましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>算術演算子</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showArithmetic()">演算結果を表示</a>
+          <ul id="arith-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>演算子</th>
+              <th>意味</th>
+              <th>例</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>+</code></td><td>加算</td><td><code>5 + 3</code></td><td>8</td></tr>
+            <tr><td><code>-</code></td><td>減算</td><td><code>5 - 3</code></td><td>2</td></tr>
+            <tr><td><code>*</code></td><td>乗算</td><td><code>5 * 3</code></td><td>15</td></tr>
+            <tr><td><code>/</code></td><td>除算</td><td><code>5 / 2</code></td><td>2.5</td></tr>
+            <tr><td><code>%</code></td><td>余り</td><td><code>5 % 2</code></td><td>1</td></tr>
+            <tr><td><code>**</code></td><td>べき乗</td><td><code>2 ** 10</code></td><td>1024</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>代入演算子</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showAssignment()">代入演算子を確認</a>
+          <ul id="assign-list"></ul>
+        </div>
+        <div class="code-heading">代入演算子の例</div>
+        <pre class="code-block"><code>let x = 10;
+x += 5;   // x = x + 5  → 15
+x -= 3;   // x = x - 3  → 12
+x *= 2;   // x = x * 2  → 24
+x /= 4;   // x = x / 4  → 6
+x **= 2;  // x = x ** 2 → 36</code></pre>
+      </section>
+
+      <section>
+        <h2>比較演算子</h2>
+        <div class="demo-area">
+          <a class="btn-demo" onclick="showComparison()">比較演算子を確認</a>
+          <ul id="compare-list"></ul>
+        </div>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>演算子</th>
+              <th>意味</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>===</code></td><td>厳密等価</td><td><code>5 === 5</code> → true</td></tr>
+            <tr><td><code>!==</code></td><td>厳密不等価</td><td><code>5 !== 3</code> → true</td></tr>
+            <tr><td><code>&lt;</code></td><td>小なり</td><td><code>3 &lt; 5</code> → true</td></tr>
+            <tr><td><code>&gt;</code></td><td>大なり</td><td><code>5 &gt; 3</code> → true</td></tr>
+            <tr><td><code>&lt;=</code></td><td>以下</td><td><code>5 &lt;= 5</code> → true</td></tr>
+            <tr><td><code>&gt;=</code></td><td>以上</td><td><code>5 &gt;= 6</code> → false</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
