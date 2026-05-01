@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ループ（for文）練習</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>1-2. ループ（for文）練習</h1>
+      <p>for文を使って、FizzBuzz問題にチャレンジしましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：FizzBuzz</h2>
+        <ol>
+          <li>1から20までの数字をループで処理するようになっています</li>
+          <li>
+            以下のルールで表示します:
+            <ul>
+              <li>3の倍数 → "Fizz"</li>
+              <li>5の倍数 → "Buzz"</li>
+              <li>両方 → "FizzBuzz"</li>
+              <li>それ以外 → 数字</li>
+            </ul>
+          </li>
+          <li>今のままでも動きますが、関数や変数に「型」をつけてください</li>
+          <li>
+            最後に、意図的に間違った値を渡してエラーを確認してください
+            <ul>
+              <li><code>addItem(true);</code> を試す</li>
+              <li>なぜエラーになるか確認する</li>
+            </ul>
+            <p class="note">
+              TypeScriptでは、型が一致しない場合にエラーが表示されます。<br />
+              実際にエラーを確認し、JavaScriptとの違いを理解しましょう。
+            </p>
+          </li>
+        </ol>
+        <hr />
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runLoop()">実行</a>
+          <ul id="list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>引数の型</td>
+              <td><code>text: string | number</code></td>
+              <td>文字と数値の両方を扱えるようにする</td>
+            </tr>
+            <tr>
+              <td>戻り値</td>
+              <td><code>(): void</code></td>
+              <td>何も返さない関数であることを示す</td>
+            </tr>
+            <tr>
+              <td>DOMの型</td>
+              <td><code>as HTMLUListElement</code></td>
+              <td>nullの可能性があるため型を明示する</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let i: number</code></td>
+              <td>変数に数値型を指定する</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>確認ポイント</h2>
+        <p class="note">
+          以下のコードを試して、TypeScriptのエラーを確認してください。
+        </p>
+        <pre class="code-block"><code>addItem(true);</code></pre>
+        <p class="note">
+          JavaScriptでは動作しますが、TypeScriptではエラーになります。<br />
+          型によって不正な値を防げることを確認しましょう。
+        </p>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+    <script src="../../lesson-nav.js"></script>
+  </body>
+</html>

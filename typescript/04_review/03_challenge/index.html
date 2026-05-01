@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数の返値 チャレンジ（復習）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>4-3. 関数の返値 チャレンジ</h1>
+      <p>
+        これまで学んだ関数・型・配列を組み合わせて、処理を完成させましょう。
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：BMI計算ツール（復習）</h2>
+        <ol>
+          <li>関数 <code>calcBMI(weight, height)</code> を作る</li>
+          <ul>
+            <li>体重と身長からBMIを計算して返す</li>
+            <li>小数点2桁に丸める</li>
+          </ul>
+
+          <li>関数 <code>getBMICategory(bmi)</code> を作る</li>
+          <ul>
+            <li>BMIに応じて判定を返す</li>
+          </ul>
+
+          <li>すべての引数・戻り値・変数に型を付ける</li>
+          <li>配列（people）にも型を付ける</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runChallenge()">実行</a>
+          <ul id="result-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+function calcBMI(weight, height) {
+  return weight / (height * height);
+}
+
+// TypeScript
+function calcBMI(weight: number, height: number): number {
+  return weight / (height * height);
+}
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、複数の引数それぞれに型を付けます。<br />
+          また、戻り値にも型を付けることで、関数の役割が明確になります。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント（復習）</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>複数引数の型</td>
+              <td><code>(weight: number, height: number)</code></td>
+              <td>引数ごとに型を指定する</td>
+            </tr>
+            <tr>
+              <td>戻り値の型</td>
+              <td><code>(): number</code></td>
+              <td>関数が返す値の型</td>
+            </tr>
+            <tr>
+              <td>配列の型</td>
+              <td>
+                <code>{ name: string; weight: number; height: number }[]</code>
+              </td>
+              <td>オブジェクト配列の型指定</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let i: number</code></td>
+              <td>ループ変数の型</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+    <script src="../../lesson-nav.js"></script>
+  </body>
+</html>

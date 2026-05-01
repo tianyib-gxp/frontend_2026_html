@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>独自の関数 チャレンジ（TypeScript）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>3-3. 独自の関数 チャレンジ</h1>
+      <p>複数の関数に型を付けて、ミニ買い物カートを作りましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>ボーナス問題：ミニ買い物カート</h2>
+        <ol>
+          <li>
+            関数 <code>calculateTotal(prices)</code> を作る<br />
+            → 配列 prices の合計金額を return する
+          </li>
+          <li>
+            関数 <code>applyDiscount(total, percent)</code> を作る<br />
+            → total に percent% の割引を適用した金額を return する
+          </li>
+          <li>すべての引数・戻り値・変数に型を付ける</li>
+          <li>
+            型を付けたあと、以下を試してください
+            <ul>
+              <li><code>applyDiscount("1000", 10);</code></li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>商品リスト: <code>[1200, 800, 3500, 650]</code></p>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runChallenge()">実行</a>
+          <ul id="cart-list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+function calculateTotal(prices) {
+  // 処理
+}
+
+// TypeScript
+function calculateTotal(prices: number[]): number {
+  // 処理
+}
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、配列や数値にも型を付けることができます。<br />
+          <code>number[]</code>
+          のように書くことで、「数値の配列」であることを明示します。<br />
+          また、<code>: number</code> によって戻り値の型も制限できます。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>配列の型</td>
+              <td><code>number[]</code></td>
+              <td>数値の配列であることを示す</td>
+            </tr>
+            <tr>
+              <td>複数引数の型</td>
+              <td><code>(total: number, percent: number)</code></td>
+              <td>それぞれの引数に型を付ける</td>
+            </tr>
+            <tr>
+              <td>戻り値</td>
+              <td><code>(): number</code></td>
+              <td>関数が数値を返すことを示す</td>
+            </tr>
+            <tr>
+              <td>型チェック</td>
+              <td><code>applyDiscount("1000", 10)</code></td>
+              <td>誤った型はエラーになる</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+    <script src="../../lesson-nav.js"></script>
+  </body>
+</html>

@@ -1,15 +1,7 @@
-* { box-sizing: border-box; }
-body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #333; }
-
-.page-header { background: #1b4332; color: #fff; padding: 20px 32px; }
-.page-header a { color: #95d5b2; text-decoration: none; font-size: 14px; }
-.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
-.page-header p { margin: 0; font-size: 14px; opacity: 0.8; }
-
-main { padding: 32px; max-width: 900px; }
-.task { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
-.task h2 { margin: 0 0 8px; font-size: 18px; color: #1b4332; }
-.task p { margin: 0 0 16px; font-size: 14px; }
+:root {
+  --theme-color: #1b4332;
+  --accent-color: #95d5b2;
+}
 
 /* ===== ここから練習スペース ===== */
 

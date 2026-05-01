@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>イベント 練習（TypeScript）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>5-2. イベント 練習</h1>
+      <p>イベントと型を組み合わせて、安全にクリック処理を実装しましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：クリックカウンター（復習）</h2>
+        <ol>
+          <li>id が <code>countBtn</code> の要素を取得する</li>
+          <li>click イベントを追加する</li>
+          <li>クリックされるたびにカウントを +1 する</li>
+          <li>id が <code>countDisplay</code> に表示する</li>
+          <li>すべての変数・DOMに型を付ける</li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" style="cursor: pointer" id="countBtn"
+            >クリック！</a
+          >
+          <p id="countDisplay">クリック数: 0</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+const btn = document.getElementById("countBtn");
+
+// TypeScript
+const btn = document.getElementById("countBtn") as HTMLAnchorElement;
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、取得したDOM要素に型を付けます。<br />
+          これにより、どのような要素かを明確にし、安全に操作できます。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント（復習）</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DOMの型</td>
+              <td><code>as HTMLAnchorElement</code></td>
+              <td>取得した要素の型を明示する</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let count: number</code></td>
+              <td>カウントの型を指定する</td>
+            </tr>
+            <tr>
+              <td>イベント</td>
+              <td><code>addEventListener</code></td>
+              <td>クリック時の処理を登録する</td>
+            </tr>
+            <tr>
+              <td>null対策</td>
+              <td><code>as HTML...</code></td>
+              <td>nullの可能性を考慮する</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+    <script src="../../lesson-nav.js"></script>
+  </body>
+</html>
