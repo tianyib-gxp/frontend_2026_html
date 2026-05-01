@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="ja">
 <head>
+  <!-- ↓ [課題3] charset の UTF-8 を Shift_JIS に変えると文字化けが起きる。確認したら必ず UTF-8 に戻すこと -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ↓ [課題2] ここを書き換えると、ブラウザのタブに表示されるタイトルが変わる -->
   <title>Session 2: HTMLの骨格を理解する</title>
   <!-- ↓ [課題4] ブラウザで右クリック →「ページのソースを表示」でこの description を探してみよう -->
   <meta name="description" content="Session 2の練習ページ。HTMLの骨格とhead要素を確認する。" />
-  <!-- ↓ [課題3] charset の UTF-8 を Shift_JIS に変えると文字化けが起きる。確認したら必ず UTF-8 に戻すこと -->
-  <link rel="stylesheet" href="../lesson-layout.css" />
   <!-- ↓ [課題5] このlinkタグを削除するとCSSが消える。削除して見た目の変化を確認してみよう -->
   <link rel="stylesheet" href="./02.css" />
 </head>
 <body>
   <header class="page-header">
+    <a href="../index.html" class="back-button">← HTML一覧へ</a>
     <h1>Session 2: HTMLの骨格を理解する</h1>
     <p>headの設定を変えながら、ブラウザが何を読み取っているか確認します。</p>
   </header>

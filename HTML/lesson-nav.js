@@ -13,42 +13,39 @@
   if (!match) return;
 
   const currentNum = match[1];
-  const idx = lessons.findIndex(function (lesson) {
-    return lesson.num === currentNum;
-  });
+  const idx = lessons.findIndex(function (l) { return l.num === currentNum; });
   if (idx === -1) return;
 
-  const current = lessons[idx];
-  const prev = idx > 0
-    ? {
-        href: '../' + lessons[idx - 1].num + '/practice.html',
-        label: '← ' + lessons[idx - 1].name,
-      }
-    : { href: '../index.html', label: '← HTML一覧' };
+  const cur = lessons[idx];
 
-  const next = idx < lessons.length - 1
-    ? {
-        href: '../' + lessons[idx + 1].num + '/practice.html',
-        label: lessons[idx + 1].name + ' →',
-      }
-    : {
-        href: '../../CSS/index.html',
-        label: 'CSS課題へ進む →',
-      };
+  var prev = idx > 0
+    ? { href: '../' + lessons[idx - 1].num + '/practice.html', label: '← ' + lessons[idx - 1].name }
+    : null;
 
-  const nav = document.createElement('nav');
-  nav.className = 'lesson-nav';
-  nav.innerHTML =
-    '<div class="lnav-left"><a class="lnav-btn lnav-prev" href="' + prev.href + '">' + prev.label + '</a></div>' +
-    '<div class="lnav-center"><span class="lnav-current">' + current.name + '</span></div>' +
-    '<div class="lnav-right"><a class="lnav-btn lnav-next" href="' + next.href + '">' + next.label + '</a></div>';
+  var next = idx < lessons.length - 1
+    ? { href: '../' + lessons[idx + 1].num + '/practice.html', label: lessons[idx + 1].name + ' →' }
+    : null;
 
-  const header = document.querySelector('header.page-header');
-  if (header) {
-    header.insertAdjacentElement('afterend', nav);
+  function btnHtml(info, cls) {
+    if (!info) return '<span></span>';
+    return '<a href="' + info.href + '" class="lnav-btn ' + cls + '">' + info.label + '</a>';
   }
 
-  const style = document.createElement('style');
+  var endMsg = !next
+    ? btnHtml({ href: '../../CSS/index.html', label: 'CSS課題へ進む →' }, 'lnav-to-css')
+    : '';
+
+  var navHtml =
+    '<nav class="lesson-nav">' +
+      '<div class="lnav-left">' + btnHtml(prev, 'lnav-prev') + '</div>' +
+      '<div class="lnav-center"><span class="lnav-current">' + cur.name + '</span></div>' +
+      '<div class="lnav-right">' + (next ? btnHtml(next, 'lnav-next') : endMsg) + '</div>' +
+    '</nav>';
+
+  var header = document.querySelector('header.page-header');
+  if (header) header.insertAdjacentHTML('afterend', navHtml);
+
+  var style = document.createElement('style');
   style.textContent = [
     '.lesson-nav{',
     '  background:#f1f3f5;border-bottom:2px solid #dee2e6;',
@@ -58,15 +55,16 @@
     '.lnav-left,.lnav-right{min-width:180px;}',
     '.lnav-right{text-align:right;}',
     '.lnav-center{color:#868e96;font-weight:bold;font-size:12px;text-align:center;}',
-    '.lnav-btn{display:inline-block;padding:5px 14px;border-radius:20px;text-decoration:none;font-weight:bold;white-space:nowrap;}',
+    '.lnav-btn{',
+    '  display:inline-block;padding:5px 14px;border-radius:20px;',
+    '  text-decoration:none;font-weight:bold;white-space:nowrap;',
+    '}',
     '.lnav-prev{border:1px solid #ced4da;color:#495057;background:#fff;}',
     '.lnav-prev:hover{background:#e9ecef;}',
     '.lnav-next{background:#4361ee;color:#fff;}',
-    '.lnav-next:hover{background:#2f4acb;}',
-    '@media (max-width:640px){',
-    '  .lesson-nav{padding:8px 12px;}',
-    '  .lnav-left,.lnav-right{min-width:120px;}',
-    '}',
+    '.lnav-next:hover{background:#3a0ca3;}',
+    '.lnav-to-css{background:#f77f00;color:#fff;}',
+    '.lnav-to-css:hover{background:#c96200;}',
   ].join('\n');
   document.head.appendChild(style);
 })();
