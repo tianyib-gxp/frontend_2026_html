@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数（Function）練習</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>2-1. 関数（Function）練習</h1>
+      <p>JavaScriptで書いた関数に、TypeScriptで型を付けてみましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題</h2>
+        <ol>
+          <li>以下の関数に型を付けてください</li>
+          <li>引数と戻り値の型を考えてください</li>
+          <li>配列や変数にも型を付けてください</li>
+          <li>
+            型を付けたあと、以下を試してエラーを確認してください
+            <ul>
+              <li><code>greet(123);</code></li>
+            </ul>
+          </li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="runDemo()">実行</a>
+          <ul id="list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <section>
+          <h2>JavaScriptとの違い</h2>
+          <pre class="code-block"><code>
+        // JavaScript
+        function greet(name) {
+          return "こんにちは、" + name + "さん！";
+        }
+        
+        // TypeScript
+        function greet(name: string): string {
+          return "こんにちは、" + name + "さん！";
+        }
+          </code></pre>
+          <p class="note">
+            TypeScriptでは、関数に「型」を付けることができます。<br />
+            引数には <code>name: string</code> のように型を指定し、<br />
+            戻り値には <code>: string</code> のように関数が返す値の型を指定します。<br />
+            これにより、想定外の値が渡されるのを防ぐことができます。
+          </p>
+        </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>引数の型</td>
+              <td><code>name: string</code></td>
+              <td>文字列のみ受け取る</td>
+            </tr>
+            <tr>
+              <td>戻り値</td>
+              <td><code>(): string</code></td>
+              <td>返す値の型を明示する</td>
+            </tr>
+            <tr>
+              <td>配列の型</td>
+              <td><code>string[]</code></td>
+              <td>配列の中身の型を指定する</td>
+            </tr>
+            <tr>
+              <td>変数の型</td>
+              <td><code>let i: number</code></td>
+              <td>ループ変数に型をつける</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>

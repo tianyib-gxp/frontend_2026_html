@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 練習（TypeScript）</title>
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="back-button">← TypeScript 一覧へ</a>
+      <h1>7-2. JSON 練習</h1>
+      <p>JSONデータをTypeScriptで扱い、型を付けて安全に処理してみましょう。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>問題：商品データをJSONから表示する</h2>
+        <ol>
+          <li>JSONの構造に対応する型（Product, Data など）を作る</li>
+          <li><code>JSON.parse()</code> の結果に型を付ける</li>
+          <li><code>products</code> をループして表示する</li>
+          <li>在庫がない場合は「（在庫なし）」と表示する</li>
+          <li>すべての変数に型を付ける</li>
+          <li>
+            型チェックとして以下を試す:
+            <ul>
+              <li><code>data.products[0].price = "100"</code></li>
+            </ul>
+          </li>
+        </ol>
+
+        <hr />
+
+        <div class="demo-area">
+          <a class="btn-demo" onclick="run()">実行</a>
+          <ul id="list"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>JavaScriptとの違い</h2>
+        <pre class="code-block"><code>
+// JavaScript
+const data = JSON.parse(jsonData);
+
+// TypeScript
+type Product = {
+  name: string;
+  price: number;
+  inStock: boolean;
+};
+
+const data: { products: Product[] } = JSON.parse(jsonData);
+        </code></pre>
+        <p class="note">
+          TypeScriptでは、JSONの構造に合わせて型を定義します。<br />
+          これにより、存在しないプロパティや型のミスを防ぐことができます。
+        </p>
+      </section>
+
+      <section>
+        <h2>学習ポイント</h2>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>コード例</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>型定義</td>
+              <td><code>type Product = {...}</code></td>
+              <td>オブジェクトの形を定義する</td>
+            </tr>
+            <tr>
+              <td>配列の型</td>
+              <td><code>Product[]</code></td>
+              <td>オブジェクトの配列</td>
+            </tr>
+            <tr>
+              <td>型アサーション</td>
+              <td><code>as 型</code></td>
+              <td>JSON.parse の結果に型を付ける</td>
+            </tr>
+            <tr>
+              <td>boolean型</td>
+              <td><code>inStock: boolean</code></td>
+              <td>true / false を扱う</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../../index.js"></script>
+    <script src="./script.ts"></script>
+  </body>
+</html>
