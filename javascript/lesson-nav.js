@@ -91,7 +91,7 @@
       '<div class="lnav-right">' + (next ? btnHtml(next, nextCls) : endMsg) + '</div>' +
     '</nav>';
 
-  var header = document.querySelector('header') || document.querySelector('header');
+  var header = document.querySelector('header');
   if (header) header.insertAdjacentHTML('afterend', navHtml);
 
   var style = document.createElement('style');
