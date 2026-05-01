@@ -1,0 +1,76 @@
+/* ===== Styles partagés entre toutes les leçons CSS ===== */
+/* Chaque leçon peut surcharger --theme-color et --accent-color dans son propre fichier CSS */
+
+:root {
+  --theme-color: #1a1a2e;
+  --accent-color: #4361ee;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.page-header {
+  background: var(--theme-color);
+  color: #fff;
+  padding: 20px 32px;
+}
+.page-header h1 { margin: 8px 0 4px; font-size: 24px; }
+.page-header p  { margin: 0; font-size: 14px; opacity: 0.8; }
+
+.back-button {
+  display: inline-block;
+  color: #fff;
+  background: #222a36;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition:
+    background 0.2s,
+    border 0.2s;
+}
+
+main { padding: 32px; max-width: 900px; }
+
+/* — Demo layout — */
+section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+section h2 { margin: 0 0 8px; font-size: 18px; color: var(--theme-color); }
+
+/* — Practice layout — */
+.task {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.task h2 { margin: 0 0 8px; font-size: 18px; color: var(--theme-color); }
+.task p  { margin: 0 0 16px; font-size: 14px; }
+
+/* — Utilities — */
+.note { margin: 0 0 16px; font-size: 14px; color: #666; line-height: 1.6; }
+
+pre.code {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-top: 16px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
