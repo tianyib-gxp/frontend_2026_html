@@ -15,7 +15,7 @@
 
   <main class="lesson-main">
     <section class="panel">
-      <h2>説明パート</h2>
+      <h2>説明</h2>
       <p>HTMLは多少壊れていてもブラウザが補正して表示します。ただし補正に頼ると環境差で不具合が出やすくなるため、DevToolsやValidatorで原因を特定し、正しい構造に直す力が重要です。</p>
     </section>
 
@@ -32,9 +32,10 @@
     <section class="panel">
       <span class="point-label">[ポイント]</span>
       <ul class="point-list">
-        <li>ブラウザ補正は便利だが、実務では正しいマークアップが前提</li>
-        <li>Elementsで実際に解釈されたDOMを確認する癖をつける</li>
-        <li>Validator結果は修正の優先度判断に使う</li>
+        <li>ブラウザは多少の文法エラーを補正して表示する</li>
+        <li>ブラウザ補正は便利だが、実務では正しい文法での記述が前提</li>
+        <ul><li>この後学ぶ、Reactでは文法が厳密にチェックされ補完されないようになっています</li></ul>
+    
       </ul>
     </section>
 
@@ -48,7 +49,7 @@
     <section class="panel work-area">
       <h2>作業エリア</h2>
       <!-- ↓ bug.html を開くと表示が崩れているはず。DevTools の Elements タブで構造を確認しながら直してみよう -->
-      <p><a class="btn-link" href="./bug.html">bug.htmlを開いて修正する</a></p>
+      <p><a class="btn-link" href="./bug.html" target="_blank">bug.htmlを開いて修正する</a></p>
       <!-- ↓ 直したら DevTools の Console タブにエラーが出ていないか確認しよう -->
     </section>
   </main>

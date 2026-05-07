@@ -16,8 +16,9 @@
 
   <main class="lesson-main">
     <section class="panel">
-      <h2>説明パート</h2>
-      <p>Webページは単体で完結せず、リンクでつながって価値を持ちます。相対パスとナビゲーションを使い、複数ページの回遊を設計します。</p>
+      <h2>説明</h2>
+      <p>Webページは単体のページだけではなく複数のページをつなぐことで価値が生まれます。</p>
+      <p>相対パスとナビゲーションを使い、複数ページにまたがるページ構造を作成できます。</p>
     </section>
 
     <section class="panel">
@@ -50,7 +51,6 @@
     <section class="panel work-area">
       <h2>作業エリア</h2>
       <header>
-        <!-- ↓ h3 を h1 に変えて、見出しの大きさが変わることを確認してみよう -->
         <h3>Session 4 練習</h3>
       </header>
 
@@ -58,8 +58,8 @@
       <nav>
         <a href="./practice.html">Home</a>
         <a href="./about.html">About</a>
-        <!-- ↓ target="_blank" を削除すると同じタブで開く。rel="noopener" の役割も確認しよう -->
-        <a href="https://developer.mozilla.org/ja/" target="_blank" rel="noopener">MDN</a>
+        <!-- ↓ target="_blank" を付けると新しいタブで開く。 -->
+        <a href="https://developer.mozilla.org/ja/" target="_blank">MDN</a>
       </nav>
 
       <article>
@@ -69,16 +69,12 @@
         <!-- ↓ さらに src を存在しないパスに変えると、画像の代わりに alt のテキストが表示される -->
         <img
           src="https://dummyimage.com/640x240/e8f1f5/0b4f6c&text=Session+4+Image"
-          alt="Session 4の練習用バナー画像"
+          alt="no image"
         />
       </article>
     </section>
   </main>
 
   <script src="../lesson-nav.js"></script>
-
-  <footer>
-    <small>Session 4 Footer</small>
-  </footer>
 </body>
 </html>
