@@ -47,7 +47,7 @@
   }
 
   var endMsg = (!next && !isDemo)
-    ? '<span class="lnav-end">🎉 全レッスン完了！</span>'
+    ? '<a href="../../javascript/index.html" class="lnav-btn lnav-to-next-section">JavaScript へ進む →</a>'
     : '';
 
   var navHtml =
@@ -80,7 +80,9 @@
     '.lnav-to-practice:hover{background:#c96200;}',
     '.lnav-to-demo{background:#4361ee;color:#fff;}',
     '.lnav-to-demo:hover{background:#3a0ca3;}',
-    '.lnav-end{color:#2d6a4f;font-weight:bold;}',
+    '.lnav-to-next-section{background:#2d6a4f;color:#fff;}',
+    '.lnav-to-next-section:hover{background:#1b4332;}',
+    '.lnav-end{color:#2d6a4f;font-weight:bold;}',  // 未使用だが互換のため残す
   ].join('\n');
   document.head.appendChild(style);
 })();

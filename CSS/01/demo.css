@@ -25,7 +25,7 @@
 .pct-50  { width: 50%;  height: 40px; background: #7209b7; }
 .pct-25  { width: 25%;  height: 40px; background: #f72585; }
 
-.compare-area { display: flex; gap: 24px; flex-wrap: wrap; }
+.compare-area { display: flex; flex-direction: column; gap: 24px; flex-wrap: wrap; }
 .compare-item { flex: 1; min-width: 200px; }
 .label { margin: 0 0 8px; font-size: 14px; font-weight: bold; }
 .box-fixed { width: 200px; height: 50px; background: #f72585; border-radius: 4px; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; }

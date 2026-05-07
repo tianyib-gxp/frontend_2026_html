@@ -14,7 +14,7 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
 
 /* ===== タグセレクターのデモ ===== */
 .demo-area p {
-  color: #1d3461;
+  color: var(--accent-color);
   font-weight: bold;
   margin: 4px 0;
 }
@@ -66,8 +66,8 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
   padding: 12px 16px;
   margin-bottom: 8px;
 }
-.card-demo p {
-  color: #1d3461 !important;
+.card-demo span {
+  color: var(--accent-color) !important;
   font-weight: bold;
   margin: 4px 0;
 }

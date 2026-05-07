@@ -15,6 +15,11 @@
   </header>
 
   <main>
+    <section>
+      <h1>セレクターとは？</h1>
+      <p>セレクターは、CSS で「どの要素にスタイルを適用するか」を指定する部分です。<br>
+      正しく設定することで、狙った要素にだけスタイルを適用できます。</p>
+    </section>
     <!-- タグセレクター -->
     <section>
       <h2>タグセレクター（要素セレクター）</h2>
@@ -22,7 +27,7 @@
       <div class="demo-area">
         <p>この段落は &lt;p&gt; タグなので青になります。</p>
         <p>こちらも &lt;p&gt; タグなので同じスタイルです。</p>
-        <span>この &lt;span&gt; は別のタグなので影響されません。</span>
+        <span>この段落は &lt;span&gt; タグなので影響されません。</span>
       </div>
       <pre class="code">/* タグセレクター */
 p {
@@ -58,8 +63,8 @@ p {
       id は1ページに1つだけ使うのがルールです（クラスと違って使い回し不可）。</p>
       <div class="demo-area">
         <p id="main-title">id="main-title" が付いた要素（特別なスタイル）</p>
-        <p>id なし — スタイルなし</p>
-        <p>id なし — スタイルなし</p>
+        <span>id なし — スタイルなし</span>
+        <span>id なし — スタイルなし</span>
       </div>
       <pre class="code">/* id セレクター */
 #main-title {
@@ -135,12 +140,12 @@ p {
       <p class="note">「.親 子」のようにスペースで繋ぐと、特定の親の中にある子要素だけに当たります。</p>
       <div class="demo-area">
         <div class="card-demo">
-          <p>カードの中の &lt;p&gt; — 青色</p>
-          <p>カードの中の別の &lt;p&gt; — こちらも青色</p>
+          <span>カードの中の &lt;span&gt; — 青色</span>
+          <span>カードの中の別の &lt;span&gt; — こちらも青色</span>
         </div>
-        <p>カードの外の &lt;p&gt; — スタイルなし</p>
+        <span>カードの外の &lt;span&gt; — スタイルなし</span>
       </div>
-      <pre class="code">/* .card-demo の中の p だけに当たる */
+      <pre class="code">/* .card-demo の中の span だけに当たる */
 .card-demo p {
   color: #1d3461;
   font-weight: bold;
