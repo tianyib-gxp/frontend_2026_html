@@ -17,8 +17,9 @@
   background: #caf0f8;
 }
 
-/* 問題3: コードらしい等幅フォントにする */
+/* 問題3: コードらしい等幅フォントmonospaceにする */
 .code-block {
+  font-family: Impact;
   background: #1e1e2e;
   color: #cdd6f4;
   padding: 16px;

@@ -49,4 +49,66 @@
   box-shadow: 0 4px 12px rgba(0,0,0,.3);
 }
 
+.open-modal-btn {
+  background: #9d0208;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.open-modal-btn:hover { background: #d62828; }
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.is-open { display: flex; }
+
+.modal-dialog {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+}
+.modal-dialog h3 { margin: 0 0 12px; color: #9d0208; font-size: 18px; }
+.modal-dialog p  { margin: 0 0 20px; font-size: 14px; line-height: 1.7; }
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+.modal-close:hover { background: #f0f0f0; }
+
+.modal-close-btn {
+  background: #9d0208;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-close-btn:hover { background: #d62828; }
 
