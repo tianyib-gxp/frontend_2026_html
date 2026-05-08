@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2-2. position デモ</title>
+  <title>5. position デモ</title>
   <link rel="stylesheet" href="../index.css" />
   <link rel="stylesheet" href="./demo.css" />
 </head>
 <body>
   <header class="page-header">
     <a href="../index.html" class="back-button">← CSS 一覧へ</a>
-    <h1>2-2. position</h1>
+    <h1>5. position</h1>
     <p>要素の配置方法を指定します。</p>
   </header>
 
@@ -56,11 +56,30 @@
       <h2>position: fixed（画面に固定）</h2>
       <p class="note">スクロールしても同じ位置に表示されます。ヘッダーや「トップへ戻る」ボタンに使います。</p>
       <p>ページ右下の <strong>「▲ TOP」ボタン</strong> が fixed の例です。スクロールしても追いかけてきます。</p>
+      <p class="note" style="margin-top:12px">モーダルオーバーレイも <code>position: fixed</code> を使って画面全体を覆います。</p>
+      <button class="open-modal-btn" onclick="document.getElementById('demoModal').classList.add('is-open')">モーダルを開く</button>
+      <pre class="code">.overlay {
+  position: fixed;
+  inset: 0;          /* top / right / bottom / left を一括で 0 に */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}</pre>
     </section>
   </main>
 
   <!-- fixed の例 -->
   <a href="#" class="fixed-btn">▲ TOP</a>
+
+  <!-- モーダルオーバーレイ -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="document.getElementById('demoModal').classList.remove('is-open')">✕</button>
+      <h3>モーダルウィンドウ</h3>
+      <p>オーバーレイは <code>position: fixed; inset: 0</code> で画面全体を覆います。<br>
+      ダイアログ本体は <code>position: relative</code> の子要素です。</p>
+      <button class="modal-close-btn" onclick="document.getElementById('demoModal').classList.remove('is-open')">閉じる</button>
+    </div>
+  </div>
   <script src="../lesson-nav.js"></script>
 </body>
 </html>

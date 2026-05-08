@@ -6,6 +6,7 @@
   <title>Session 6: ウェブの仕組みを体感する</title>
   <link rel="stylesheet" href="../lesson-layout.css" />
   <link rel="stylesheet" href="./06.css" />
+  <link rel="stylesheet" href="./missing.css">
 </head>
 <body>
   <header class="page-header">
@@ -16,7 +17,7 @@
 
   <main class="lesson-main">
     <section class="panel">
-      <h2>説明パート</h2>
+      <h2>説明</h2>
       <p>ページ表示はHTMLだけでなく、CSS・画像・スクリプトの追加通信で成り立っています。通信ログを確認すると、Webがどの順序で表示されるかを具体的に理解できます。</p>
     </section>
 
@@ -43,6 +44,8 @@
       <h2>参考リンク</h2>
       <ul class="link-list">
         <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener">MDN: Webの仕組み</a></li>
+        <li><a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Reference/Status" target="_blank" rel="noopener">MDN: HTTPステータスコード一覧</a></li>
+        <ul><li>サーバーは、ティーポットでコーヒーを淹れようとする試みを拒否する。というジョークステータスコードとかもあり面白いので是非見てみてください。</li></ul>
       </ul>
     </section>
 
@@ -51,20 +54,26 @@
       <!-- ↓ DevTools（F12）→ Network タブを開いた状態でこのページをリロードしてみよう -->
       <p>Networkタブで通信の流れを観察してください。</p>
 
-      <h3>ステータスコード観察用リンク</h3>
-      <!-- ↓ 各リンクをクリックして、Networkタブの Status 列の値を確認してみよう -->
+      <h3>ステータスコード観察用ボタン</h3>
+      <!-- ↓ NetworkタブをF12で開いてからボタンをクリックしよう。Status列に結果が表示される -->
+      <!-- Service Workerがリクエストを横取りして指定のステータスコードを返す仕組み -->
       <ul>
-        <li><a href="https://httpstat.us/200" target="_blank" rel="noopener">200 OK</a></li>
-        <li><a href="https://httpstat.us/301" target="_blank" rel="noopener">301 Moved Permanently</a></li>
-        <li><a href="https://httpstat.us/404" target="_blank" rel="noopener">404 Not Found</a></li>
+        <li><button onclick="fetch('./simulate-200').then(r => console.log('Status:', r.status))">200 OK（成功）</button></li>
+        <li><button onclick="fetch('./simulate-401').then(r => console.log('Status:', r.status))">401 Unauthorized（認証が必要）</button></li>
+        <li><button onclick="fetch('./simulate-404').then(r => console.log('Status:', r.status))">404 Not Found（リソースが存在しない）</button></li>
+        <li><button onclick="fetch('./simulate-500').then(r => console.log('Status:', r.status))">500 Internal Server Error（サーバー内部エラー）</button></li>
+        <li><button onclick="fetch('./simulate-503').then(r => console.log('Status:', r.status))">503 Service Unavailable（サーバーが一時的に利用不可）</button></li>
       </ul>
 
-      <!-- ↓ [課題3] headタグ内に <link rel="stylesheet" href="./missing.css"> を追加して、Networkに赤い404行が出ることを確認しよう -->
-
-      <img src="https://dummyimage.com/480x180/eaf4ff/003049&text=Network+Practice" alt="ネットワーク確認用のサンプル画像" />
     </section>
   </main>
 
   <script src="../lesson-nav.js"></script>
+  <script>
+    // デモ用のステータスコードを返すService Workerを登録
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
 </body>
 </html>

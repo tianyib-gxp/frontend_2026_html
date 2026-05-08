@@ -7,7 +7,6 @@
 
 .block-demo {
   display: block;
-  width: 200px;
   height: 40px;
   background: #2d6a4f;
   color: #fff;
@@ -21,6 +20,9 @@
 .inline-demo {
   display: inline;
   background: #52b788;
+  height: 3000px; /* このCSSは無視される */
+  width: 3000px; /* このCSSも無視される */
+  margin-top: 3000px; /* このCSSも無視される */
   color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
