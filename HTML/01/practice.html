@@ -1,107 +1,124 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Session 1: 最初のHTMLを表示する</title>
-  <link rel="stylesheet" href="../lesson-layout.css" />
-</head>
-<body>
-  <header class="page-header">
-     <a href="../index.html" class="back-button">← HTML 一覧へ</a>
-    <h1>Session 1: 最初のHTMLを表示する</h1>
-    <p>まずはタグを書いて、ブラウザ表示が変わる体験を作ります。</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 1: 最初のHTMLを表示する</title>
+    <link rel="stylesheet" href="../lesson-layout.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../index.html" class="back-button">← HTML 一覧へ</a>
+      <h1>Session 1: 最初のHTMLを表示する</h1>
+      <p>まずはタグを書いて、ブラウザ表示が変わる体験を作ります。</p>
+    </header>
 
-  <main class="lesson-main">
-    <section class="panel">
-      <h2>ウェブの3層構造</h2>
-      <p class="note">
-        ウェブページは3つの技術で成り立っています。<br />
-        <strong>HTML</strong>：構造と意味　／　<strong>CSS</strong>：見た目　／　<strong>JavaScript</strong>：動作と対話性
-      </p>
-      <table class="summary-table">
-        <thead>
-          <tr>
-            <th>技術</th>
-            <th>役割</th>
-            <th>例</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML</td>
-            <td>構造・意味付け</td>
-            <td>見出し、段落、リスト</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>見た目・スタイル</td>
-            <td>色、フォント、レイアウト</td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td>動作・対話性</td>
-            <td>ボタンのクリック、DOM操作</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <main class="lesson-main">
+      <section class="panel">
+        <h2>ウェブの3層構造</h2>
+        <p class="note">
+          ウェブページは3つの技術で成り立っています。<br />
+          <strong>HTML</strong
+          >：構造と意味　／　<strong>CSS</strong>：見た目　／　<strong>JavaScript</strong>：動作と対話性
+        </p>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>技術</th>
+              <th>役割</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>構造・意味付け</td>
+              <td>見出し、段落、リスト</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>見た目・スタイル</td>
+              <td>色、フォント、レイアウト</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>動作・対話性</td>
+              <td>ボタンのクリック、DOM操作</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-    <section class="panel">
-      <h2>説明</h2>
-      <p>HTMLは「見た目」より先に「意味のある構造」を作る言語です。この回では、見出し・段落・リストを使って自己紹介ページの骨組みを作ります。</p>
-    </section>
+      <section class="panel">
+        <h2>説明</h2>
+        <p>
+          HTMLは「見た目」より先に「意味のある構造」を作る言語です。この回では、見出し・段落・リストを使って自己紹介ページの骨組みを作ります。
+        </p>
+      </section>
 
-    <section class="panel">
-      <h2>やってほしいこと</h2>
-      <ol class="task-list">
-        <li>h1に自己紹介タイトルを書く</li>
-        <li>pを2つ追加して、自己紹介文を書く</li>
-        <li>ulとliで、好きなことを箇条書きする</li>
-      </ol>
-    </section>
+      <section class="panel">
+        <h2>やってほしいこと</h2>
+        <ol class="task-list">
+          <li>h1に自己紹介タイトルを書く</li>
+          <li>pを2つ追加して、自己紹介文を書く</li>
+          <li>ulとliで、好きなことを箇条書きする</li>
+        </ol>
+      </section>
 
-    <section class="panel">
-      <span class="point-label">[ポイント]</span>
-      <ul class="point-list">
-        <li>タグは役割を持つ。見出しはh1、文章はp、一覧はulとliを使う</li>
-        <li>HTMLを書き換えたら、ブラウザをリロードして変化を確認する</li>
-        <li>最初はタグを試しながら慣れることが大切</li>
-      </ul>
-    </section>
+      <section class="panel">
+        <span class="point-label">[ポイント]</span>
+        <ul class="point-list">
+          <li>タグは役割を持つ。見出しはh1、文章はp、一覧はulとliを使う</li>
+          <li>HTMLを書き換えたら、ブラウザをリロードして変化を確認する</li>
+          <li>最初はタグを試しながら慣れることが大切</li>
+        </ul>
+      </section>
 
-    <section class="panel">
-      <h2>参考リンク</h2>
-      <ul class="link-list">
-        <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files" target="_blank" rel="noopener">MDN: ファイルの扱い方</a></li>
-        <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like" target="_blank" rel="noopener">MDN: Webサイトの見た目を考える</a></li>
-      </ul>
-    </section>
+      <section class="panel">
+        <h2>参考リンク</h2>
+        <ul class="link-list">
+          <li>
+            <a
+              href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+              target="_blank"
+              rel="noopener"
+              >MDN: ファイルの扱い方</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like"
+              target="_blank"
+              rel="noopener"
+              >MDN: Webサイトの見た目を考える</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <section class="panel work-area">
-      <h2>作業エリア</h2>
+      <section class="panel work-area">
+        <h2>作業エリア</h2>
 
-      <!-- ↓ {自己紹介タイトル} を自分の名前やニックネームに書き換えてみよう -->
-      <h3>{自己紹介タイトル}</h3>
+        <!-- ↓ {自己紹介タイトル} を自分の名前やニックネームに書き換えてみよう -->
+        <h3>バオテンイ</h3>
 
-      <!-- ↓ - の部分を自己紹介の文章に書き換えてみよう -->
-      <p>-</p>
-      <!-- ↓ もう1文追加したいときは <p>文章</p> をここにコピーして増やしてみよう -->
-      <p>-</p>
+        <!-- ↓ - の部分を自己紹介の文章に書き換えてみよう -->
+        <p>-</p>
+        <!-- ↓ もう1文追加したいときは <p>文章</p> をここにコピーして増やしてみよう -->
+        <p>-</p>
 
-      <!-- ↓ h3 を h2 に変えて、見出しの大きさが変わるか確認してみよう -->
-      <h3>好きなこと</h3>
-      <ul>
-        <!-- ↓ A / B / C を自分の好きなことに書き換えてみよう -->
-        <li>A</li>
-        <li>B</li>
-        <!-- ↓ <li>D</li> を追加して、リストが増えることを確認してみよう -->
-        <li>C</li>
-      </ul>
-    </section>
-  </main>
+        <!-- ↓ h3 を h2 に変えて、見出しの大きさが変わるか確認してみよう -->
+        <h3>好きなこと</h3>
+        <ul>
+          <!-- ↓ A / B / C を自分の好きなことに書き換えてみよう -->
+          <li>A</li>
+          <li>B</li>
+          <!-- ↓ <li>D</li> を追加して、リストが増えることを確認してみよう -->
+          <li>C</li>
+        </ul>
+      </section>
+    </main>
 
-  <script src="../lesson-nav.js"></script>
-</body>
+    <script src="../lesson-nav.js"></script>
+  </body>
 </html>

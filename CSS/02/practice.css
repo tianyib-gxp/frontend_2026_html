@@ -10,9 +10,14 @@
   border: 2px solid #0f3460;
   border-radius: 6px;
   max-width: 300px;
+  padding: 16px 20px;
 }
-.card h3 { margin: 0 0 8px; }
-.card p { margin: 0; }
+.card h3 {
+  margin: 0 0 8px;
+}
+.card p {
+  margin: 0;
+}
 
 /* 問題2: ボックスの下側に外側の余白を追加する */
 .item {
@@ -22,6 +27,7 @@
   border-radius: 4px;
 }
 .item-spacing {
+  margin-bottom: 16px;
 }
 
 /* 問題3: ボタンを押しやすいサイズにする */
@@ -32,6 +38,7 @@
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  padding: 12px 24px;
 }
 
 /* 問題4: コンテンツを中央に配置して内側に余白を付ける */
@@ -39,4 +46,7 @@
   background: #e8f4f8;
   border-radius: 6px;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
 }

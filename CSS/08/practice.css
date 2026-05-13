@@ -10,21 +10,52 @@
   background: #0f4c75;
   padding: 12px 24px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav-logo { color: #fff; font-size: 18px; font-weight: bold; }
-.nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
-.nav-menu a { color: #fff; text-decoration: none; font-size: 14px; }
+.nav-logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: left;
+}
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: right;
+}
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
 
 /* 問題2: コンテンツを上下左右の中央に配置する */
 .center-stage {
   background: #dbeafe;
   height: 200px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.center-card { background: #0f4c75; color: #fff; padding: 16px 24px; border-radius: 8px; font-size: 14px; }
+.center-card {
+  background: #0f4c75;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+}
 
 /* 問題3: カードを横並びにして間隔を開ける */
 .card-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 .feat-card {
   flex: 1;
@@ -39,6 +70,9 @@
 
 /* 問題4: アイテムを縦方向に並べて間隔を開ける */
 .vert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   background: #dbeafe;
   padding: 16px;
   border-radius: 4px;

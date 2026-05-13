@@ -3,12 +3,33 @@
   --accent-color: #4361ee;
 }
 
-code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+code {
+  background: #eef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+}
 
-.task p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; }
-.task ul { margin: 0 0 16px; padding-left: 20px; font-size: 14px; line-height: 1.8; }
-.task em { color: #555; }
-code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+.task p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.task ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.task em {
+  color: #555;
+}
+code {
+  background: #eef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+}
 
 .preview {
   background: #f8f8f8;
@@ -30,13 +51,13 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
    ===================================================== */
 
 /* 問題1: <h3> タグ全てに適用するセレクターに書き換えてください */
-#practice-dummy1 {
+h3 {
   color: #1d3461;
   font-size: 20px;
 }
 
 /* 問題2: "btn" クラスが付いた要素に適用するセレクターに書き換えてください */
-#practice-dummy2 {
+.btn {
   background: #4361ee;
   color: white;
   padding: 10px 20px;
@@ -46,7 +67,7 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
 }
 
 /* 問題3: "hero-title" という id を持つ要素に適用するセレクターに書き換えてください */
-#practice-dummy3 {
+#hero-title {
   font-size: 36px;
   color: #e63946;
   font-weight: 900;
@@ -54,20 +75,20 @@ code { background: #eef; padding: 2px 6px; border-radius: 3px; font-size: 13px; 
 }
 
 /* 問題4a: "card" クラスに適用するセレクターに書き換えてください */
-#practice-dummy4a {
+.card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
 }
 
 /* 問題4b: "featured" クラスに適用するセレクターに書き換えてください */
-#practice-dummy4b {
+.featured {
   background: #fff3bf;
   border-color: #f4a261;
 }
 
 /* 問題5: ".sidebar の中の a タグだけ" に適用するセレクターに書き換えてください */
-#practice-dummy5 {
+.sidebar a {
   color: #4361ee;
   font-weight: bold;
   text-decoration: none;

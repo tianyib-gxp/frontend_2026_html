@@ -16,6 +16,10 @@ function addParagraph() {
    * - document.getElementById('output').appendChild() で追加する
    * =========================================
    */
+  count += 1;
+  document.createElement('p');
+  document.getElementById('output').textContent =
+    'ボタンが ' + count + '回 押されました！';
 }
 
 function resetOutput() {
@@ -31,4 +35,6 @@ function resetOutput() {
    * - element.textContent = '' で中身を空にできる
    * =========================================
    */
+  count = 0;
+  document.getElementById('output').textContent = '';
 }

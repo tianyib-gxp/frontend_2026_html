@@ -3,7 +3,11 @@
   --accent-color: #4361ee;
 }
 
-.container { background: #eef2ff; padding: 16px; border-radius: 4px; }
+.container {
+  background: #eef2ff;
+  padding: 16px;
+  border-radius: 4px;
+}
 
 /* 共通のボックスデザイン（変更不要） */
 .box {
@@ -20,18 +24,24 @@
 
 /* 問題1: ボックスを 幅 300px、高さ 100pxにする */
 .box-1 {
+  height: 100px;
+  width: 300px;
 }
 
 /* 問題2: ボックスを 幅 60%、高さ 80pxのサイズにする */
 .box-2 {
+  height: 80px;
+  width: 60%;
 }
 
 /* 問題3: 幅・高さともに 120pxの正方形のボックスにする */
 .box-3 {
+  height: 120px;
+  width: 120px;
 }
 
 /* 問題4: ボックスを 親要素の横幅いっぱい（100%）にする */
 .box-4 {
   height: 50px;
-  width: 10px;
+  width: 100%;
 }

@@ -7,16 +7,26 @@
 
 /* 問題1（カード側）: バッジを配置するための基準点にする */
 .card {
+  position: relative;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   max-width: 280px;
 }
-.card h3 { margin: 0 0 8px; }
-.card p { margin: 0; font-size: 14px; color: #666; }
+.card h3 {
+  margin: 0 0 8px;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
 
 /* 問題1（バッジ側）: カードの右上に絶対配置する */
 .badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   background: #d62828;
   color: #fff;
   font-size: 11px;
@@ -27,17 +37,44 @@
 
 /* 問題2: 画面上部に固定して追いかけてくるようにする */
 .fixed-header {
+  position: fixed;
   background: #9d0208;
   color: #fff;
   padding: 16px 24px;
   font-weight: bold;
 }
-.scroll-content { margin-top: 60px; padding: 16px; background: #ffecd2; border-radius: 4px; }
+.scroll-content {
+  margin-top: 60px;
+  padding: 16px;
+  background: #ffecd2;
+  border-radius: 4px;
+}
 
 /* 問題3: 現在の位置から下・右にずらす */
-.row { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #ffecd2; border-radius: 4px; }
-.sq { width: 60px; height: 60px; background: #9d0208; color: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; }
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  background: #ffecd2;
+  border-radius: 4px;
+}
+.sq {
+  width: 60px;
+  height: 60px;
+  background: #9d0208;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 .sq-shift {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
   background: #f48c06;
 }

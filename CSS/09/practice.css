@@ -3,7 +3,9 @@
   --accent-color: #4ecdc4;
 }
 
-main { max-width: none; }
+main {
+  max-width: none;
+}
 
 /* ===== ここから練習スペース ===== */
 
@@ -13,10 +15,16 @@ main { max-width: none; }
   padding: 20px;
   border-radius: 4px;
   width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* 問題2: ボタンに最小の幅を設定してラベルが短くても揃えるようにする */
-.btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 .min-btn {
   background: #1a535c;
   color: #fff;
@@ -25,10 +33,15 @@ main { max-width: none; }
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  min-width: 120px;
 }
 
 /* 問題3: カードに最小・最大の幅を設定してレスポンシブに並べる */
-.resp-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+.resp-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 .resp-card {
   flex: 1;
   background: #1a535c;
@@ -37,4 +50,6 @@ main { max-width: none; }
   border-radius: 8px;
   text-align: center;
   font-size: 14px;
+  min-width: 200px;
+  max-width: 320px;
 }

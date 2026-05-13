@@ -1,72 +1,95 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <!-- ↓ [課題1] charset の UTF-8 を Shift_JIS に変えると文字化けが起きる。確認したら必ず UTF-8 に戻すこと -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ↓ [課題2] ここを書き換えると、ブラウザのタブに表示されるタイトルが変わる -->
-  <title>Session 2: HTMLの骨格を理解する</title>
-  <!-- ↓ [課題3] ブラウザで右クリック →「ページのソースを表示」でこの description を探してみよう -->
-  <meta name="description" content="Session 2の練習ページ。HTMLの骨格とhead要素を確認する。" />
-  <!-- ↓ [課題4] このlinkタグを削除するとCSSが消える。削除して見た目の変化を確認してみよう -->
-  <link rel="stylesheet" href="./02.css" />
-</head>
-<body>
-  <header class="page-header">
-    <a href="../index.html" class="back-button">← HTML 一覧へ</a>
-    <h1>Session 2: HTMLの骨格を理解する</h1>
-    <p>headの設定を変えながら、ブラウザが何を読み取っているか確認します。</p>
-  </header>
+  <head>
+    <!-- ↓ [課題1] charset の UTF-8 を Shift_JIS に変えると文字化けが起きる。確認したら必ず UTF-8 に戻すこと -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ↓ [課題2] ここを書き換えると、ブラウザのタブに表示されるタイトルが変わる -->
+    <title>Session 2: HTMLの骨格を理解する</title>
+    <!-- ↓ [課題3] ブラウザで右クリック →「ページのソースを表示」でこの description を探してみよう -->
+    <meta
+      name="description"
+      content="Session 2の練習ページ。HTMLの骨格とhead要素を確認する。"
+    />
+    <!-- ↓ [課題4] このlinkタグを削除するとCSSが消える。削除して見た目の変化を確認してみよう -->
+    <link rel="stylesheet" href="./02.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../index.html" class="back-button">← HTML 一覧へ</a>
+      <h1>Session 2: HTMLの骨格を理解する</h1>
+      <p>headの設定を変えながら、ブラウザが何を読み取っているか確認します。</p>
+    </header>
 
-  <main class="lesson-main">
-    <section class="panel">
-      <h2>説明</h2>
-      <p>HTML文書は、doctype・html・head・bodyで構成されます。headに書く設定は画面に直接出ませんが、文字コードやタブタイトル、モバイル表示に強く影響します。</p>
-    </section>
+    <main class="lesson-main">
+      <section class="panel">
+        <h2>説明</h2>
+        <p>
+          HTML文書は、doctype・html・head・bodyで構成されます。headに書く設定は画面に直接出ませんが、文字コードやタブタイトル、モバイル表示に強く影響します。
+        </p>
+      </section>
 
-    <section class="panel">
-      <h2>やってほしいこと</h2>
-      <ol class="task-list">
-        <li>doctype, html, head, bodyを1つずつ消して表示差分を確認する</li>
-        <li>titleを書き換えてタブ表示の変化を見る</li>
-        <li>meta charsetを意図的に変えて文字化けを確認して戻す</li>
-        <li>このページのソースを表示してmeta descriptionを探す</li>
-        <li>linkタグを一度削除してCSS未適用状態を確認する</li>
-      </ol>
-    </section>
+      <section class="panel">
+        <h2>やってほしいこと</h2>
+        <ol class="task-list">
+          <li>doctype, html, head, bodyを1つずつ消して表示差分を確認する</li>
+          <li>titleを書き換えてタブ表示の変化を見る</li>
+          <li>meta charsetを意図的に変えて文字化けを確認して戻す</li>
+          <li>このページのソースを表示してmeta descriptionを探す</li>
+          <li>linkタグを一度削除してCSS未適用状態を確認する</li>
+        </ol>
+      </section>
 
-    <section class="panel">
-      <span class="point-label">[ポイント]</span>
-      <ul class="point-list">
-        <li>タグは要素名、属性は追加情報。空要素は終了タグを持たない</li>
-        
-        <li>headは画面に見えないが、検索や表示制御に影響する</li>
-        <ul>
-          <li>meta: 文字エンコーディングの種類など、画面に表示されない情報を設定するためのタグ。</li>
-          <li>title: ブラウザのタブに表示されるタイトルを設定するタグ。</li>
-          <li>link: CSSファイルなど、外部リソースを読み込むためのタグ。</li>
+      <section class="panel">
+        <span class="point-label">[ポイント]</span>
+        <ul class="point-list">
+          <li>タグは要素名、属性は追加情報。空要素は終了タグを持たない</li>
+
+          <li>headは画面に見えないが、検索や表示制御に影響する</li>
+          <ul>
+            <li>
+              meta:
+              文字エンコーディングの種類など、画面に表示されない情報を設定するためのタグ。
+            </li>
+            <li>title: ブラウザのタブに表示されるタイトルを設定するタグ。</li>
+            <li>link: CSSファイルなど、外部リソースを読み込むためのタグ。</li>
+          </ul>
         </ul>
-      </ul>
 
-      <div>もしかすると、CodeSandboxではうまく表示されないかもしれません。
-      </div>
-    </section>
+        <div>
+          もしかすると、CodeSandboxではうまく表示されないかもしれません。
+        </div>
+      </section>
 
-    <section class="panel">
-      <h2>参考リンク</h2>
-      <ul class="link-list">
-        <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank" rel="noopener">MDN: HTML入門（Getting started）</a></li>
-        <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML" target="_blank" rel="noopener">MDN: headとメタデータ</a></li>
-      </ul>
-    </section>
+      <section class="panel">
+        <h2>参考リンク</h2>
+        <ul class="link-list">
+          <li>
+            <a
+              href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+              target="_blank"
+              rel="noopener"
+              >MDN: HTML入門（Getting started）</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+              target="_blank"
+              rel="noopener"
+              >MDN: headとメタデータ</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <section class="panel work-area">
-      <h2>作業エリア</h2>
-      <!-- ↓ 上の head タグ内のコメントを読みながら、1つずつ変更してブラウザの変化を確認しよう -->
-      <p>head内の設定を変更して、ブラウザの挙動を観察します。</p>
-    </section>
-  </main>
+      <section class="panel work-area">
+        <h2>作業エリア</h2>
+        <!-- ↓ 上の head タグ内のコメントを読みながら、1つずつ変更してブラウザの変化を確認しよう -->
+        <p>head内の設定を変更して、ブラウザの挙動を観察します。</p>
+      </section>
+    </main>
 
-  <script src="../lesson-nav.js"></script>
-</body>
+    <script src="../lesson-nav.js"></script>
+  </body>
 </html>
