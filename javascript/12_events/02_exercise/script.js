@@ -12,3 +12,8 @@
  * - document.getElementById("countBtn").addEventListener("click", ...)
  * =============================================
  */
+let count = 0;
+document.getElementById('countBtn').addEventListener('click', () => {
+  count += 1;
+  document.getElementById('countDisplay').textContent = `クリック数: ${count}`;
+});

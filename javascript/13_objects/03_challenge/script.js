@@ -24,6 +24,21 @@ function addResult(text) {
  * =============================================
  */
 
+function Employee(name, department, salary) {
+  this.name = name;
+  this.department = department;
+  this.salary = salary;
+
+  this.introduce = function () {
+    return `${this.name}さん（${this.department}部）の給与は${this.salary}円です`;
+  };
+
+  this.getRaise = function (percent) {
+    this.salary = this.salary + this.salary * (percent / 100);
+    return `${percent}%アップ`;
+  };
+}
+
 function runChallenge() {
   const list = document.getElementById('result-list');
   list.innerHTML = '';

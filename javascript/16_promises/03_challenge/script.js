@@ -48,4 +48,13 @@ function addLog(message) {
 async function login(username, password) {
   logEl.innerHTML = '';
   // ここにコードを書いてください
+  try {
+    const token = await authenticate(username, password);
+    console.log(token);
+    const profile = await fetchProfile(token.token);
+
+    addLog('ログイン成功');
+  } catch (err) {
+    addLog(err.message);
+  }
 }

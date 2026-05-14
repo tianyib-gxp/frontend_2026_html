@@ -40,4 +40,11 @@ function addItem(text) {
 function runAll() {
   list.innerHTML = '';
   // ここにコードを書いてください
+  Promise.all([fetchName(), fetchAge(), fetchCity()])
+    .then(([name, age, city]) => {
+      addItem(name);
+      addItem(age);
+      addItem(city);
+    })
+    .catch((err) => addItem('エラー: ' + err.message));
 }

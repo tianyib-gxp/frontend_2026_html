@@ -13,6 +13,11 @@ function addLog(text) {
  * - delay ミリ秒後に callback(message) を呼ぶ
  * =============================================
  */
+function delayMessage(message, delay, callback) {
+  setTimeout(() => {
+    callback(message);
+  }, delay);
+}
 
 function run() {
   const log = document.getElementById('log');

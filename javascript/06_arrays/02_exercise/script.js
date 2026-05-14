@@ -20,6 +20,18 @@ function addItem() {
    * - shoppingList.length で現在の件数を取得できる
    * =========================================
    */
+  const itemInput = document.getElementById('item-input').value;
+
+  if (itemInput != '') {
+    shoppingList.push(itemInput);
+    //console.log('shoppingList:' + shoppingList);
+    const listItem = document.createElement('li');
+    listItem.textContent = itemInput;
+
+    document.getElementById('shopping-list').appendChild(listItem);
+    document.getElementById('count-display').textContent =
+      `アイテム数: ${shoppingList.length}件`;
+  }
 }
 
 function removeLastItem() {
@@ -38,6 +50,13 @@ function removeLastItem() {
    * - ul.lastElementChild.remove() で最後の要素を削除できる
    * =========================================
    */
+  if (shoppingList.length != 0) {
+    shoppingList.pop();
+    const ul = document.getElementById('shopping-list');
+    ul.lastElementChild.remove();
+    document.getElementById('count-display').textContent =
+      `アイテム数: ${shoppingList.length}件`;
+  }
 }
 
 function clearItems() {
@@ -54,4 +73,8 @@ function clearItems() {
    * - document.getElementById('shopping-list').innerHTML = '' でリストを空にする
    * =========================================
    */
+  shoppingList = [];
+  document.getElementById('shopping-list').innerHTML = '';
+  document.getElementById('count-display').textContent =
+    `アイテム数: ${shoppingList.length}件`;
 }

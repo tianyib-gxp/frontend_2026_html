@@ -14,6 +14,13 @@ function addItem(text) {
  * ヒント: for文で配列をループして足し合わせる
  * ===========================================
  */
+function calculateTotal(prices) {
+  let total = 0;
+  for (let i = 0; i < prices.length; i++) {
+    total += Number(prices[i]);
+  }
+  return total;
+}
 
 /**
  * ===========================================
@@ -24,6 +31,9 @@ function addItem(text) {
  * ヒント: total * (1 - percent / 100)
  * ===========================================
  */
+function applyDiscount(total, percent) {
+  return total * (1 - percent / 100);
+}
 
 function runChallenge() {
   const list = document.getElementById('cart-list');

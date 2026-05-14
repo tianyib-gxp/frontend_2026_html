@@ -18,6 +18,18 @@ function addGrade(text) {
  * ================================================
  */
 
+function calculateGrade(score) {
+  if (score >= 90) {
+    return 'A';
+  } else if (score >= 70) {
+    return 'B';
+  } else if (score >= 50) {
+    return 'C';
+  } else {
+    return 'F';
+  }
+}
+
 function runChallenge() {
   const list = document.getElementById('grade-list');
   list.innerHTML = '';

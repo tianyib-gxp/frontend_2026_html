@@ -38,4 +38,19 @@ function run(url) {
    *    - addLog("エラー発生: " + err.message) を呼ぶ
    * =============================================
    */
+
+  mockFetch(url)
+    .then((response) => {
+      if (response.status != 'ok') {
+        throw new Error('取得失敗');
+      } else {
+        return response.data;
+      }
+    })
+    .then((data) => {
+      addLog('取得成功: ' + data.length + '件');
+    })
+    .catch((err) => {
+      addLog('エラー発生: ' + err.message);
+    });
 }

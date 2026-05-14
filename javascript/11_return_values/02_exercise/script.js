@@ -13,6 +13,9 @@ function addItem(text) {
  * - return: 華氏の数値 (℃ × 9 / 5 + 32)
  * =============================================
  */
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
 
 function run() {
   const list = document.getElementById('list');

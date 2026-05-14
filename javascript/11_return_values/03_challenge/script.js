@@ -15,6 +15,9 @@ function addResult(text) {
  *   ヒント: parseFloat(value.toFixed(2)) を使う
  * =============================================
  */
+function calcBMI(weight, height) {
+  return parseFloat((weight / (height * height)).toFixed(2));
+}
 
 /**
  * =============================================
@@ -24,6 +27,17 @@ function addResult(text) {
  * - return: "低体重" / "普通体重" / "過体重" / "肥満"
  * =============================================
  */
+function getBMICategory(bmi) {
+  if (bmi < 18.5) {
+    return '低体重';
+  } else if (bmi < 25) {
+    return '普通体重';
+  } else if (bmi < 30) {
+    return '過体重';
+  } else {
+    return '肥満';
+  }
+}
 
 function runChallenge() {
   const list = document.getElementById('result-list');

@@ -16,3 +16,15 @@
  * - 空チェック: value === ""
  * =============================================
  */
+
+document.getElementById('myForm').addEventListener('submit', (e) => {
+  const nameInput = document.getElementById('nameInput').value;
+  const emailInput = document.getElementById('emailInput').value;
+  if (nameInput === '' || emailInput === '') {
+    e.preventDefault();
+    document.getElementById('error').textContent =
+      '名前とメールを両方入力してください。';
+  } else {
+    document.getElementById('error').textContent = '送信成功！';
+  }
+});

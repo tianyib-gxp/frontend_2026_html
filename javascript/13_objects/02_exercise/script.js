@@ -19,6 +19,15 @@ function addItem(text) {
  * - describe(): 「"タイトル"（著者, 年, ページ数ページ）」を return する
  * =============================================
  */
+const book = {
+  title: 'JavaScript入門',
+  author: '田中 一郎',
+  year: 2023,
+  pages: 320,
+  describe() {
+    return `"${this.title}" (${this.author}, ${this.year}年, ${this.pages}ページ)`;
+  },
+};
 
 function run() {
   const list = document.getElementById('list');

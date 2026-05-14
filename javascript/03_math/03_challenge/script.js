@@ -6,4 +6,14 @@ function calcTip() {
   // ヒント: 1人分 = 合計 / 人数
   // ヒント: toFixed(2) で小数点2桁に丸める
   // ヒント: document.getElementById('tip-result').innerHTML に表示する
+
+  const bill = Number(document.getElementById('bill').value);
+  const tip = Number(document.getElementById('tip-rate').value);
+  const people = Number(document.getElementById('people').value);
+
+  const tipAmount = bill * (tip / 100);
+  const total = bill + tipAmount;
+  const onePerson = total / people;
+
+  document.getElementById('tip-result').textContent = onePerson;
 }

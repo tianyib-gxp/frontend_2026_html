@@ -6,4 +6,11 @@ function processNumbers() {
   // ヒント: .filter(n => n % 2 === 0) で偶数だけ取り出す
   // ヒント: .map(n => n * 2) で各要素を2倍にする
   // ヒント: 各ステップの結果を #numbers-output に innerHTML で表示する
+  const numbersInput = document.getElementById('numbers-input').value;
+  let nums = numbersInput
+    .split(',')
+    .map(Number)
+    .filter((n) => n % 2 === 0)
+    .map((n) => n * 2);
+  document.getElementById('numbers-output').innerHTML = nums;
 }

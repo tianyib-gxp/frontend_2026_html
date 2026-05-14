@@ -14,6 +14,10 @@ function addItem(text) {
  * ====================================
  */
 
+function add(a, b) {
+  return a + b;
+}
+
 function run() {
   const list = document.getElementById('list');
   list.innerHTML = '';

@@ -13,6 +13,14 @@ function addItem(text) {
  * =====================================
  */
 
+function showMessage(text, type) {
+  if (type === 'error') {
+    addItem('❌');
+  } else {
+    addItem('✅');
+  }
+}
+
 function run() {
   const list = document.getElementById('list');
   list.innerHTML = '';
