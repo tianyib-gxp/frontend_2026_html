@@ -1,6 +1,6 @@
 function addItem(text: string): void {
-  const list = document.getElementById("list") as HTMLUListElement;
-  const li: HTMLLIElement = document.createElement("li");
+  const list = document.getElementById('list') as HTMLUListElement;
+  const li: HTMLLIElement = document.createElement('li');
 
   li.textContent = text;
   list.appendChild(li);
@@ -25,9 +25,17 @@ const jsonData: string = `{
  * =============================================
  */
 
+type Product = {
+  name: string;
+  price: number;
+  inStock: boolean;
+};
+
+const obj: { products: Product[] } = JSON.parse(jsonData);
+
 function run(): void {
-  const list = document.getElementById("list") as HTMLUListElement;
-  list.innerHTML = "";
+  const list = document.getElementById('list') as HTMLUListElement;
+  list.innerHTML = '';
 
   /**
    * =============================================
@@ -41,7 +49,16 @@ function run(): void {
    *   ○○: ○○円（在庫なし）
    * =============================================
    */
-
+  for (let i = 0; i < obj.products.length; i++) {
+    //console.log(obj.products[i].name);
+    if (obj.products[i].inStock) {
+      const text = `${obj.products[i].name}: ${obj.products[i].price}円（在庫:あり）`;
+      addItem(text);
+    } else {
+      const text = `${obj.products[i].name}: ${obj.products[i].price}円（在庫:なし）`;
+      addItem(text);
+    }
+  }
   // 型チェック
   // data.products[0].price = "100";
 }

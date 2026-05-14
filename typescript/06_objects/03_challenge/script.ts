@@ -1,6 +1,6 @@
 function addResult(text: string): void {
-  const list = document.getElementById("result-list") as HTMLUListElement;
-  const li: HTMLLIElement = document.createElement("li");
+  const list = document.getElementById('result-list') as HTMLUListElement;
+  const li: HTMLLIElement = document.createElement('li');
 
   li.textContent = text;
   list.appendChild(li);
@@ -22,13 +22,34 @@ function addResult(text: string): void {
  * =============================================
  */
 
-function runChallenge(): void {
-  const list = document.getElementById("result-list") as HTMLUListElement;
-  list.innerHTML = "";
+class Employee {
+  name: string;
+  department: string;
+  salary: number;
 
-  const emp1 = new Employee("田中", "営業", 350000);
-  const emp2 = new Employee("佐藤", "開発", 420000);
-  const emp3 = new Employee("山田", "人事", 300000);
+  constructor(name: string, department: string, salary: number) {
+    this.name = name;
+    this.department = department;
+    this.salary = salary;
+  }
+
+  introduce(): string {
+    return `${this.name}さん（${this.department}部）の給与は${this.salary}円です`;
+  }
+
+  getRaise(percent: number): number {
+    this.salary = this.salary + this.salary * (percent / 100);
+    return this.salary;
+  }
+}
+
+function runChallenge(): void {
+  const list = document.getElementById('result-list') as HTMLUListElement;
+  list.innerHTML = '';
+
+  const emp1 = new Employee('田中', '営業', 350000);
+  const emp2 = new Employee('佐藤', '開発', 420000);
+  const emp3 = new Employee('山田', '人事', 300000);
 
   const employees: Employee[] = [emp1, emp2, emp3];
 

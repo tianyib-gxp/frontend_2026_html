@@ -2,42 +2,48 @@
 
 // ヒント:
 // token を持つオブジェクト
-// type AuthResponse = ???
+type AuthResponse = {
+  token: string;
+};
 
 // ヒント:
 // name, role, lastLogin を持つ
-// type Profile = ???
+type Profile = {
+  name: string;
+  role: string;
+  lastLogin: string;
+};
 
 // ─── 模擬API（型を付けてください） ───────────────────
 
 function authenticate(
   username: string,
-  password: string
-) /* : Promise<AuthResponse> */ {
+  password: string,
+): Promise<AuthResponse> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (username === "admin" && password === "1234") {
-        resolve({ token: "abc-xyz-123" });
+      if (username === 'admin' && password === '1234') {
+        resolve({ token: 'abc-xyz-123' });
       } else {
-        reject(new Error("認証失敗：ユーザー名またはパスワードが間違っています"));
+        reject(
+          new Error('認証失敗：ユーザー名またはパスワードが間違っています'),
+        );
       }
     }, 700);
   });
 }
 
-function fetchProfile(
-  token: string
-) /* : Promise<Profile> */ {
+function fetchProfile(token: string): Promise<Profile> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (token === "abc-xyz-123") {
+      if (token === 'abc-xyz-123') {
         resolve({
-          name: "田中 太郎",
-          role: "admin",
-          lastLogin: "2025-06-01",
+          name: '田中 太郎',
+          role: 'admin',
+          lastLogin: '2025-06-01',
         });
       } else {
-        reject(new Error("プロフィール取得失敗：無効なトークン"));
+        reject(new Error('プロフィール取得失敗：無効なトークン'));
       }
     }, 600);
   });
@@ -45,10 +51,10 @@ function fetchProfile(
 
 // ─── ユーティリティ ──────────────────────────────
 
-const logEl = document.getElementById("log") as HTMLUListElement;
+const logEl = document.getElementById('log') as HTMLUListElement;
 
 function addLog(message: string): void {
-  const li: HTMLLIElement = document.createElement("li");
+  const li: HTMLLIElement = document.createElement('li');
   li.textContent = message;
   logEl.appendChild(li);
 }
@@ -77,13 +83,23 @@ function addLog(message: string): void {
  * =============================================
  */
 
-async function login(
-  username: string,
-  password: string
-): Promise<void> {
-  logEl.innerHTML = "";
+async function login(username: string, password: string): Promise<void> {
+  logEl.innerHTML = '';
 
   // ここに実装
+  try {
+    const token = await authenticate(username, password);
+    console.log(token);
+    const profile = await fetchProfile(token.token);
+
+    addLog('ログイン成功');
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      addLog(err.message);
+    } else {
+      addLog('予期せぬエラーが発生しました');
+    }
+  }
 }
 
 // HTMLから呼び出す

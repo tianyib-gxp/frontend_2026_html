@@ -29,11 +29,14 @@ function addLog(text: string): void {
 
 function delayMessage(
   // ここに型を付けてください
-  message,
-  delay,
-  callback,
+  message: string,
+  delay: number,
+  callback: (msg: string) => void,
 ) {
   // ここに実装してください
+  setTimeout(() => {
+    callback(message);
+  }, delay);
 }
 
 /**
@@ -46,8 +49,8 @@ function delayMessage(
  * =============================================
  */
 
-function run() {
-  const log = document.getElementById('log');
+function run(): void {
+  const log = document.getElementById('log') as HTMLUListElement;
   log.innerHTML = '';
 
   addLog('処理を開始します...');

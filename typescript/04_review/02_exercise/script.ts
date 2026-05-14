@@ -1,5 +1,5 @@
-function addItem(text) {
-  const list = document.getElementById('list');
+function addItem(text: string) {
+  const list = document.getElementById('list') as HTMLUListElement;
   const li = document.createElement('li');
 
   li.textContent = text;
@@ -17,12 +17,13 @@ function addItem(text) {
  * =============================================
  */
 
-function celsiusToFahrenheit(celsius) {
+function celsiusToFahrenheit(celsius: number): number {
   // ここに実装
+  return (celsius * 9) / 5 + 32;
 }
 
 function run() {
-  const list = document.getElementById('list');
+  const list = document.getElementById('list') as HTMLUListElement;
   list.innerHTML = '';
 
   const temps = [0, 20, 37, 100];

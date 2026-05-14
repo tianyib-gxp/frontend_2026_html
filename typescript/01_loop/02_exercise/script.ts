@@ -1,12 +1,12 @@
-function addItem(text) {
-  const list = document.getElementById('list');
+function addItem(text: string | number): void {
+  const list = document.getElementById('list') as HTMLUListElement;
   const li = document.createElement('li');
-  li.textContent = text;
+  li.textContent = text.toString();
   list.appendChild(li);
 }
 
-function runLoop() {
-  const list = document.getElementById('list');
+function runLoop(): void {
+  const list = document.getElementById('list') as HTMLUListElement;
 
   // リセット
   list.innerHTML = '';

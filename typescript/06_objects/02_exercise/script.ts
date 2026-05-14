@@ -1,5 +1,5 @@
-function addItem(text) {
-  const list = document.getElementById('list');
+function addItem(text: string) {
+  const list = document.getElementById('list') as HTMLUListElement;
   const li = document.createElement('li');
 
   li.textContent = text;
@@ -16,12 +16,25 @@ function addItem(text) {
  * =============================================
  */
 
-const book = {
+const book: {
+  title: string;
+  author: string;
+  year: number;
+  pages: number;
+  describe(): string;
+} = {
   // ここに実装
+  title: 'JavaScript入門',
+  author: '田中 一郎',
+  year: 2023,
+  pages: 320,
+  describe() {
+    return `"${this.title}" (${this.author}, ${this.year}年, ${this.pages}ページ)`;
+  },
 };
 
 function run() {
-  const list = document.getElementById('list');
+  const list = document.getElementById('list') as HTMLUListElement;
   list.innerHTML = '';
 
   addItem('タイトル: ' + book.title);

@@ -1,29 +1,29 @@
 // ─── 模擬API（型を付けてください） ─────────────────────────
 
-function fetchName() /* : Promise<string> */ {
+function fetchName(): Promise<string> {
   return new Promise((resolve) => {
-    setTimeout(() => resolve("田中 花子"), 600);
+    setTimeout(() => resolve('田中 花子'), 600);
   });
 }
 
-function fetchAge() /* : Promise<number> */ {
+function fetchAge(): Promise<number> {
   return new Promise((resolve) => {
     setTimeout(() => resolve(22), 400);
   });
 }
 
-function fetchCity() /* : Promise<string> */ {
+function fetchCity(): Promise<string> {
   return new Promise((resolve) => {
-    setTimeout(() => resolve("東京"), 500);
+    setTimeout(() => resolve('東京'), 500);
   });
 }
 
 // ─── ユーティリティ ─────────────────────────
 
-const list = document.getElementById("result-list") as HTMLUListElement;
+const list = document.getElementById('result-list') as HTMLUListElement;
 
 function addItem(text: string): void {
-  const li: HTMLLIElement = document.createElement("li");
+  const li: HTMLLIElement = document.createElement('li');
   li.textContent = text;
   list.appendChild(li);
 }
@@ -51,10 +51,17 @@ function addItem(text: string): void {
  * =============================================
  */
 
-function runAll() /* : void */ {
-  list.innerHTML = "";
+function runAll(): void {
+  list.innerHTML = '';
 
   // ここにコードを書いてください
+  Promise.all([fetchName(), fetchAge(), fetchCity()])
+    .then(([name, age, city]: [string, number, string]) => {
+      addItem(name);
+      addItem(String(age));
+      addItem(city);
+    })
+    .catch((err) => addItem('エラー: ' + err.message));
 }
 
 // HTMLから呼び出す

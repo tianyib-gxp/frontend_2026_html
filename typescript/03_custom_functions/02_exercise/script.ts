@@ -19,8 +19,14 @@ function addItem(text) {
   list.appendChild(li);
 }
 
-function showMessage(text, type) {
+function showMessage(text: string, type:string):void {
   // ここに実装
+  if (type === "error"){
+    text += "❌";
+  } else{
+    text += "✅";
+  }
+  addItem(text);
 }
 
 function run() {
@@ -31,7 +37,7 @@ function run() {
   showMessage('エラーが発生しました', 'error');
 
   // 型確認
-  // showMessage("テスト", "warning");
+  showMessage("テスト", "warning");
 }
 
 (window as any).run = run;

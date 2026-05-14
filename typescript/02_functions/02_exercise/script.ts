@@ -1,17 +1,17 @@
-function addItem(text) {
-  const list = document.getElementById('list');
+function addItem(text: string) {
+  const list = document.getElementById('list') as HTMLUListElement;
   const li = document.createElement('li');
 
   li.textContent = text;
   list.appendChild(li);
 }
 
-function greet(name) {
+function greet(name: string) {
   return 'こんにちは、' + name + 'さん！';
 }
 
 function runDemo() {
-  const list = document.getElementById('list');
+  const list = document.getElementById('list') as HTMLUListElement;
   list.innerHTML = '';
 
   const names = ['太郎', '花子', '健太'];
@@ -27,7 +27,7 @@ function runDemo() {
    * 型を付けたあとに試してください
    */
 
-  // greet(123);
+  //greet(123);
 }
 
 // HTMLから呼び出すために必要

@@ -1,5 +1,5 @@
-function addItem(text) {
-  const list = document.getElementById('cart-list');
+function addItem(text: string) {
+  const list = document.getElementById('cart-list') as HTMLUListElement;
   const li = document.createElement('li');
 
   li.textContent = text;
@@ -16,8 +16,13 @@ function addItem(text) {
  * ===========================================
  */
 
-function calculateTotal(prices) {
+function calculateTotal(prices: number[]): number {
   // ここに実装
+  let total = 0;
+  for (let i = 0; i < prices.length; i++) {
+    total += prices[i];
+  }
+  return total;
 }
 
 /**
@@ -30,12 +35,13 @@ function calculateTotal(prices) {
  * ===========================================
  */
 
-function applyDiscount(total, percent) {
+function applyDiscount(total: number, percent: number): number {
   // ここに実装
+  return total - total * (percent / 100);
 }
 
 function runChallenge() {
-  const list = document.getElementById('cart-list');
+  const list = document.getElementById('cart-list') as HTMLUListElement;
   list.innerHTML = '';
 
   const prices = [1200, 800, 3500, 650];

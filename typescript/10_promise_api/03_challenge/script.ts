@@ -55,6 +55,13 @@ function runSettled(): void {
    * result.status === "rejected"
    * =============================================
    */
+  Promise.allSettled(requests).then((results) => {
+    results.forEach((r) => {
+      if (r.status === 'fulfilled')
+        addLog('log-settled', `✅ 成功: ${r.value}`);
+      else addLog('log-settled', `❌ 失敗: ${r.reason}`);
+    });
+  });
 }
 
 // ─── 問題2 ─────────────────────────
@@ -69,6 +76,9 @@ function timeout(ms: number): Promise<never> {
    * setTimeout + reject
    * =============================================
    */
+  return new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('タイムアウト')), ms);
+  });
 }
 
 // Promise.race を使う
@@ -85,6 +95,13 @@ function runRace(): void {
    *   .catch(...)
    * =============================================
    */
+  Promise.race([fetchData(), timeout(1000)])
+    .then((result) => {
+      addLog('log-race', '✅ ' + result);
+    })
+    .catch((err) => {
+      addLog('log-race', '⏱️ ' + err.message);
+    });
 }
 
 // HTMLから呼び出す
